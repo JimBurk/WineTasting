@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Wine Tasting Notes</string>
+
+    <!-- Open Activity -->
+    <string name="title_bar">Wine Tasting and Wine Rating</string>
+    <string name="wine_notes">Add New Wine Notes</string>
+
+    <!-- Add Notes Activity-->
+    <string name="add_notes_title">Wine</string>
+    <string name="varietal_text_view">Varietal</string>
+    <string name="vintage_text_view">Vintage</string>
+    <string name="winery_text_view">Winery</string>
+    <string name="vineyard_text_view">Vineyard</string>
+    <string name="price_text_view">Price</string>
+    <string name="summary_button">SUMMARY</string>
+
+    <string name="header_wine">Wine</string>
+    <string name="header_appearance">Color</string>
+    <string name="header_aroma">Aroma</string>
+    <string name="header_body">Body</string>
+    <string name="header_taste">Taste</string>
+    <string name="header_finish">Finish</string>
+    <string name="header_total">Total</string>
+    <string name="header_rank">Rank</string>
+    <string name="header_notes">Notes</string>
+
+    <string name="a1">1A</string>
+    <string name="b1">1B</string>
+    <string name="a2">2A</string>
+    <string name="b2">2B</string>
+    <string name="a3">3A</string>
+    <string name="b3">3B</string>
+    <string name="a4">4A</string>
+    <string name="b4">4B</string>
+    <string name="a5">5A</string>
+    <string name="b5">5B</string>
+    <string name="a6">6A</string>
+    <string name="b6">6B</string>
+
+
+</resources>

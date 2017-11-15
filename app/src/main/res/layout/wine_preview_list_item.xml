@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="viewWineDetails"
+    android:clickable="true"
+    android:id="@+id/wineListLinearLayout">
+
+    <ImageView
+        android:id="@+id/wineBottleImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/wine_bottle">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vineyardListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Vineyard" />
+
+        <TextView
+            android:id="@+id/varietalListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Varietal" />
+
+        <TextView
+            android:id="@+id/vintageListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Vintage" />
+    </LinearLayout>
+</LinearLayout>

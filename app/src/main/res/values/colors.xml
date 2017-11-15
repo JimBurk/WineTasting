@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#8b2252</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="pastelPurple1">#c7c6f2</color>
+    <color name="pastelPurple2">#b5c3e1</color>
+    <color name="pastelPurple3">#b2b2d2</color>
+    <color name="pastelPurple4">#a69ec1</color>
+    <color name="pastelPurple5">#999fbf</color>
+    <color name="violet">#8b2252</color>
+    <color name="pastelRed1">#ff6961</color>
+    <color name="midNightBlack">#000000</color>
+
+    <color name="header_bg">#CFCFCF</color>
+    <color name="body_bg">#DFDFDF</color>
+</resources>
