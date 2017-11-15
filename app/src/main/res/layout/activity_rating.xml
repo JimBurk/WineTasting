@@ -334,6 +334,218 @@
             android:gravity="center"
             android:textSize="24sp"/>
 
+        <TextView
+            android:id="@+id/flight2ANumberTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:textSize="24sp"
+            android:layout_columnWeight="0.8"
+            android:text="@string/a2"
+            android:background="@drawable/textview_border_header"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2AColorTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="colorFragment2A"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2AAromaTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="aromaFragment2A"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2ABodyTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="bodyFragment2A"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2ATasteTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="3"
+            android:layout_column="4"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="tasteFragment2A"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2AFinishTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="3"
+            android:layout_column="5"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="finishFragment2A"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/rating2ATotalTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="3"
+            android:layout_column="6"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/rating2ARankTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="3"
+            android:layout_column="7"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/rating2ANotesTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="3"
+            android:layout_column="8"
+            android:layout_columnWeight="4"
+            android:inputType="text"
+            android:background="@drawable/textview_border"
+            android:gravity="center"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/flight2BNumberTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:textSize="24sp"
+            android:layout_columnWeight="0.8"
+            android:text="@string/b2"
+            android:background="@drawable/textview_border_header"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2BColorTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="colorFragment2B"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2BAromaTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="aromaFragment2B"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2BBodyTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="bodyFragment2B"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2BTasteTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="4"
+            android:layout_column="4"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="tasteFragment2B"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/rating2BFinishTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="4"
+            android:layout_column="5"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:onClick="finishFragment2B"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/rating2BTotalTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="4"
+            android:layout_column="6"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/rating2BRankTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="4"
+            android:layout_column="7"
+            android:textSize="24sp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/textview_border"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/rating2BNotesTV"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_row="4"
+            android:layout_column="8"
+            android:layout_columnWeight="4"
+            android:inputType="text"
+            android:background="@drawable/textview_border"
+            android:gravity="center"
+            android:textSize="24sp"/>
+
     </GridLayout>
 
 </LinearLayout>
