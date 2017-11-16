@@ -36,4 +36,40 @@ public class RatingActivity extends AppCompatActivity {
     public void bodyFragment2B(View view) { Log.i("Rating Activity", "bodyFragment2B"); }
     public void tasteFragment2B(View view) { Log.i("Rating Activity", "tasteFragment2B"); }
     public void finishFragment2B(View view) { Log.i("Rating Activity", "finishFragment2B"); }
+
+    public void colorFragment3A(View view) { Log.i("Rating Activity", "colorFragment3A"); }
+    public void aromaFragment3A(View view) { Log.i("Rating Activity", "aromaFragment3A"); }
+    public void bodyFragment3A(View view) { Log.i("Rating Activity", "bodyFragment3A"); }
+    public void tasteFragment3A(View view) { Log.i("Rating Activity", "tasteFragment3A"); }
+    public void finishFragment3A(View view) { Log.i("Rating Activity", "finishFragment3A"); }
+
+    public void colorFragment3B(View view) { Log.i("Rating Activity", "colorFragment3B"); }
+    public void aromaFragment3B(View view) { Log.i("Rating Activity", "aromaFragment3B"); }
+    public void bodyFragment3B(View view) { Log.i("Rating Activity", "bodyFragment3B"); }
+    public void tasteFragment3B(View view) { Log.i("Rating Activity", "tasteFragment3B"); }
+    public void finishFragment3B(View view) { Log.i("Rating Activity", "finishFragment3B"); }
+
+    public void colorFragment4A(View view) { Log.i("Rating Activity", "colorFragment4A"); }
+    public void aromaFragment4A(View view) { Log.i("Rating Activity", "aromaFragment4A"); }
+    public void bodyFragment4A(View view) { Log.i("Rating Activity", "bodyFragment4A"); }
+    public void tasteFragment4A(View view) { Log.i("Rating Activity", "tasteFragment4A"); }
+    public void finishFragment4A(View view) { Log.i("Rating Activity", "finishFragment4A"); }
+
+    public void colorFragment4B(View view) { Log.i("Rating Activity", "colorFragment4B"); }
+    public void aromaFragment4B(View view) { Log.i("Rating Activity", "aromaFragment4B"); }
+    public void bodyFragment4B(View view) { Log.i("Rating Activity", "bodyFragment4B"); }
+    public void tasteFragment4B(View view) { Log.i("Rating Activity", "tasteFragment4B"); }
+    public void finishFragment4B(View view) { Log.i("Rating Activity", "finishFragment4B"); }
+
+    public void colorFragment5A(View view) { Log.i("Rating Activity", "colorFragment5A"); }
+    public void aromaFragment5A(View view) { Log.i("Rating Activity", "aromaFragment5A"); }
+    public void bodyFragment5A(View view) { Log.i("Rating Activity", "bodyFragment5A"); }
+    public void tasteFragment5A(View view) { Log.i("Rating Activity", "tasteFragment5A"); }
+    public void finishFragment5A(View view) { Log.i("Rating Activity", "finishFragment5A"); }
+
+    public void colorFragment5B(View view) { Log.i("Rating Activity", "colorFragment5B"); }
+    public void aromaFragment5B(View view) { Log.i("Rating Activity", "aromaFragment5B"); }
+    public void bodyFragment5B(View view) { Log.i("Rating Activity", "bodyFragment5B"); }
+    public void tasteFragment5B(View view) { Log.i("Rating Activity", "tasteFragment5B"); }
+    public void finishFragment5B(View view) { Log.i("Rating Activity", "finishFragment5B"); }
 }
