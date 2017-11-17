@@ -72,4 +72,6 @@ public class RatingActivity extends AppCompatActivity {
     public void bodyFragment5B(View view) { Log.i("Rating Activity", "bodyFragment5B"); }
     public void tasteFragment5B(View view) { Log.i("Rating Activity", "tasteFragment5B"); }
     public void finishFragment5B(View view) { Log.i("Rating Activity", "finishFragment5B"); }
+
+    public void ratingContinue(View view) { Log.i("Rating Activity", "continueButton"); }
 }

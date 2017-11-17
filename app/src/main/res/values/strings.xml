@@ -34,8 +34,8 @@
     <string name="b4">4B</string>
     <string name="a5">5A</string>
     <string name="b5">5B</string>
-    <string name="a6">6A</string>
-    <string name="b6">6B</string>
 
+    <string name="touch_text">\tTap a purple button to change the contents\t</string>
 
+    <string name="rating_continue">\t\tContinue\t\t</string>
 </resources>

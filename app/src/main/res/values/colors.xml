@@ -16,4 +16,5 @@
 
     <color name="header_bg">#CFCFCF</color>
     <color name="body_bg">#DFDFDF</color>
+    <color name="button_bg">#CC99CC</color>
 </resources>
