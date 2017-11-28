@@ -2,8 +2,18 @@
     <string name="app_name">Wine Tasting Notes</string>
 
     <!-- Open Activity -->
+    <string name="add_tasting">\t\tAdd a New Tasting\t\t</string>
+    <string name="review_tasting">\t\tReview a Previous Tasting\t\t</string>
+    <string name="review_wine">\t\tReview a Particular Wine\t\t</string>
+
     <string name="title_bar">Wine Tasting and Wine Rating</string>
     <string name="wine_notes">Add New Wine Notes</string>
+
+    <!-- Add Tasting Activity-->
+    <string name="tasting_name">\t\tName of Tasting\t\t</string>
+    <string name="tasting_date">\t\tDate of Tasting\t\t</string>
+    <string name="tasting_location">\t\tTasting Location\t\t</string>
+    <string name="tasting_continue">\t\tContinue\t\t</string>
 
     <!-- Add Notes Activity-->
     <string name="add_notes_title">Wine</string>
@@ -13,6 +23,8 @@
     <string name="vineyard_text_view">Vineyard</string>
     <string name="price_text_view">Price</string>
     <string name="summary_button">SUMMARY</string>
+
+    <!-- Rating Activity-->
 
     <string name="header_wine">Wine</string>
     <string name="header_appearance">Color</string>
@@ -35,7 +47,20 @@
     <string name="a5">5A</string>
     <string name="b5">5B</string>
 
-    <string name="touch_text">\tTap a purple button to change the contents\t</string>
+    <string name="touch_text">\tTap an attribute to see the rating parameters, a purple button
+        \t\n\tto change the contents, and the total button to add the ratings.\t</string>
 
+    <string name="rank">\t\tRank Wines\t\t</string>
     <string name="rating_continue">\t\tContinue\t\t</string>
+
+    <!-- Wines Activity-->
+
+    <string name="header_vintage">Vintage</string>
+    <string name="header_varietal">Varietal</string>
+    <string name="header_winery">Winery</string>
+    <string name="header_vineyard">Vineyard / Desgnation</string>
+    <string name="header_price">Price</string>
+
+    <string name="wines_save">\tSave These Wines\t</string>
+
 </resources>
