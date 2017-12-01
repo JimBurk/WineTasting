@@ -41,7 +41,15 @@ public class OpenActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, 0);
     }
 
-    public void viewWineDetails(View view){
+    public void reviewTastings(View view){
+        Intent reviewTastingIntent = new Intent(this, ReviewTastingsActivity.class);
+        startActivity(reviewTastingIntent);
+        overridePendingTransition(R.anim.fade_in, 0);
+    }
 
+    public void reviewWines(View view){
+        Intent reviewWinesIntent = new Intent(this, ReviewWinesActivity.class);
+        startActivity(reviewWinesIntent);
+        overridePendingTransition(R.anim.fade_in, 0);
     }
 }

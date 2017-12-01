@@ -25,6 +25,13 @@
             android:screenOrientation="landscape">
         </activity>
         <activity android:name=".WinesActivity">
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".ReviewTastingsActivity">
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".ReviewWinesActivity">
+            android:screenOrientation="landscape">
         </activity>
     </application>
 
