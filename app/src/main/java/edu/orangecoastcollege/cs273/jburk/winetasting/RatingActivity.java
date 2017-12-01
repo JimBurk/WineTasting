@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RatingActivity extends AppCompatActivity {
 
     boolean [] totaled = { false, false, false, false, false, false, false, false, false, false };
@@ -22,6 +25,20 @@ public class RatingActivity extends AppCompatActivity {
 
     String totalString;
 
+    private Rating rating1a;
+    private Rating rating1b;
+    private Rating rating2a;
+    private Rating rating2b;
+    private Rating rating3a;
+    private Rating rating3b;
+    private Rating rating4a;
+    private Rating rating4b;
+    private Rating rating5a;
+    private Rating rating5b;
+
+    private List<Rating> ratingList = new ArrayList<>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +48,17 @@ public class RatingActivity extends AppCompatActivity {
         rankButton.setVisibility(View.INVISIBLE);
         continueButton = (Button) findViewById(R.id.ratingContinue);
         continueButton.setVisibility(View.INVISIBLE);
+
+        ratingList.add(rating1a = new Rating());
+        ratingList.add(rating1b = new Rating());
+        ratingList.add(rating2a = new Rating());
+        ratingList.add(rating2b = new Rating());
+        ratingList.add(rating3a = new Rating());
+        ratingList.add(rating3b = new Rating());
+        ratingList.add(rating4a = new Rating());
+        ratingList.add(rating4b = new Rating());
+        ratingList.add(rating5a = new Rating());
+        ratingList.add(rating5b = new Rating());
     }
 
     public void total1A(View view) {
@@ -40,7 +68,9 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating1ATasteTV);
         EditText finishET = findViewById(R.id.rating1AFinishTV);
 
-        total[0] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating1a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[0] = rating1a.getColor() + rating1a.getAroma() + rating1a.getBody() + rating1a.getTaste() + rating1a.getFinish();
 
         if (total[0] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating1ATotalTV);
@@ -58,7 +88,9 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating1BTasteTV);
         EditText finishET = findViewById(R.id.rating1BFinishTV);
 
-        total[1] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating1b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[1] = rating1b.getColor() + rating1b.getAroma() + rating1b.getBody() + rating1b.getTaste() + rating1b.getFinish();
 
         if (total[1] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating1BTotalTV);
@@ -76,7 +108,9 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating2ATasteTV);
         EditText finishET = findViewById(R.id.rating2AFinishTV);
 
-        total[2] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating2a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[2] = rating2a.getColor() + rating2a.getAroma() + rating2a.getBody() + rating2a.getTaste() + rating2a.getFinish();
 
         if (total[2] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating2ATotalTV);
@@ -94,7 +128,9 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating2BTasteTV);
         EditText finishET = findViewById(R.id.rating2BFinishTV);
 
-        total[3] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating2b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[3] = rating2b.getColor() + rating2b.getAroma() + rating2b.getBody() + rating2b.getTaste() + rating2b.getFinish();
 
         if (total[3] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating2BTotalTV);
@@ -112,7 +148,9 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating3ATasteTV);
         EditText finishET = findViewById(R.id.rating3AFinishTV);
 
-        total[4] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating3a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[4] = rating3a.getColor() + rating3a.getAroma() + rating3a.getBody() + rating3a.getTaste() + rating3a.getFinish();
 
         if (total[4] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating3ATotalTV);
@@ -130,7 +168,9 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating3BTasteTV);
         EditText finishET = findViewById(R.id.rating3BFinishTV);
 
-        total[5] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating3b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[5] = rating3b.getColor() + rating3b.getAroma() + rating3b.getBody() + rating3b.getTaste() + rating3b.getFinish();
 
         if (total[5] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating3BTotalTV);
@@ -148,7 +188,9 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating4ATasteTV);
         EditText finishET = findViewById(R.id.rating4AFinishTV);
 
-        total[6] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating4a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[6] = rating4a.getColor() + rating4a.getAroma() + rating4a.getBody() + rating4a.getTaste() + rating4a.getFinish();
 
         if (total[6] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating4ATotalTV);
@@ -166,7 +208,9 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating4BTasteTV);
         EditText finishET = findViewById(R.id.rating4BFinishTV);
 
-        total[7] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating4b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[7] = rating4b.getColor() + rating4b.getAroma() + rating4b.getBody() + rating4b.getTaste() + rating4b.getFinish();
 
         if (total[7] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating4BTotalTV);
@@ -184,7 +228,9 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating5ATasteTV);
         EditText finishET = findViewById(R.id.rating5AFinishTV);
 
-        total[8] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating5a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[8] = rating5a.getColor() + rating5a.getAroma() + rating5a.getBody() + rating5a.getTaste() + rating5a.getFinish();
 
         if (total[8] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating5ATotalTV);
@@ -202,20 +248,23 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating5BTasteTV);
         EditText finishET = findViewById(R.id.rating5BFinishTV);
 
-        total[9] = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+        rating5b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
+
+        total[9] = rating5b.getColor() + rating5b.getAroma() + rating5b.getBody() + rating5b.getTaste() + rating5b.getFinish();
 
         if (total[9] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating5BTotalTV);
             totalString = Float.toString(total[9]);
-            totalButton
-                    .setText(totalString);
+            totalButton.setText(totalString);
             totaled[9] = true;
             checkTotaled();
         }
     }
 
-    public float getTotal(EditText colorET, EditText aromaET, EditText bodyET, EditText tasteET, EditText finishET) {
+    public Rating getTotal(EditText colorET, EditText aromaET, EditText bodyET, EditText tasteET, EditText finishET) {
         float total = 0.0f;
+
+        Rating newRating = new Rating();
 
         String colorString = colorET.getText().toString();
         String aromaString = aromaET.getText().toString();
@@ -231,43 +280,27 @@ public class RatingActivity extends AppCompatActivity {
             float tasteRating = Float.parseFloat(tasteString);
             float finishRating = Float.parseFloat(finishString);
 
+            newRating.setColor(colorRating);
+            newRating.setAroma(aromaRating);
+            newRating.setBody(bodyRating);
+            newRating.setTaste(tasteRating);
+            newRating.setFinish(finishRating);
+
             if ((colorRating >= 0 && colorRating <= 5.0) && (aromaRating >= 0.0 && aromaRating <= 5.0)
                     && (bodyRating >= 0.0 && bodyRating <= 5.0) && (tasteRating >= 0.0 && tasteRating <= 5.0)
                     && (finishRating >= 0.0 && finishRating <= 5.0)) {
 
                 total = colorRating + aromaRating + bodyRating + tasteRating + finishRating;
 
-                Button totalButton1A = (Button) findViewById(R.id.rating1ATotalTV);
-                String totalString = Float.toString(total);
-                totalButton1A.setText(totalString);
-                totaled[0] = true;
                 checkTotaled();
             } else {
-                AlertDialog alertDialog = new AlertDialog.Builder(RatingActivity.this).create();
-                alertDialog.setTitle("Alert");
-                alertDialog.setMessage("A Rating must be from 0 to 5");
-                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        });
-                alertDialog.show();
+                setDialog5();
             }
         }
         else {
-            AlertDialog alertDialog = new AlertDialog.Builder(RatingActivity.this).create();
-            alertDialog.setTitle("Alert");
-            alertDialog.setMessage("All Ratings Must be entered BEFORE Totaling");
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
-            alertDialog.show();
+            setDialogEmpty();
         }
-        return total;
+        return newRating;
     }
 
     public void fillRatings(View v) {
@@ -391,6 +424,8 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("5");
     }
+
+
 
     private void checkTotaled() {
         boolean allDone = true;
@@ -516,6 +551,32 @@ public class RatingActivity extends AppCompatActivity {
         Intent winesIntent = new Intent(this, WinesActivity.class);
         startActivity(winesIntent);
         overridePendingTransition(R.anim.fade_in, 0);
+    }
+
+    private void setDialog5() {
+        AlertDialog alertDialog = new AlertDialog.Builder(RatingActivity.this).create();
+        alertDialog.setTitle("Alert");
+        alertDialog.setMessage("A Rating must be from 0 to 5");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+    }
+
+    private void setDialogEmpty() {
+        AlertDialog alertDialog = new AlertDialog.Builder(RatingActivity.this).create();
+        alertDialog.setTitle("Alert");
+        alertDialog.setMessage("All Ratings Must be entered BEFORE Totaling");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
     }
 
     public void colorAlert(View view) {

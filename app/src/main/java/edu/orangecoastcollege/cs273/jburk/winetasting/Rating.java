@@ -96,7 +96,7 @@ public class Rating implements Parcelable {
     }
 
     /**
-     * Return 0 if the its a stand parcel, else if rsendign files
+     * Return 0 if the its a stand parcel, else if resending files
      * need to run file descriptors
      *
      * @return 0
