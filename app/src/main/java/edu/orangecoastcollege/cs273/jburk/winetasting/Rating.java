@@ -9,28 +9,20 @@ import android.os.Parcelable;
 
 public class Rating implements Parcelable {
     private long mId;
-    private int mFlight;
-    private int mOrder;
     private float mColor;
     private float mAroma;
     private float mBody;
     private float mTaste;
     private float mFinish;
-    private float mTotal;
-    private int mRank;
     private String mNotes;
 
     public Rating(long id, int flight, int order, float color, float aroma, float body, float taste, float finish, float total, int rank, String notes) {
         mId = id;
-        mFlight = flight;
-        mOrder = order;
         mColor = color;
         mAroma = aroma;
         mBody = body;
         mTaste = taste;
         mFinish = finish;
-        mTotal = total;
-        mRank = rank;
         mNotes = notes;
     }
 
@@ -40,14 +32,6 @@ public class Rating implements Parcelable {
 
     public long getId() {
         return mId;
-    }
-
-    public int getFlight() {
-        return mFlight;
-    }
-
-    public int getOrder() {
-        return mOrder;
     }
 
     public float getColor() {
@@ -70,28 +54,12 @@ public class Rating implements Parcelable {
         return mFinish;
     }
 
-    public int getRank() {
-        return mRank;
-    }
-
-    public float getTotal() {
-        return mTotal;
-    }
-
     public String getNotes() {
         return mNotes;
     }
 
     public void setId(long id) {
         mId = id;
-    }
-
-    public void setFlight(int flight) {
-        mFlight = flight;
-    }
-
-    public void setOrder(int order) {
-        mOrder = order;
     }
 
     public void setColor(float color) {
@@ -110,23 +78,21 @@ public class Rating implements Parcelable {
         mTaste = taste;
     }
 
-    public void setRank(int rank) {mRank = rank; }
-
     public void setFinish(float finish) {
         mFinish = finish;
-    }
-
-    public void setTotal(float total) {
-        mTotal = total;
     }
 
     public void setNotes(String notes) {
         mNotes = notes;
     }
 
-    public void calcTotal() {
-        if ((getColor() >= 0) && (getAroma() >= 0) && (getBody() >= 0) && (getTaste() >= 0) && (getFinish() >= 0))
-            setTotal(getColor() + getAroma() + getBody() + getTaste() + getFinish());
+    public float calcTotal() {
+        if ((getColor() >= 0) && (getAroma() >= 0) && (getBody() >= 0) && (getTaste() >= 0) && (getFinish() >= 0)) {
+            return (getColor() + getAroma() + getBody() + getTaste() + getFinish());
+        }
+        else {
+            return 0.0f;
+        }
     }
 
     /**
@@ -148,15 +114,11 @@ public class Rating implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeLong(mId);
-        parcel.writeInt(mFlight);
-        parcel.writeInt(mOrder);
         parcel.writeFloat(mColor);
         parcel.writeFloat(mAroma);
         parcel.writeFloat(mBody);
         parcel.writeFloat(mTaste);
         parcel.writeFloat(mFinish);
-        parcel.writeFloat(mTotal);
-        parcel.writeInt(mRank);
         parcel.writeString(mNotes);
     }
 
@@ -181,4 +143,45 @@ public class Rating implements Parcelable {
         public Rating[] newArray(int size) { return new Rating[size];
         }
     } ;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Rating rating = (Rating) o;
+
+        if (mId != rating.mId) return false;
+        if (Float.compare(rating.mColor, mColor) != 0) return false;
+        if (Float.compare(rating.mAroma, mAroma) != 0) return false;
+        if (Float.compare(rating.mBody, mBody) != 0) return false;
+        if (Float.compare(rating.mTaste, mTaste) != 0) return false;
+        if (Float.compare(rating.mFinish, mFinish) != 0) return false;
+        return mNotes != null ? mNotes.equals(rating.mNotes) : rating.mNotes == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (mId ^ (mId >>> 32));
+        result = 31 * result + (mColor != +0.0f ? Float.floatToIntBits(mColor) : 0);
+        result = 31 * result + (mAroma != +0.0f ? Float.floatToIntBits(mAroma) : 0);
+        result = 31 * result + (mBody != +0.0f ? Float.floatToIntBits(mBody) : 0);
+        result = 31 * result + (mTaste != +0.0f ? Float.floatToIntBits(mTaste) : 0);
+        result = 31 * result + (mFinish != +0.0f ? Float.floatToIntBits(mFinish) : 0);
+        result = 31 * result + (mNotes != null ? mNotes.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Rating{" +
+                "mId=" + mId +
+                ", mColor=" + mColor +
+                ", mAroma=" + mAroma +
+                ", mBody=" + mBody +
+                ", mTaste=" + mTaste +
+                ", mFinish=" + mFinish +
+                ", mNotes='" + mNotes + '\'' +
+                '}';
+    }
 }
