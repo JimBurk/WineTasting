@@ -36,9 +36,6 @@ public class RatingActivity extends AppCompatActivity {
     private Rating rating5a;
     private Rating rating5b;
 
-    private List<Rating> ratingList = new ArrayList<>();
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,16 +46,16 @@ public class RatingActivity extends AppCompatActivity {
         continueButton = (Button) findViewById(R.id.ratingContinue);
         continueButton.setVisibility(View.INVISIBLE);
 
-        ratingList.add(rating1a = new Rating());
-        ratingList.add(rating1b = new Rating());
-        ratingList.add(rating2a = new Rating());
-        ratingList.add(rating2b = new Rating());
-        ratingList.add(rating3a = new Rating());
-        ratingList.add(rating3b = new Rating());
-        ratingList.add(rating4a = new Rating());
-        ratingList.add(rating4b = new Rating());
-        ratingList.add(rating5a = new Rating());
-        ratingList.add(rating5b = new Rating());
+        rating1a = new Rating();
+        rating1b = new Rating();
+        rating2a = new Rating();
+        rating2b = new Rating();
+        rating3a = new Rating();
+        rating3b = new Rating();
+        rating4a = new Rating();
+        rating4b = new Rating();
+        rating5a = new Rating();
+        rating5b = new Rating();
     }
 
     public void total1A(View view) {
