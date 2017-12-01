@@ -16,7 +16,7 @@ public class Rating implements Parcelable {
     private float mFinish;
     private String mNotes;
 
-    public Rating(long id, int flight, int order, float color, float aroma, float body, float taste, float finish, float total, int rank, String notes) {
+    public Rating(long id, float color, float aroma, float body, float taste, float finish, String notes) {
         mId = id;
         mColor = color;
         mAroma = aroma;
@@ -26,8 +26,8 @@ public class Rating implements Parcelable {
         mNotes = notes;
     }
 
-    public Rating(int flight, int order) {
-        this(-1, flight, order, -1, -1, -1, -1, -1, -1, -1, "");
+    public Rating() {
+        this(-1, -1, -1, -1, -1, -1, "");
     }
 
     public long getId() {
