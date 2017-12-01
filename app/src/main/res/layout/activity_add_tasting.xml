@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/vines3"
+    android:orientation="vertical"
+    tools:context="edu.orangecoastcollege.cs273.jburk.winetasting.AddTasting">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="100dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border"
+            android:paddingLeft="100dp"
+            android:text="@string/tasting_name"
+            android:textSize="32sp"
+            android:visibility="visible"/>
+
+        <EditText
+            android:id="@+id/tasting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:background="@drawable/button_border"
+            android:hint="@string/tasting_name"
+            android:paddingLeft="200dp"
+            android:inputType="text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="100dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:background="@drawable/button_border"
+            android:paddingLeft="100dp"
+            android:layout_weight="1"
+            android:text="@string/tasting_date"/>
+
+        <EditText
+            android:id="@+id/tasting_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:background="@drawable/button_border"
+            android:hint="@string/tasting_date"
+            android:layout_weight="1"
+            android:paddingLeft="200dp"
+            android:inputType="date"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:paddingTop="100dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:background="@drawable/button_border"
+            android:paddingLeft="100dp"
+            android:text="@string/tasting_location"/>
+
+        <EditText
+            android:id="@+id/tasting_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:background="@drawable/button_border"
+            android:hint="@string/tasting_location"
+            android:paddingLeft="200dp"
+            android:inputType="text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:paddingTop="100dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/add_tasting_continue_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:onClick="newRating"
+            android:background="@drawable/textview_border"
+            android:text="@string/tasting_continue"/>
+
+    </LinearLayout>
+
+</LinearLayout>
