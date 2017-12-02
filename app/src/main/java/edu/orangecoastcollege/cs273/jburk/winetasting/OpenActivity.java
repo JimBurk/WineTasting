@@ -52,4 +52,8 @@ public class OpenActivity extends AppCompatActivity {
         startActivity(reviewWinesIntent);
         overridePendingTransition(R.anim.fade_in, 0);
     }
+
+    public void quitApp(View view) {
+        this.finishAffinity();
+    }
 }

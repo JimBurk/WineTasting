@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Notes de Gegustation de Vin</string>
+
+    <!-- Open Activity -->
+    <string name="add_tasting">\t\tAjouter une Nouvelle Degustation\t\t</string>
+    <string name="review_tasting">\t\tRevoir une Degustation Precedente\t\t</string>
+    <string name="review_wine">\t\tPasser en Revue un Vin Particular\t\t</string>
+    <string name="quit_app">Quit Wine Tasting Notes</string>
+
+    <!-- Add Tasting Activity-->
+    <string name="tasting_name">\t\tNom de la Degustation\t\t</string>
+    <string name="tasting_date">\t\tDatede Degustatio\t\t</string>
+    <string name="tasting_location">\t\tLieu de Degustatio\t\t</string>
+    <string name="tasting_continue">\t\tContinuer\t\t</string>
+
+    <!-- Add Notes Activity-->
+    <string name="add_notes_title">Vin</string>
+    <string name="varietal_text_view">Varietal</string>
+    <string name="vintage_text_view">Millesime</string>
+    <string name="winery_text_view">Vinicloe</string>
+    <string name="vineyard_text_view">Vignoble</string>
+    <string name="price_text_view">Prix</string>
+    <string name="summary_button">RESUME</string>
+
+    <!-- Rating Activity-->
+
+    <string name="header_wine">Vin</string>
+    <string name="header_appearance">Couleur</string>
+    <string name="header_aroma">Arome</string>
+    <string name="header_body">Body</string>
+    <string name="header_taste">Saveur</string>
+    <string name="header_finish">Fini</string>
+    <string name="header_total">Total</string>
+    <string name="header_rank">Rang</string>
+    <string name="header_notes">Remarques</string>
+
+    <string name="a1" translatable="false">1A</string>
+    <string name="b1" translatable="false">1B</string>
+    <string name="a2" translatable="false">2A</string>
+    <string name="b2" translatable="false">2B</string>
+    <string name="a3" translatable="false">3A</string>
+    <string name="b3" translatable="false">3B</string>
+    <string name="a4" translatable="false">4A</string>
+    <string name="b4" translatable="false">4B</string>
+    <string name="a5" translatable="false">5A</string>
+    <string name="b5" translatable="false">5B</string>
+
+    <string name="touch_text">\tAppuyezsur un attribut pour voir le psrametres de classification, un bouton violet
+        \t\n\tpour changer le contenu, et le bouton TOTAL pour ajouter le evaluations.\t</string>
+
+    <string name="rank">\t\tClasser le Vins\t\t</string>
+    <string name="rating_continue">\t\tRESUME\t\t</string>
+
+    <!-- Wines Activity-->
+
+    <string name="header_vintage">Millesime</string>
+    <string name="header_varietal">Varietal</string>
+    <string name="header_winery">Vinicloe</string>
+    <string name="header_vineyard">Vignobl / la Desgnation</string>
+    <string name="header_price">Price</string>
+    <string name="add_picture">Add Pictures</string>
+    <string name="wines_enter">Enter Wines</string>
+
+    <string name="add_photo">Add a Photo</string>
+
+    <string name="wines_save">\tSauegarder ces Vins\t</string>
+
+</resources>

@@ -5,7 +5,7 @@
     <string name="add_tasting">\t\tAdd a New Tasting\t\t</string>
     <string name="review_tasting">\t\tReview a Previous Tasting\t\t</string>
     <string name="review_wine">\t\tReview a Particular Wine\t\t</string>
-    <string name="quit_app">\t\tQuit Wine Tasting Notes\t\t</string>
+    <string name="quit_app">Quit Wine Tasting Notes</string>
 
     <!-- Add Tasting Activity-->
     <string name="tasting_name">\t\tName of Tasting\t\t</string>
@@ -58,10 +58,11 @@
     <string name="header_winery">Winery</string>
     <string name="header_vineyard">Vineyard / Desgnation</string>
     <string name="header_price">Price</string>
+    <string name="add_picture">Add Pictures</string>
     <string name="wines_enter">Enter Wines</string>
 
-    <string name="add_photo">\t\tAdd a Photo\t\t</string>
+    <string name="add_photo">Add a Photo</string>
 
-    <string name="wines_save">\t\tSave These Wines\t\t</string>
+    <string name="wines_save">\tSave These Wines\t</string>
 
 </resources>

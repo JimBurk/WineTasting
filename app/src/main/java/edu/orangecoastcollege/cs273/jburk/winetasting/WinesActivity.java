@@ -8,10 +8,19 @@ import android.widget.EditText;
 
 public class WinesActivity extends AppCompatActivity {
 
+    private long mId = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wines);
+    }
+
+    public void addPhoto(View view) {
+        Intent picturesIntent = new Intent(this, AddPhotoActivity.class);
+        picturesIntent.putExtra("FirstWineID", 0);
+        startActivity(picturesIntent);
+        overridePendingTransition(R.anim.fade_in, 0);
     }
 
     public void winesEnter(View view) {
