@@ -200,7 +200,7 @@ public class Wine implements Parcelable{
     }
 
     /**
-     * Return 0 if the its a stand parcel, else if rsendign files
+     * Return 0 if the its a stand parcel, else if resendign files
      * need to run file descriptors
      *
      * @return 0
@@ -212,7 +212,7 @@ public class Wine implements Parcelable{
      * Writes all the member variables of th class to the parcel.
      * we specify data types
      *
-     * @param parcel The package with details about the game.
+     * @param parcel The package with details about the wine.
      * @param i any custom flags (with files)
      */
     @Override

@@ -14,6 +14,17 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+/***
+ *  The Rating Activity is the page used to enter values to each of the 5 attributes for each wine.
+ *  These are Color, Aroma, Body, Taste and Finish. A rating is from 0 to 5 for each attribute. Tapping
+ *  any of the attribute headers will present the user with a description of what the various rating
+ *  represent. When any wine has been rated, tapping the total button will sum the 5 values. After
+ *  all 10 wines have been totaled, the "Rank" button is set visible. The wines will be ranked for
+ *  the top 3 places. The user may then proceed to the next page, the wine entry page.
+ *
+ *  Written by:  Jim Burk
+ */
+
 public class RatingActivity extends AppCompatActivity {
 
     boolean [] totaled = { false, false, false, false, false, false, false, false, false, false };
@@ -57,6 +68,15 @@ public class RatingActivity extends AppCompatActivity {
         rating5a = new Rating();
         rating5b = new Rating();
     }
+
+    /***
+     * When the "Total" button is pressed for each wine, from 1A to 5B, the 5 attribute ratings are
+     * determined. A check is made that all ratings have been entered, and that the values are from
+     * 0 to 5. If either is not met an alert is displayed. There is a total function for each of the
+     * 10 wines that are identical except for the line number.
+     *
+     * @param view
+     */
 
     public void total1A(View view) {
         EditText colorET = findViewById(R.id.rating1AColorTV);
@@ -258,6 +278,21 @@ public class RatingActivity extends AppCompatActivity {
         }
     }
 
+    /***
+     * Thias method is called by each of the 10 "totalxx" methods. Each Edit text value is converted
+     * to a float, and the value is checked for the correct range. This method puts up the alerts when
+     * the inputs are incorrect. If the value is correct the checkTotal() method is called to see if
+     * all 10 wines have beeen totaled.
+     *
+     * @param colorET
+     * @param aromaET
+     * @param bodyET
+     * @param tasteET
+     * @param finishET
+     *
+     * @return the sum of the 5 attributes
+     */
+
     public Rating getTotal(EditText colorET, EditText aromaET, EditText bodyET, EditText tasteET, EditText finishET) {
         float total = 0.0f;
 
@@ -300,129 +335,159 @@ public class RatingActivity extends AppCompatActivity {
         return newRating;
     }
 
+    /***
+     * This is a dummy method to fill in a bunch of ratings during a demonstration. It will be deleted
+     * for the released version.
+     *
+     * @param v
+     */
+
     public void fillRatings(View v) {
         EditText colorET = findViewById(R.id.rating1AColorTV);
         EditText aromaET = findViewById(R.id.rating1AAromaTV);
         EditText bodyET = findViewById(R.id.rating1ABodyTV);
         EditText tasteET = findViewById(R.id.rating1ATasteTV);
         EditText finishET = findViewById(R.id.rating1AFinishTV);
+        Button totalET = findViewById(R.id.rating1ATotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("2");
+        totalET.setText("");
 
         colorET = findViewById(R.id.rating1BColorTV);
         aromaET = findViewById(R.id.rating1BAromaTV);
         bodyET = findViewById(R.id.rating1BBodyTV);
         tasteET = findViewById(R.id.rating1BTasteTV);
         finishET = findViewById(R.id.rating1BFinishTV);
+        totalET = findViewById(R.id.rating1BTotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("2");
+        totalET.setText("");
 
         colorET = findViewById(R.id.rating2AColorTV);
         aromaET = findViewById(R.id.rating2AAromaTV);
         bodyET = findViewById(R.id.rating2ABodyTV);
         tasteET = findViewById(R.id.rating2ATasteTV);
         finishET = findViewById(R.id.rating2AFinishTV);
+        totalET = findViewById(R.id.rating2ATotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("2");
+        totalET.setText("");
 
         colorET = findViewById(R.id.rating2BColorTV);
         aromaET = findViewById(R.id.rating2BAromaTV);
         bodyET = findViewById(R.id.rating2BBodyTV);
         tasteET = findViewById(R.id.rating2BTasteTV);
         finishET = findViewById(R.id.rating2BFinishTV);
+        totalET = findViewById(R.id.rating2BTotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("2");
+        totalET.setText("");
 
         colorET = findViewById(R.id.rating3AColorTV);
         aromaET = findViewById(R.id.rating3AAromaTV);
         bodyET = findViewById(R.id.rating3ABodyTV);
         tasteET = findViewById(R.id.rating3ATasteTV);
         finishET = findViewById(R.id.rating3AFinishTV);
+        totalET = findViewById(R.id.rating3ATotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("2");
+        totalET.setText("");
 
         colorET = findViewById(R.id.rating3BColorTV);
         aromaET = findViewById(R.id.rating3BAromaTV);
         bodyET = findViewById(R.id.rating3BBodyTV);
         tasteET = findViewById(R.id.rating3BTasteTV);
         finishET = findViewById(R.id.rating3BFinishTV);
+        totalET = findViewById(R.id.rating3BTotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("2");
+        totalET.setText("");
 
         colorET = findViewById(R.id.rating4AColorTV);
         aromaET = findViewById(R.id.rating4AAromaTV);
         bodyET = findViewById(R.id.rating4ABodyTV);
         tasteET = findViewById(R.id.rating4ATasteTV);
         finishET = findViewById(R.id.rating4AFinishTV);
+        totalET = findViewById(R.id.rating4ATotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("2");
+        totalET.setText("");
 
         colorET = findViewById(R.id.rating4BColorTV);
         aromaET = findViewById(R.id.rating4BAromaTV);
         bodyET = findViewById(R.id.rating4BBodyTV);
         tasteET = findViewById(R.id.rating4BTasteTV);
         finishET = findViewById(R.id.rating4BFinishTV);
+        totalET = findViewById(R.id.rating4BTotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("3");
+        totalET.setText("");
 
         colorET = findViewById(R.id.rating5AColorTV);
         aromaET = findViewById(R.id.rating5AAromaTV);
         bodyET = findViewById(R.id.rating5ABodyTV);
         tasteET = findViewById(R.id.rating5ATasteTV);
         finishET = findViewById(R.id.rating5AFinishTV);
+        totalET = findViewById(R.id.rating5ATotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("4");
+        totalET.setText("");
 
         colorET = findViewById(R.id.rating5BColorTV);
         aromaET = findViewById(R.id.rating5BAromaTV);
         bodyET = findViewById(R.id.rating5BBodyTV);
         tasteET = findViewById(R.id.rating5BTasteTV);
         finishET = findViewById(R.id.rating5BFinishTV);
+        totalET = findViewById(R.id.rating5BTotalTV);
 
         colorET.setText("3");
         aromaET.setText("3");
         bodyET.setText("3");
         tasteET.setText("3");
         finishET.setText("5");
+        totalET.setText("");
     }
 
-
+    /***
+     * This method is called for each total to see if all 10 wines have been totaled. If so the "Rank"
+     * button is made visible.
+     */
 
     private void checkTotaled() {
         boolean allDone = true;
@@ -433,19 +498,24 @@ public class RatingActivity extends AppCompatActivity {
         if (allDone) rankButton.setVisibility(View.VISIBLE);
     }
 
+    /***
+     * This method will rank the totals obtained for each wine. Only the top 3 places are determined.
+     * There may be ties for 3rd.
+     */
+
     public void rankCalculate(View view) {
         float order[] = {-1, -1, -1};
         for (int i = 0; i < 10; i++) {
-            if (total[i] > order[0]) {
+            if (total[i] >= order[0]) {
                 order[2] = order[1];
                 order[1] = order[0];
                 order[0] = total[i];
             }
-            else if (total [i] > order[1]) {
+            else if (total [i] >= order[1]) {
                 order[2] = order[1];
                 order[1] = total[i];
             }
-            else if (total[i] > order[2])
+            else if (total[i] >= order[2])
                 order[2] = total[i];
         }
 
@@ -544,11 +614,19 @@ public class RatingActivity extends AppCompatActivity {
         continueButton.setVisibility(View.VISIBLE);
     }
 
+    /***
+     *This method continues to the next activity
+     */
+
     public void ratingContinue(View view) {
         Intent winesIntent = new Intent(this, WinesActivity.class);
         startActivity(winesIntent);
         overridePendingTransition(R.anim.fade_in, 0);
     }
+
+    /***
+     * The following are all alert dialogs for the total errors, and the rating criteria.
+     */
 
     private void setDialog5() {
         AlertDialog alertDialog = new AlertDialog.Builder(RatingActivity.this).create();

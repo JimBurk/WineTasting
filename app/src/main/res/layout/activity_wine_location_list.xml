@@ -2,15 +2,15 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_caffeine_list"
+    android:id="@+id/activity_wine_location_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="edu.orangecoastcollege.cs273.jburk.winetasting.WineLocationListActivity"
-    android:orientation="vertical">
+    tools:context="edu.orangecoastcollege.cs273.jburk.winetasting.WineLocationListActivity">
 
     <fragment
         android:id="@+id/wineMapFragment"

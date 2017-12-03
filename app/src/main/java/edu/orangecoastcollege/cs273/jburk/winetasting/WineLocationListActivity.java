@@ -21,9 +21,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.List;
 
-//TODO: (1) Implement the OnMapReadCallback interface for Google Maps
-//TODO: First, you'll need to compile GoogleMaps in build.gradle
-//TODO: and add permissions and your Google Maps API key in the AndroidManifest.xml
 public class WineLocationListActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private LocationDBHelper db;
@@ -46,7 +43,7 @@ public class WineLocationListActivity extends AppCompatActivity implements OnMap
         locationListAdapter = new LocationListAdapter(this, R.layout.activity_wine_location, allLocationsList);
         locationsListView.setAdapter(locationListAdapter);
 
-        //TODO: (2) Load the support map fragment asynchronously
+        // (2) Load the support map fragment asynchronously
         // Instruct android to load Google Map into our fragment
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.wineMapFragment);
         mapFragment.getMapAsync(this);
@@ -82,11 +79,6 @@ public class WineLocationListActivity extends AppCompatActivity implements OnMap
         }
     }
 
-    // (3) Implement the onMapReady method, which will add a special "marker" for our current location,
-    // which is 33.671028, -117.911305  (MBCC 139)
-    // Then add normal markers for all the wine locations from the allLocationsList.
-    // Set the zoom level of the map to 15.0f
-
     public void viewLocationDetails(View view) {
         if (view instanceof LinearLayout) {
             LinearLayout selectedLayout = (LinearLayout) view;
@@ -97,7 +89,4 @@ public class WineLocationListActivity extends AppCompatActivity implements OnMap
             startActivity(detailsIntent);
         }
     }
-
-    // TODO: (4) Create a viewLocationsDetails(View v) method to create a new Intent to the
-    // TODO: wineDetailsActivity class, sending it the selectedLocation the user picked from the locationsListView
 }
