@@ -5,7 +5,8 @@
     <string name="add_tasting">\t\tAjouter une Nouvelle Degustation\t\t</string>
     <string name="review_tasting">\t\tRevoir une Degustation Precedente\t\t</string>
     <string name="review_wine">\t\tPasser en Revue un Vin Particular\t\t</string>
-    <string name="quit_app">Quit Wine Tasting Notes</string>
+    <string name="locate_wine">\t\tLocate Tasting\t\t</string>
+    <string name="quit_app">Quittez les Notes de Degustation de Vin</string>
 
     <!-- Add Tasting Activity-->
     <string name="tasting_name">\t\tNom de la Degustation\t\t</string>
@@ -57,11 +58,11 @@
     <string name="header_varietal">Varietal</string>
     <string name="header_winery">Vinicloe</string>
     <string name="header_vineyard">Vignobl / la Desgnation</string>
-    <string name="header_price">Price</string>
-    <string name="add_picture">Add Pictures</string>
-    <string name="wines_enter">Enter Wines</string>
+    <string name="header_price">Prix</string>
+    <string name="add_picture">Ajouter des Images</string>
+    <string name="wines_enter">Entrez les Vins</string>
 
-    <string name="add_photo">Add a Photo</string>
+    <string name="add_photo">Ajouiter une Photo</string>
 
     <string name="wines_save">\tSauegarder ces Vins\t</string>
 

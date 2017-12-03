@@ -5,6 +5,7 @@
     <string name="add_tasting">\t\tAdd a New Tasting\t\t</string>
     <string name="review_tasting">\t\tReview a Previous Tasting\t\t</string>
     <string name="review_wine">\t\tReview a Particular Wine\t\t</string>
+    <string name="locate_wine">\t\tLocate Tasting\t\t</string>
     <string name="quit_app">\t\tQuit Wine Tasting Notes\t\t</string>
 
     <!-- Add Tasting Activity-->
@@ -23,7 +24,6 @@
     <string name="summary_button">SUMMARY</string>
 
     <!-- Rating Activity-->
-
     <string name="header_wine">Wine</string>
     <string name="header_appearance">Color</string>
     <string name="header_aroma">Aroma</string>
@@ -58,7 +58,8 @@
     <string name="header_winery">Winery</string>
     <string name="header_vineyard">Vineyard / Desgnation</string>
     <string name="header_price">Price</string>
-    <string name="wines_enter">Enter Wines</string>
+
+    <string name="wines_enter">\t\tEnter Wines\t\t</string>
 
     <string name="add_photo">\t\tAdd a Photo\t\t</string>
 
