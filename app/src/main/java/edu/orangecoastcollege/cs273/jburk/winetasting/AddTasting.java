@@ -11,6 +11,11 @@ import android.widget.EditText;
 import java.util.Date;
 import java.util.EmptyStackException;
 
+/***
+ * This is the screen for adding a new tasting. There are edit texts for three string entries, a name,
+ * a date and a location. This data is passed to the next screen for inclusion in the data base.
+ */
+
 public class AddTasting extends AppCompatActivity {
 
     private EditText tastingNameET;
@@ -27,11 +32,14 @@ public class AddTasting extends AppCompatActivity {
         setContentView(R.layout.activity_add_tasting);
     }
 
+    /***
+     * This method obtains data from the ETs and puts it into an intent for passage to the rating activity.
+     */
+
     public void newRating(View view) {
         tastingNameET = (EditText) findViewById(R.id.tasting_name);
         tastingDateET = (EditText) findViewById(R.id.tasting_name);
         tastingLocationET = (EditText) findViewById(R.id.tasting_name);
-
 
         mTastingName = tastingNameET.getText().toString();
         mTastingDate = tastingDateET.getText().toString();

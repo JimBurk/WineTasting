@@ -52,6 +52,12 @@ public class RatingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rating);
 
+        Intent intentFromOpen = getIntent();
+
+        String tastingName = intentFromOpen.getStringExtra("TastingName");
+        String tastingDatee = intentFromOpen.getStringExtra("TastingDate");
+        String tastingLocation = intentFromOpen.getStringExtra("TastingLocation");
+
         rankButton = (Button) findViewById(R.id.rankDisplay);
         rankButton.setVisibility(View.INVISIBLE);
         continueButton = (Button) findViewById(R.id.ratingContinue);
@@ -500,7 +506,7 @@ public class RatingActivity extends AppCompatActivity {
 
     /***
      * This method will rank the totals obtained for each wine. Only the top 3 places are determined.
-     * There may be ties for 3rd.
+     * There may currently be ties for any place.
      */
 
     public void rankCalculate(View view) {
@@ -615,7 +621,7 @@ public class RatingActivity extends AppCompatActivity {
     }
 
     /***
-     *This method continues to the next activity
+     *This method continues to the next activity.
      */
 
     public void ratingContinue(View view) {

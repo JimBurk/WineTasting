@@ -1,7 +1,10 @@
 package edu.orangecoastcollege.cs273.jburk.winetasting;
 
+import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import java.net.URI;
 
 /**
  * The <code>Wine</code> class maintains information about wine, including its id number, varietal,
@@ -18,6 +21,7 @@ public class Wine implements Parcelable{
     private String mWinery;
     private String mVineyard;
     private double mPrice;
+    private Uri mImageUri;
 
     /**
      * Default Constructor, Creates a new <code>Wine</code> from its id, varietal, vintage, winery,
@@ -33,16 +37,17 @@ public class Wine implements Parcelable{
      * @param mVineyard The wine vineyard.
      * @param mPrice The wine price.
      */
-    public Wine(String mVarietal, int mVintage, String mWinery, String mVineyard, double mPrice){
+    public Wine(String mVarietal, int mVintage, String mWinery, String mVineyard, double mPrice, Uri imageUri) {
         this.mVarietal = mVarietal;
         this.mVintage = mVintage;
         this.mWinery = mWinery;
         this.mVineyard = mVineyard;
         this.mPrice = mPrice;
+        this.mImageUri = imageUri;
     }
 
     /**
-     * Creates a new <code>Wine</code> from its id, varietal, vintage, winery, vineyard, and price.
+     * Creates a new <code>Wine</code> from its id, varietal, vintage, winery, vineyard, price and Uri.
      * @param mId The wine id.
      * @param mVarietal The wine varietal.
      * @param mVintage The wine vintage.
@@ -50,13 +55,14 @@ public class Wine implements Parcelable{
      * @param mVineyard The wine vineyard.
      * @param mPrice The wine price.
      */
-    public Wine(Long mId, String mVarietal, int mVintage, String mWinery, String mVineyard, double mPrice) {
+    public Wine(Long mId, String mVarietal, int mVintage, String mWinery, String mVineyard, double mPrice, Uri imageUri) {
         this.mId = mId;
         this.mVarietal = mVarietal;
         this.mVintage = mVintage;
         this.mWinery = mWinery;
         this.mVineyard = mVineyard;
         this.mPrice = mPrice;
+        this.mImageUri = imageUri;
     }
 
     /**

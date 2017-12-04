@@ -5,7 +5,7 @@
     <string name="add_tasting">\t\tAjouter une Nouvelle Degustation\t\t</string>
     <string name="review_tasting">\t\tRevoir une Degustation Precedente\t\t</string>
     <string name="review_wine">\t\tPasser en Revue un Vin Particular\t\t</string>
-    <string name="locate_wine">\t\tLocate Tasting\t\t</string>
+    <string name="locate_wine">\t\tSituer la Degustation\t\t</string>
     <string name="quit_app">Quittez les Notes de Degustation de Vin</string>
 
     <!-- Add Tasting Activity-->
@@ -21,7 +21,7 @@
     <string name="winery_text_view">Vinicloe</string>
     <string name="vineyard_text_view">Vignoble</string>
     <string name="price_text_view">Prix</string>
-    <string name="summary_button">RESUME</string>
+    <string name="summary_button">Reprende</string>
 
     <!-- Rating Activity-->
 
@@ -50,7 +50,7 @@
         \t\n\tpour changer le contenu, et le bouton TOTAL pour ajouter le evaluations.\t</string>
 
     <string name="rank">\t\tClasser le Vins\t\t</string>
-    <string name="rating_continue">\t\tRESUME\t\t</string>
+    <string name="rating_continue">\t\tReprende\t\t</string>
 
     <!-- Wines Activity-->
 

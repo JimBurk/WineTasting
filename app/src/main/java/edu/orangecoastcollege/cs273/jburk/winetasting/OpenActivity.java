@@ -8,14 +8,13 @@ import android.widget.ListView;
 
 import java.util.List;
 
-public class OpenActivity extends AppCompatActivity {
+/***
+ * This is the Opening screen for the App. The user has the choices of adding a new tasting, reviewing
+ * a previous tasting, reviewing the wines, locating some wine points of interest on a Google map or
+ * exiting the app.
+ */
 
-    /*
-    private DBHelper db;
-    private List<Wine> winesList;
-    private ListView winesListView;
-    private WinePreviewListAdapter wineAdapter;
-    */
+public class OpenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
