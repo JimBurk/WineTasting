@@ -1,0 +1,1528 @@
+﻿[
+ {
+   "Name": "Willcox",
+   "state": "Arizona",
+   "County": "[Cochise, Graham]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Altus",
+   "state": "Arkansas",
+   "County": "[Franklin]",
+   "Located": "[Arkansas Mountain, Ozark Mountain]",
+   "Contains": ""
+ },
+ {
+   "Name": "Arkansas Mountain",
+   "state": "Arkansas",
+   "County": "[Conway, Crawford, Franklin, Johnson, Logan, Madison, Newton, Pope, Sebastian, Van Buren, Yell]",
+   "Located": "[Ozark Mountain]",
+   "Contains": "[Altus]"
+ },
+ {
+   "Name": "Adelaida District",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "Alexander Valley",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Northern Sonoma]",
+   "Contains": "[Pine Mountain--Cloverdale Peak, Russian River Valley]"
+ },
+ {
+   "Name": "Alta Mesa",
+   "state": "California",
+   "County": "[Sacramento]",
+   "Located": "[Lodi]",
+   "Contains": ""
+ },
+ {
+   "Name": "Anderson Valley",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "[Mendocino, North Coast]",
+   "Contains": "[Mendocino Ridge]"
+ },
+ {
+   "Name": "Antelope Valley of the California High Desert",
+   "state": "California",
+   "County": "[Kern, Los Angeles]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Arroyo Grande Valley",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Arroyo Seco",
+   "state": "California",
+   "County": "[Monterey]",
+   "Located": "[Central Coast, Monterey]",
+   "Contains": ""
+ },
+ {
+   "Name": "Atlas Peak",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Ballard Canyon",
+   "state": "California",
+   "County": "[Santa Barbara]",
+   "Located": "[Central Coast, Santa Ynez Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Ben Lomond Mountain",
+   "state": "California",
+   "County": "[Santa Cruz]",
+   "Located": "[Santa Cruz Mountains]",
+   "Contains": ""
+ },
+ {
+   "Name": "Benmore Valley",
+   "state": "California",
+   "County": "[Lake]",
+   "Located": "[North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Bennett Valley",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Sonoma Coast, Sonoma Mountain, Sonoma Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Big Valley District–Lake County",
+   "state": "California",
+   "County": "[Lake]",
+   "Located": "[Clear Lake, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Borden Ranch",
+   "state": "California",
+   "County": "[Sacramento, San Joaquin]",
+   "Located": "[Lodi]",
+   "Contains": ""
+ },
+ {
+   "Name": "California Shenandoah Valley",
+   "state": "California",
+   "County": "[Amador, El Dorado]",
+   "Located": "[Sierra Foothills]",
+   "Contains": ""
+ },
+ {
+   "Name": "Calistoga",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Capay Valley",
+   "state": "California",
+   "County": "[Yolo]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Carmel Valley",
+   "state": "California",
+   "County": "[Monterey]",
+   "Located": "[Central Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Central Coast",
+   "state": "California",
+   "County": "[Alameda, Contra Costa, Monterey, San Benito, San Francisco, San Luis Obispo, San Mateo, Santa Barbara, Santa Clara, Santa Cruz,]",
+   "Located": "[Adelaida District, Arroyo Grande, Arroyo Seco, Ballard Canyon, Carmel Valley, Chalone, Cienega Valley, Creston District, Edna Valley, El Pomar District, Hames Valley, Happy Canyon of Santa Barbara, Lamorinda, Lime Kiln Valley, Livermore Valley, Los Olivos District, Monterey, Mt. Harlan, Pacheco Pass, Paicines, Paso Robles, Paso Robles Estrella District, Paso Robles Geneseo District, Paso Robles Highlands District, Paso Robles Willow Creek District, San Antonio Valley, San Benito, San Bernabe, San Francisco Bay, San Juan Creek, San Lucas, San Miguel District, San Ysidro District, Santa Clara Valley, Santa Lucia Highlands, Santa Margarita Ranch, Santa Maria Valley, Santa Ynez Valley, Sta. Rita Hills, Templeton Gap District, York Mountain (Santa Cruz Mountain AVA specifically excluded)]",
+   "Contains": ""
+ },
+ {
+   "Name": "Chalk Hill",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Northern Sonoma, Russian River Valley, Sonoma Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Chalone",
+   "state": "California",
+   "County": "[Monterey, San Benito]",
+   "Located": "[Central Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Chiles Valley",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Cienega Valley",
+   "state": "California",
+   "County": "[San Benito]",
+   "Located": "[Central Coast, San Benito]",
+   "Contains": "[Lime Kiln Valley]"
+ },
+ {
+   "Name": "Clarksburg",
+   "state": "California",
+   "County": "[Yolo]",
+   "Located": "[Merritt Island]",
+   "Contains": ""
+ },
+ {
+   "Name": "Clear Lake",
+   "state": "California",
+   "County": "[Lake]",
+   "Located": "[North Coast]",
+   "Contains": "[Big Valley District–Lake County, High Valley, Kelsey Bench–Lake County, Red Hills Lake County]"
+ },
+ {
+   "Name": "Clements Hills",
+   "state": "California",
+   "County": "[San Joaquin]",
+   "Located": "[Lodi]",
+   "Contains": ""
+ },
+ {
+   "Name": "Cole Ranch",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "[Mendocino, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Coombsville",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Cosumnes River",
+   "state": "California",
+   "County": "[Sacramento]",
+   "Located": "[Lodi]",
+   "Contains": ""
+ },
+ {
+   "Name": "Covelo",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Creston District",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "Cucamonga Valley",
+   "state": "California",
+   "County": "[Riverside San Bernadino]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Diablo Grande",
+   "state": "California",
+   "County": "[Stanislaus]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Diamond Mountain District",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]]",
+   "Contains": ""
+ },
+ {
+   "Name": "Dos Rios",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Dry Creek Valley",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Northern Sonoma]",
+   "Contains": "[Rockpile]"
+ },
+ {
+   "Name": "Dunnigan Hills",
+   "state": "California",
+   "County": "[Yolo]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Eagle Peak Mendocino County",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "[North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Edna Valley",
+   "state": "California",
+   "County": "[[San Luis Obispo]",
+   "Located": "[Central Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "El Dorado",
+   "state": "California",
+   "County": "[El Dorado]",
+   "Located": "[Sierra Foothills]",
+   "Contains": "[Fair Play]"
+ },
+ {
+   "Name": "El Pomar District",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "Fair Play",
+   "state": "California",
+   "County": "[El Dorado]",
+   "Located": "[El Dorado, Sierra Foothills]",
+   "Contains": ""
+ },
+ {
+   "Name": "Fiddletown",
+   "state": "California",
+   "County": "[Amador]",
+   "Located": "[Sierra Foothills]",
+   "Contains": ""
+ },
+ {
+   "Name": "Fort Ross-Seaview",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Sonoma Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Fountaingrove District",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Green Valley of Russian River Valley",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Northern Sonoma, Russian River Valley, Sonoma Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Guenoc Valley",
+   "state": "California",
+   "County": "[Lake]",
+   "Located": "[North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Hames Valley",
+   "state": "California",
+   "County": "[Monterey]",
+   "Located": "[Central Coast, Monterey]",
+   "Contains": ""
+ },
+ {
+   "Name": "Happy Canyon of Santa Barbara",
+   "state": "California",
+   "County": "[Santa Barbara]",
+   "Located": "[Central Coast, Santa Ynez Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "High Valley",
+   "state": "California",
+   "County": "[Lake]",
+   "Located": "[Clear Lake, North Coast ]",
+   "Contains": ""
+ },
+ {
+   "Name": "Howell Mountain",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Inwood Valley",
+   "state": "California",
+   "County": "[Shasta]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Jahant",
+   "state": "California",
+   "County": "[Sacramento San Joaquin]",
+   "Located": "[Lodi]",
+   "Contains": ""
+ },
+ {
+   "Name": "Kelsey Bench–Lake County",
+   "state": "California",
+   "County": "[Lake]",
+   "Located": "[Clear Lake, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Knights Valley",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Northern Sonoma]",
+   "Contains": ""
+ },
+ {
+   "Name": "Lamorinda",
+   "state": "California",
+   "County": "[Contra Costa]",
+   "Located": "[Central Coast, San Francisco Bay]",
+   "Contains": ""
+ },
+ {
+   "Name": "Leona Valley",
+   "state": "California",
+   "County": "[Los Angeles]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Lime Kiln Valley",
+   "state": "California",
+   "County": "[San Benito]",
+   "Located": "[Cienega Valley, Central Coast, San Benito]",
+   "Contains": ""
+ },
+ {
+   "Name": "Livermore Valley",
+   "state": "California",
+   "County": "[Alameda Contra Costa]",
+   "Located": "[Central Coast, San Francisco Bay]",
+   "Contains": ""
+ },
+ {
+   "Name": "Lodi",
+   "state": "California",
+   "County": "[Sacramento, San Joaquin]",
+   "Located": "[Alta Mesa, Borden Ranch, Clements Hills, Cosumnes River, Jahant, Mokelumne River, Sloughhouse]",
+   "Contains": ""
+ },
+ {
+   "Name": "Los Carneros",
+   "state": "California",
+   "County": "[Napa Sonoma]",
+   "Located": "[Napa Valley, North Coast, Sonoma Coast, Sonoma Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Los Olivos District",
+   "state": "California",
+   "County": "[Santa Barbara]",
+   "Located": "[Central Coast, Santa Ynez Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Madera",
+   "state": "California",
+   "County": "[Fresno, Madera]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Malibu Coast",
+   "state": "California",
+   "County": "[Los Angeles, Ventura]",
+   "Located": "[Malibu-Newton Canyon, Saddle Rock-Malibu]",
+   "Contains": ""
+ },
+ {
+   "Name": "Malibu-Newton Canyon",
+   "state": "California",
+   "County": "[Los Angeles]",
+   "Located": "[Malibu Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Manton Valley",
+   "state": "California",
+   "County": "[Shasta Tehama]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Mendocino",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "[North Coast]",
+   "Contains": "[Anderson Valley, Cole Ranch, McDowell Valley, Mendocino Ridge, Potter Valley, Redwood Valley, Yorkville Highlands]"
+ },
+ {
+   "Name": "Mendocino Ridge",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "[Mendocino, North Coast]]",
+   "Contains": "[Anderson Valley]"
+ },
+ {
+   "Name": "Merritt Island",
+   "state": "California",
+   "County": "[Yolo]",
+   "Located": "[Clarksburg]",
+   "Contains": ""
+ },
+ {
+   "Name": "McDowell Valley",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "[Mendocino, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Mokelumne River",
+   "state": "California",
+   "County": "[San Joaquin]",
+   "Located": "[Lodi]",
+   "Contains": ""
+ },
+ {
+   "Name": "Monterey",
+   "state": "California",
+   "County": "[Monterey]",
+   "Located": "[Central Coast]",
+   "Contains": "[Arroyo Seco, Hames Valley, San Bernabe, San Lucas, Santa Lucia Highlands]"
+ },
+ {
+   "Name": "Moon Mountain District Sonoma County",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Sonoma Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Mt. Harlan",
+   "state": "California",
+   "County": "[San Benito]",
+   "Located": "[Central Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Mt. Veeder",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Napa Valley",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[North Coast]",
+   "Contains": "[Atlas Peak, Calistoga, Chiles Valley, Coombsville, Diamond Mountain District, Howell Mountain, Los Carneros, Mt. Veeder, Oak Knoll District of Napa Valley, Oakville, Rutherford, Spring Mountain District, St. Helena, Stags Leap District, Wild Horse Valley, Yountville]"
+ },
+ {
+   "Name": "North Coast",
+   "state": "California",
+   "County": "[Lake Marin, Mendocino, Napa, Solano, Sonoma]",
+   "Located": "[Alexander Valley, Anderson Valley, Atlas Peak, Benmore Valley, Bennett Valley, Big Valley District–Lake County, Calistoga, Chalk Hill, Chiles Valley, Clear Lake, Cole Ranch, Coombsville, Diamond Mountain District, Dry Creek Valley, Eagle Peak, Mendocino County, Fort Ross-Seaview, Fountaingrove District, Green Valley of the Russian River Valley, Guenoc Valley, High Valley, Howell Mountain, Kelsey Bench–Lake County, Knights Valley, Los Carneros, McDowell Valley, Mendocino, Mendocino Ridge, Moon Mountain District Sonoma County, Mt. Veeder, Napa Valley, Northern Sonoma, Oak Knoll District of Napa Valley, Oakville, Pine Mountain—Cloverdale Peak, Potter Valley, Red Hills Lake County, Redwood Valley, Rockpile, Russian River Valley, Rutherford, Solano County Green Valley, Sonoma Coast, Sonoma Mountain, Sonoma Valley, Spring Mountain District, St. Helena, Stags Leap District, Suisun Valley, Wild Horse Valley, Yorkville Highlands Yountville]",
+   "Contains": ""
+ },
+ {
+   "Name": "North Yuba",
+   "state": "California",
+   "County": "[Yuba]",
+   "Located": "[Sierra Foothills]",
+   "Contains": ""
+ },
+ {
+   "Name": "Northern Sonoma",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast]",
+   "Contains": "[Alexander Valley, Chalk Hill Dry Creek, Green Valley of Russian River Valley, Knights Valley, Pine Mountain—Cloverdale Peak, Rockpile, Russian River Valley, Sonoma Coast]"
+ },
+ {
+   "Name": "Oak Knoll District of Napa Valley",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Oakville",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Pacheco Pass",
+   "state": "California",
+   "County": "[San Benito]",
+   "Located": "[Central Coast, San Francisco Bay, Santa Clara Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Paicines",
+   "state": "California",
+   "County": "[San Benito]",
+   "Located": "[Central Coast, San Benito]",
+   "Contains": ""
+ },
+ {
+   "Name": "Paso Robles",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast]",
+   "Contains": "[Adelaida District, Creston District, El Pomar District, Paso Robles Estrella District, Paso Robles Geneseo District, Paso Robles Highlands District, Paso Robles Willow Creek District, San Juan Creek, San Miguel District, Santa Margarita Ranch,Templeton Gap District]"
+ },
+ {
+   "Name": "Paso Robles Estrella District",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "Paso Robles Geneseo District",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "Paso Robles Highlands District",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "Paso Robles Willow Creek District",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "Pine Mountain-Cloverdale Peak",
+   "state": "California",
+   "County": "[Mendocino Sonoma]",
+   "Located": "[North Coast, Northern Sonoma]",
+   "Contains": "[Alexander Valley]"
+ },
+ {
+   "Name": "Potter Valley",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "[Mendocino, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Ramona Valley",
+   "state": "California",
+   "County": "[San Diego]",
+   "Located": "[South Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Red Hills Lake County",
+   "state": "California",
+   "County": "[Lake]",
+   "Located": "[Clear Lake, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Redwood Valley",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "[Mendocino, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "River Junction",
+   "state": "California",
+   "County": "[San Joaquin]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Rockpile",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Northern Sonoma]",
+   "Contains": "[Dry Creek Valley]"
+ },
+ {
+   "Name": "Russian River Valley",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Northern Sonoma, Sonoma Coast]",
+   "Contains": "[Alexander Valley, Chalk Hill, Green Valley of Russian River Valley]"
+ },
+ {
+   "Name": "Rutherford",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Saddle Rock-Malibu",
+   "state": "California",
+   "County": "[Los Angeles]",
+   "Located": "[Malibu Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Salado Creek",
+   "state": "California",
+   "County": "[Stanislaus]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "San Antonio Valley",
+   "state": "California",
+   "County": "[Monterey]",
+   "Located": "[Central Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "San Benito",
+   "state": "California",
+   "County": "[San Benito]",
+   "Located": "[Central Coast]",
+   "Contains": "[Cienega Valley, Lime Kiln Valley, Paicines]"
+ },
+ {
+   "Name": "San Bernabe",
+   "state": "California",
+   "County": "[Monterey]",
+   "Located": "[Central Coast, Monterey]",
+   "Contains": ""
+ },
+ {
+   "Name": "San Francisco Bay",
+   "state": "California",
+   "County": "[Alameda, Contra Costa, San Benito, San Francisco, San Mateo, Santa Clara, Santa Cruz, Sola]no",
+   "Located": "[Central Coast]",
+   "Contains": "[Lamorinda, Livermore Valley, Pacheco Pass, San Ysidro District, Santa Clara Valley (specifically excludes Santa Cruz Mountains)]"
+ },
+ {
+   "Name": "San Juan Creek",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "San Lucas",
+   "state": "California",
+   "County": "[Monterey]",
+   "Located": "[Central Coast, Monterey]",
+   "Contains": ""
+ },
+ {
+   "Name": "San Miguel District",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "San Pasqual Valley",
+   "state": "California",
+   "County": "[San Diego]",
+   "Located": "[South Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "San Ysidro District",
+   "state": "California",
+   "County": "[Santa Clara]",
+   "Located": "[Central Coast, San Francisco Bay, Santa Clara Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Santa Clara Valley",
+   "state": "California",
+   "County": "[Alameda, San Benito, Santa Clara]",
+   "Located": "[Central Coast, San Francisco Bay]",
+   "Contains": "[Pacheco Pass, San Ysidro District]"
+ },
+ {
+   "Name": "Santa Cruz Mountains",
+   "state": "California",
+   "County": "[San Mateo, Santa Clara, Santa Cruz]",
+   "Located": "[San Francisco Bay, Central Coast]",
+   "Contains": "Ben Lomond Mountain"
+ },
+ {
+   "Name": "Santa Lucia Highlands",
+   "state": "California",
+   "County": "[Monterey]",
+   "Located": "[Central Coast, Monterey]",
+   "Contains": ""
+ },
+ {
+   "Name": "Santa Margarita Ranch",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "Santa Maria Valley",
+   "state": "California",
+   "County": "[San Luis Obispo, Santa Barbara]",
+   "Located": "[Central Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Santa Ynez Valley",
+   "state": "California",
+   "County": "[Santa Barbara]",
+   "Located": "[Central Coast]",
+   "Contains": "[Ballard Canyon, Happy Canyon of Santa Barbara, Los Olivos District, Sta. Rita Hills]"
+ },
+ {
+   "Name": "Seiad Valley",
+   "state": "California",
+   "County": "[Siskiyou]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Sierra Foothills",
+   "state": "California",
+   "County": "[Amador, Calaveras, El Dorado, Mariposa, Nevada, PM]",
+   "Located": "[California Shenandoah Valley, El Dorado, Fair Play, Fiddletown North Yuba]",
+   "Contains": ""
+ },
+ {
+   "Name": "Sierra Pelona Valley",
+   "state": "California",
+   "County": "[Los Angeles]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Sloughhouse",
+   "state": "California",
+   "County": "[Sacramento]",
+   "Located": "[Lodi]",
+   "Contains": ""
+ },
+ {
+   "Name": "Solano County Green Valley",
+   "state": "California",
+   "County": "[Solano]",
+   "Located": "[North Coast]",
+   "Contains": "Wild Horse Valley"
+ },
+ {
+   "Name": "Sonoma Coast",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast]",
+   "Contains": "[Bennett Valley, Chalk Hill, Green Valley of Russian River Valley, Los Carneros, Northern Sonoma, Russian River Valley, Sonoma Valley]"
+ },
+ {
+   "Name": "Sonoma Mountain",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Sonoma Valley]",
+   "Contains": "Bennett Valley"
+ },
+ {
+   "Name": "Sonoma Valley",
+   "state": "California",
+   "County": "[Sonoma]",
+   "Located": "[North Coast, Sonoma Coast ]",
+   "Contains": "[Bennett Valley, Los Carneros,  Moon Mountain District Sonoma County, Sonoma Mountain]"
+ },
+ {
+   "Name": "South Coast",
+   "state": "California",
+   "County": "[Los Angeles, Orange, Riverside, San Bernadino, SaM]",
+   "Located": "[Ramona Valley, San Pasquale Valley, Temecula Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Spring Mountain District",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Squaw Valley–Miramonte",
+   "state": "California",
+   "County": "[Fresno]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "St. Helena",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Sta. Rita Hills",
+   "state": "California",
+   "County": "[Santa Barbara]",
+   "Located": "[Central Coast, Santa Ynez Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Stags Leap District",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Suisun Valley",
+   "state": "California",
+   "County": "[Solano]",
+   "Located": "[North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Temecula Valley",
+   "state": "California",
+   "County": "[Riverside]",
+   "Located": "[South Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Templeton Gap District",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast, Paso Robles]",
+   "Contains": ""
+ },
+ {
+   "Name": "Tracy Hills",
+   "state": "California",
+   "County": "[San Joaquin, Stanislaus]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Trinity Lakes",
+   "state": "California",
+   "County": "[Trinity]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Wild Horse Valley",
+   "state": "California",
+   "County": "[Napa, Solano]",
+   "Located": "[Napa Valley, North Coast, Solano County, Green Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Willow Creek",
+   "state": "California",
+   "County": "[Humboldt, Trinity]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "York Mountain",
+   "state": "California",
+   "County": "[San Luis Obispo]",
+   "Located": "[Central Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Yorkville Highlands",
+   "state": "California",
+   "County": "[Mendocino]",
+   "Located": "[Mendocino, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Yountville",
+   "state": "California",
+   "County": "[Napa]",
+   "Located": "[Napa Valley, North Coast]",
+   "Contains": ""
+ },
+ {
+   "Name": "Western Connecticut Highlands",
+   "state": "Connecticut",
+   "County": "[Fairfield, Hartford, Litchfield, New Haven]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Eagle Foothills",
+   "state": "Idaho",
+   "County": "[Ada, Gem]",
+   "Located": "[Snake River Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Shawnee Hills",
+   "state": "Illinois",
+   "County": "[Alexander, Gallatin, Hardin, Jackson, Johnson, PoM Williamson]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Bartholomew, Brown, Crawford, Daviess, Dubois, Floyd, Greene, Harrison, Jackson, Lawrence, Martin, Monroe, Morgan, Orange, Owens, Perry, Scott, Spencer, Washington",
+   "state": "Indiana",
+   "County": "[]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Catoctin",
+   "state": "Maryland",
+   "County": "[Frederick, Washington]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Linganore",
+   "state": "Maryland",
+   "County": "[Carroll, Frederick]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Martha’s Vineyard",
+   "state": "Massachusetts",
+   "County": "[Dukes]",
+   "Located": "[Southeastern New England]",
+   "Contains": ""
+ },
+ {
+   "Name": "Fennville",
+   "state": "Michigan",
+   "County": "[Allegan]",
+   "Located": "[Lake Michigan Shore]",
+   "Contains": ""
+ },
+ {
+   "Name": "Lake Michigan Shore",
+   "state": "Michigan",
+   "County": "[Allegan, Berrien, Cass, Kalamazoo, Van Buren]",
+   "Located": "[Fennville]",
+   "Contains": ""
+ },
+ {
+   "Name": "Leelanau Peninsula",
+   "state": "Michigan",
+   "County": "[Leelanau]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Old Mission Peninsula",
+   "state": "Michigan",
+   "County": "[Grand Traverse]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Tip of the Mitt",
+   "state": "Michigan",
+   "County": "[Alpena, Antrim, Charlevoix, Cheboygan, Emmet, PreM]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Alexandria Lakes",
+   "state": "Minnsota",
+   "County": "[Douglas]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Augusta",
+   "state": "Missouri",
+   "County": "[St. Charles]",
+   "Located": "[Ozark Mountain]",
+   "Contains": ""
+ },
+ {
+   "Name": "Hermann",
+   "state": "Missouri",
+   "County": "[Gasconade, Franklin]",
+   "Located": "[Ozark Mountain]",
+   "Contains": ""
+ },
+ {
+   "Name": "Ozark Highlands",
+   "state": "Missouri",
+   "County": "[Crawford, Dent, Franklin, Gasconade, Maries, OsagM, Texas]",
+   "Located": "[Ozark Mountain]",
+   "Contains": ""
+ },
+ {
+   "Name": "Outer Coastal Plain",
+   "state": "New Jersey",
+   "County": "[Atlantic, Burlington, Camden, Cape May, CumberlanM]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Warren Hills",
+   "state": "New Jersy",
+   "County": "[Warren]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Middle Rio Grande Valley",
+   "state": "New Mexico",
+   "County": "[Bernalillo, Sandoval, Socorro, Valencia]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Mimbres Valley",
+   "state": "New Mexico",
+   "County": "[Grant, Luna]]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Cayuga Lake",
+   "state": "New York",
+   "County": "[Cayuga, Seneca, Tompkins]]",
+   "Located": "[Finger Lakes]",
+   "Contains": ""
+ },
+ {
+   "Name": "Champlain Valley of New York",
+   "state": "New York",
+   "County": "[Clinton, Essex]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Finger Lakes",
+   "state": "New York",
+   "County": "[Cayuga, Courtland, Livingston, Monroe, Onondaga, Mompkins, Wayne, Yates]",
+   "Located": "[Cayuga Lake, Seneca Lake]",
+   "Contains": ""
+ },
+ {
+   "Name": "Hudson River Region",
+   "state": "New York",
+   "County": "[Columbia, Duchess, Orange, Putnam, Rockland, SullM]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Long Island",
+   "state": "New York",
+   "County": "[Nassau, Suffolk]",
+   "Located": "[North Fork of Long Island, The Hamptons]",
+   "Contains": ""
+ },
+ {
+   "Name": "Niagara Escarpment",
+   "state": "New York",
+   "County": "[Niagara]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "North Fork of Long Island",
+   "state": "New York",
+   "County": "[Suffolk]",
+   "Located": "[Long Island]",
+   "Contains": ""
+ },
+ {
+   "Name": "Seneca Lake",
+   "state": "New York",
+   "County": "[Ontario, Schuyler, Seneca, Yates]",
+   "Located": "[Finger Lakes]",
+   "Contains": ""
+ },
+ {
+   "Name": "The Hamptons, Long Island",
+   "state": "New York",
+   "County": "[Suffolk]",
+   "Located": "[Long Island]",
+   "Contains": ""
+ },
+ {
+   "Name": "Haw River Valley",
+   "state": "North Carolina",
+   "County": "[Alamance, Caswell, Chatham, Guilford, Orange, RocM]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Swan Creek",
+   "state": "North Carolina",
+   "County": "[Iredell, Wilkes, Yadkin]",
+   "Located": "[Yadkin Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Yadkin Valley",
+   "state": "North Carolina",
+   "County": "[Davidson, Davie, Forsythe, Stokes, Surrey, WilkesM]",
+   "Located": "[Swan Creek]",
+   "Contains": ""
+ },
+ {
+   "Name": "Grand River Valley",
+   "state": "Ohio",
+   "County": "[Ashtabula, Geauga, Lake]",
+   "Located": "[Lake Erie]",
+   "Contains": ""
+ },
+ {
+   "Name": "Isle St. George",
+   "state": "Ohio",
+   "County": "[Ottawa]",
+   "Located": "[Lake Erie]",
+   "Contains": ""
+ },
+ {
+   "Name": "Loramie Creek",
+   "state": "Ohio",
+   "County": "[Shelby]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Applegate Valley",
+   "state": "Oregon",
+   "County": "[Jackson, Josephine]",
+   "Located": "[Rogue Valley, Southern Oregon]",
+   "Contains": ""
+ },
+ {
+   "Name": "Chehalem Mountains",
+   "state": "Oregon",
+   "County": "[Clackamas, Washington, Yamhill]",
+   "Located": "[Willamette Valley]",
+   "Contains": "[Ribbon Ridge]"
+ },
+ {
+   "Name": "Dundee Hills",
+   "state": "Oregon",
+   "County": "[Yamhill]",
+   "Located": "[Willamette Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Elkton Oregon",
+   "state": "Oregon",
+   "County": "[Douglas]",
+   "Located": "[Southern Oregon, Umpqua Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Eola -Amity Hills",
+   "state": "Oregon",
+   "County": "[Polk, Yamhill]",
+   "Located": "[Willamette Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "McMinnville",
+   "state": "Oregon",
+   "County": "[Yamhill]",
+   "Located": "[Willamette Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Red Hill Douglas County Oregon",
+   "state": "Oregon",
+   "County": "[Douglas]",
+   "Located": "[Southern Oregon, Umpqua Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Ribbon Ridge",
+   "state": "Oregon",
+   "County": "[Yamhill]",
+   "Located": "[Chehalem Mountains, Willamette Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "The Rocks District of Milton–Freewater",
+   "state": "Oregon",
+   "County": "[Umatilla]",
+   "Located": "[Columbia Valley, Walla Walla Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Rogue Valley",
+   "state": "Oregon",
+   "County": "[Jackson, Josephine]",
+   "Located": "[Southern Oregon]",
+   "Contains": "[Applegate Valley]"
+ },
+ {
+   "Name": "Southern Oregon",
+   "state": "Oregon",
+   "County": "[Douglas, Jackson, Josephine]",
+   "Located": "[Applegate Valley, Elkton Oregon, Red Hill Douglas County Oregon, Rogue Valley, Umpqua Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Umpqua Valley",
+   "state": "Oregon",
+   "County": "[Douglas]",
+   "Located": "[Southern Oregon]",
+   "Contains": "[Elkton Oregon, Red Hill Douglas County Oregon]"
+ },
+ {
+   "Name": "Willamette Valley",
+   "state": "Oregon",
+   "County": "[Benton, Clackamas, Lane, Linn, Marion, Multnomah,M]",
+   "Located": "[Chehalem Mountains, Dundee Hills, Eola-Amity Hills, McMinnville, Ribbon Ridge, Yamhill-Carlton]",
+   "Contains": ""
+ },
+ {
+   "Name": "Yamhill-Carlton",
+   "state": "Oregon",
+   "County": "[Washington, Yamhill]",
+   "Located": "[Willamette Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Lancaster, Valley",
+   "state": "Pennsylvania",
+   "County": "[Chester, Lancaster]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Lehigh Valley",
+   "state": "Pennsylvania",
+   "County": "[Berks, Carbon, Lehigh, Monroe, Northampton, SchuyM]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Bell Mountain",
+   "state": "Texas",
+   "County": "[Gillespie]",
+   "Located": "[Texas Hill Country]",
+   "Contains": ""
+ },
+ {
+   "Name": "Escondido Valley",
+   "state": "Texas",
+   "County": "[Pecos]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Fredericksburg in the Texas Hill Country",
+   "state": "Texas",
+   "County": "[Gillespie]",
+   "Located": "[Texas Hill Country]",
+   "Contains": ""
+ },
+ {
+   "Name": "Texas Davis Mountains",
+   "state": "Texas",
+   "County": "[Jeff Davis]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Texas High Plains",
+   "state": "Texas",
+   "County": "[Armstrong, Bailey, Borden, Briscoe, Castro, CochrMens, Floyd, Gaines, Garza, Hale, Hockley, Lamb, Lubbock, Lynn, Motley, Parmer, Randall, Swisher, Terry, Yoakum]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Texas Hill Country",
+   "state": "Texas",
+   "County": "[Bandera, Bexar, Blanco, Burnet, Comal, Edwards, GMerr, Kimble, Lampasas, Llano, Mason, McCulloch, Medina, Menard, Real, San Saba, Travis, Uvalde, Williamson]",
+   "Located": "[Bell Mountain, Fredericksburg in the Texas Hill Country]",
+   "Contains": ""
+ },
+ {
+   "Name": "Texoma",
+   "state": "Texas",
+   "County": "[Cooke, Fannin, Grayson, Montague",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Middleburg Virginia",
+   "state": "Virginia",
+   "County": "[Fauquier, Loudoun]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Monticello",
+   "state": "Virginia",
+   "County": "[Albemarle, Greene, Nelson, Orange]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "North Fork of Roanoke",
+   "state": "Virginia",
+   "County": "[Montgomery, Roanoke]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Northern Neck George Washington Birthplace",
+   "state": "Virginia",
+   "County": "[King George, Lancaster, Northumberland, Richmond,M]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Rocky Knob",
+   "state": "Virginia",
+   "County": "[Floyd, Patrick]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Virginia’s Eastern Shore",
+   "state": "Virginia",
+   "County": "[Accomack, Northampton]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Ancient Lakes of Columbia Valley",
+   "state": "Washington",
+   "County": "[Douglas, Grant, Kittitas]",
+   "Located": "[Columbia Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Horse Heaven Hills",
+   "state": "Washington",
+   "County": "[Benton, Klickitat, Yakima]",
+   "Located": "[Columbia Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Lake Chelan",
+   "state": "Washington",
+   "County": "[Chelan]",
+   "Located": "[Columbia Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Naches Heights",
+   "state": "Washington",
+   "County": "[Yakima]",
+   "Located": "[Columbia Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Puget Sound",
+   "state": "Washington",
+   "County": "[Clallam, Island, Jefferson, King, Kitsap, Mason, MThurston, Whatcom]",
+   "Located": "",
+   "Contains": ""
+ },
+ {
+   "Name": "Rattlesnake Hills",
+   "state": "Washington",
+   "County": "[Yakima]",
+   "Located": "[Yakima Valley, Columbia Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Red Mountain",
+   "state": "Washington",
+   "County": "[Benton]",
+   "Located": "[Yakima Valley, Columbia Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Snipes Mountain",
+   "state": "Washington",
+   "County": "[Yakima]",
+   "Located": "[Yakima Valley, Columbia Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Wahluke Slope",
+   "state": "Washington",
+   "County": "[Grant]",
+   "Located": "[Columbia Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Yakima Valley",
+   "state": "Washington",
+   "County": "[Benton Yakima]",
+   "Located": "[Columbia Valley]",
+   "Contains": "[Rattlesnake Hills, Red Mountain, Snipes Mountain"
+ },
+ {
+   "Name": "Kanawha River Valley",
+   "state": "West Virginia",
+   "County": "[Cabell, Jackson, Kanawha, Mason, Putnam]",
+   "Located": "[Ohio River Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Lake Wisconsin",
+   "state": "Wisconsin",
+   "County": "[Columbia, Dane]",
+   "Located": "[Upper Mississippi River Valley]",
+   "Contains": ""
+ },
+ {
+   "Name": "Wisconsin Ledge",
+   "state": "Wisconsin",
+   "County": "[Brown, Calumet, Dodge, Door, Fond du Lac, KewauneMboygan, Washington]",
+   "Located": "",
+   "Contains": ""
+ }
+]
