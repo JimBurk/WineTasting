@@ -6,13 +6,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+/***
+ * This activity allows the user to enter the data about the wines they have just blind tasted. The
+ * variables for each wine are the vintage, varietal, winery, vineyard (or designation) and price.
+ * These will be saved in the database along with the associated tasting and rating.
+ */
+
 public class WinesActivity extends AppCompatActivity {
+
+    private long mId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wines);
     }
+
+    /***
+     * This method will go to a new activity to allow the user to take some label shots, then assign
+     * one to each wine.
+     */
+
+    public void addPhoto(View view) {
+        Intent picturesIntent = new Intent(this, AddPhotoActivity.class);
+        picturesIntent.putExtra("FirstWineID", 0);
+        startActivity(picturesIntent);
+        overridePendingTransition(R.anim.fade_in, 0);
+    }
+
+    /***
+     * This is a dummy method to fill in ten wines during a demonstration. It will be deleted
+     * for the released version.
+     */
 
     public void winesEnter(View view) {
         EditText vintageET = findViewById(R.id.wines1AVintageET);
@@ -21,7 +46,7 @@ public class WinesActivity extends AppCompatActivity {
         EditText vineyardET = findViewById(R.id.wines1AVineyardET);
         EditText priceET = findViewById(R.id.wines1APriceET);
 
-        vintageET.setText("2003");
+        vintageET.setText("2002");
         varietalET.setText("Cabernet Sauvignon");
         wineryET.setText("Pride Mountain");
         vineyardET.setText("Napa");
@@ -135,6 +160,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET.setText("Big River VY");
         priceET.setText("$35.95");
     }
+
+    /***
+     * When the user is finished with this activity, the results are put in the database and control
+     * passed back to the opening screen.
+     */
 
     public void winesContinue(View view) {
         Intent continueIntent = new Intent(this, OpenActivity.class);

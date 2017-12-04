@@ -13,7 +13,7 @@
         android:id="@+id/add_tasting_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:onClick="newTasting"
         android:text="@string/add_tasting"
         android:background="@drawable/button_border"
@@ -24,7 +24,7 @@
         android:id="@+id/review_tasting_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:onClick="reviewTastings"
         android:text="@string/review_tasting"
         android:background="@drawable/button_border"
@@ -34,9 +34,29 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:onClick="reviewWines"
         android:text="@string/review_wine"
+        android:background="@drawable/button_border"
+        android:layout_gravity="center"
+        android:textSize="32sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:onClick="locateWines"
+        android:text="@string/locate_wine"
+        android:background="@drawable/button_border"
+        android:layout_gravity="center"
+        android:textSize="32sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:onClick="quitApp"
+        android:text="@string/quit_app"
         android:background="@drawable/button_border"
         android:layout_gravity="center"
         android:textSize="32sp"/>

@@ -4,6 +4,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
+ * This is the model for the rating class. A Rating has an id, and variables for rating Color, Aroma,
+ * Body, Taste and Finish. The user can also write some notes on each wine.
+ *
  * Created by jimburk on 11/10/17.
  */
 
@@ -15,6 +18,17 @@ public class Rating implements Parcelable {
     private float mTaste;
     private float mFinish;
     private String mNotes;
+
+    /***
+     * These are the constructors for the class. The first has all the data, while the second has none.
+     * @param id
+     * @param color
+     * @param aroma
+     * @param body
+     * @param taste
+     * @param finish
+     * @param notes
+     */
 
     public Rating(long id, float color, float aroma, float body, float taste, float finish, String notes) {
         mId = id;

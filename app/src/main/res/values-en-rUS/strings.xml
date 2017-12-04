@@ -24,6 +24,7 @@
     <string name="summary_button">SUMMARY</string>
 
     <!-- Rating Activity-->
+
     <string name="header_wine">Wine</string>
     <string name="header_appearance">Color</string>
     <string name="header_aroma">Aroma</string>
