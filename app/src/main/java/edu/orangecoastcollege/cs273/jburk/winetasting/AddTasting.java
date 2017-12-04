@@ -1,15 +1,16 @@
 package edu.orangecoastcollege.cs273.jburk.winetasting;
 
 import android.content.Intent;
-import android.content.SearchRecentSuggestionsProvider;
-import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import java.util.Date;
-import java.util.EmptyStackException;
+import java.util.ArrayList;
+import java.util.List;
 
 /***
  * This is the screen for adding a new tasting. There are edit texts for three string entries, a name,
@@ -18,18 +19,42 @@ import java.util.EmptyStackException;
 
 public class AddTasting extends AppCompatActivity {
 
-    private EditText tastingNameET;
-    private EditText tastingDateET;
-    private EditText tastingLocationET;
+    private DBHelper db;
 
-    private String mTastingName;
-    private String mTastingDate;
-    private String mTastingLocation;
+    public static final String TAG = AddTasting.class.getSimpleName();
+
+    private EditText mTastingName;
+    private EditText mTastingDate;
+    private EditText mTastingLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_tasting);
+
+        //deleteDatabase(DBHelper.DATABASE_NAME);
+
+        mTastingName = (EditText) findViewById(R.id.tasting_name);
+        mTastingDate = (EditText) findViewById(R.id.tasting_date);
+        mTastingLocation = (EditText) findViewById(R.id.tasting_location);
+    }
+
+    public void testLog(){
+        db = new DBHelper(this);
+
+        List<Tasting> tastingList = new ArrayList<>();
+        tastingList = db.getAllTastings();
+
+        Log.i(TAG, "Showing all tastings");
+        for (Tasting t: tastingList)
+            Log.i(TAG, t.toString());
+
+        db.deleteAllTasting();
+        tastingList.clear();
+        tastingList = db.getAllTastings();
+        Log.i(TAG, "After deleting the list.");
+        for (Tasting t: tastingList)
+            Log.i(TAG, t.toString());
     }
 
     /***
@@ -37,19 +62,28 @@ public class AddTasting extends AppCompatActivity {
      */
 
     public void newRating(View view) {
-        tastingNameET = (EditText) findViewById(R.id.tasting_name);
-        tastingDateET = (EditText) findViewById(R.id.tasting_name);
-        tastingLocationET = (EditText) findViewById(R.id.tasting_name);
+        String name = mTastingName.getText().toString();
+        String date = mTastingDate.getText().toString();
+        String location = mTastingLocation.getText().toString();
 
-        mTastingName = tastingNameET.getText().toString();
-        mTastingDate = tastingDateET.getText().toString();
-        mTastingLocation = tastingDateET.getText().toString();
+        if (TextUtils.isEmpty(name) || TextUtils.isEmpty(date) || TextUtils.isEmpty(location))
+            Toast.makeText(this, "Please completely fill out the 'name', 'date', and 'location.'",
+                    Toast.LENGTH_SHORT).show();
+        else{
+            Tasting newTasting = new Tasting(name, date, location);
+            db = new DBHelper(this);
+
+            db.addTasting(newTasting);
+
+            mTastingName.setText("");
+            mTastingDate.setText("");
+            mTastingLocation.setText("");
+
+        testLog();
 
         Intent newRatingIntent = new Intent(this, RatingActivity.class);
-        newRatingIntent.putExtra("TastingName", mTastingName);
-        newRatingIntent.putExtra("TastingDate", mTastingDate);
-        newRatingIntent.putExtra("TastingLocation", mTastingLocation);
         startActivity(newRatingIntent);
         overridePendingTransition(R.anim.fade_in, 0);
+        }
     }
 }

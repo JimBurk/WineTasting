@@ -120,5 +120,4 @@ public class AddPhotoActivity extends AppCompatActivity {
         // Parse the String
         return Uri.parse(uri);
     }
-
 }
