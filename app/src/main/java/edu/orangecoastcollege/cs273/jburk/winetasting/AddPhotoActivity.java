@@ -21,7 +21,7 @@ import java.util.List;
 
 public class AddPhotoActivity extends AppCompatActivity {
 
-    private ArrayList<Wine> wineList = new ArrayList<Wine>();
+    private ArrayList<Wine> wineArrayList;
     private TextView numTextView;
     private TextView wineInfoTV;
     private ImageView wineImageView;
@@ -40,7 +40,7 @@ public class AddPhotoActivity extends AppCompatActivity {
 
         Intent photoIntent = getIntent();
 
-        ArrayList<Wine> wineArrayList  = getIntent().getParcelableArrayListExtra("wineArrayList");
+        wineArrayList  = getIntent().getParcelableArrayListExtra("wineArrayList");
 
         numTextView = (TextView) findViewById(R.id.numWinesTV);
         wineImageView = (ImageView) findViewById(R.id.wineBottleIV);
@@ -86,7 +86,7 @@ public class AddPhotoActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         DBHelper db = new DBHelper(this);
-        Wine wine = wineList.get(imageNum);
+        Wine wine = wineArrayList.get(imageNum);
 
         String wineInfo = wine.getmVarietal();
         wineInfo += "\n" + wine.getmVintage();
@@ -94,7 +94,6 @@ public class AddPhotoActivity extends AppCompatActivity {
 
         wineInfoTV.setText(wineInfo);
 
-        mId = mId + imageNum;
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK && data != null)  {
             // data is from GalleryIntent
