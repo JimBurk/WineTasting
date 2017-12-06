@@ -59,6 +59,7 @@ public class WinesActivity extends AppCompatActivity {
         saveWine = (Button) findViewById(R.id.winesContinue);
         //getSaveWine = (Button) findViewById(R.id.getSavedWines);
 
+
         allWineList.add(wine1a = new Wine());
         allWineList.add(wine1b = new Wine());
         allWineList.add(wine2a = new Wine());
@@ -84,12 +85,11 @@ public class WinesActivity extends AppCompatActivity {
         Intent picturesIntent = new Intent(this, AddPhotoActivity.class);
         ArrayList<Wine> wineArrayList = new ArrayList<Wine>();
         wineArrayList.addAll(allWineList);
-        Bundle bundle = new Bundle();
 
-        bundle.putParcelableArrayList("wineArrayList", wineArrayList);
+        picturesIntent.putExtra("FirstWineID", 0);
 
-        //picturesIntent.putExtra("FirstWineID", 0);
-        picturesIntent.putExtras(bundle);
+        picturesIntent.putParcelableArrayListExtra("wineArrayList", wineArrayList);
+
         startActivity(picturesIntent);
 
         overridePendingTransition(R.anim.fade_in, 0);

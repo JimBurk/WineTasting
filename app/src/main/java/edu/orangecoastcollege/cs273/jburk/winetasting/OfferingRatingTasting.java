@@ -13,6 +13,7 @@ public class OfferingRatingTasting {
         this.mGroupId = mGroupId;
         this.mTasting = mTasting;
         this.mRating = mRating;
+    //mTasting.get
     }
 
     public long getmGroupId() {

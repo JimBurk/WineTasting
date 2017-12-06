@@ -8,12 +8,12 @@ import android.os.Parcelable;
  */
 
 public class Tasting implements Parcelable {
-    private Long mId;
+    private long mId;
     private String mName;
     private String mDate;
     private String mLocation;
 
-    public Tasting(Long id, String name, String date, String location) {
+    public Tasting(long id, String name, String date, String location) {
         mId = id;
         mName = name;
         mDate = date;
@@ -26,16 +26,12 @@ public class Tasting implements Parcelable {
         mLocation = location;
     }
 
-    public Tasting(Long id) {
+    public Tasting(long id) {
         mId = id;
     }
 
     protected Tasting(Parcel in) {
-        if (in.readByte() == 0) {
-            mId = null;
-        } else {
-            mId = in.readLong();
-        }
+        mId = in.readLong();
         mName = in.readString();
         mDate = in.readString();
         mLocation = in.readString();
@@ -53,11 +49,11 @@ public class Tasting implements Parcelable {
         }
     };
 
-    public Long getId() {
+    public long getId() {
         return mId;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         mId = id;
     }
 
@@ -98,7 +94,7 @@ public class Tasting implements Parcelable {
 
         Tasting mmTasting = (Tasting) mo;
 
-        if (mId != null ? !mId.equals(mmTasting.mId) : mmTasting.mId != null) return false;
+        if (mId != mmTasting.mId) return false;
         if (mName != null ? !mName.equals(mmTasting.mName) : mmTasting.mName != null) return false;
         if (mDate != null ? !mDate.equals(mmTasting.mDate) : mmTasting.mDate != null) return false;
         return mLocation != null ? mLocation.equals(mmTasting.mLocation) : mmTasting.mLocation == null;
@@ -106,7 +102,7 @@ public class Tasting implements Parcelable {
 
     @Override
     public int hashCode() {
-        int mresult = mId != null ? mId.hashCode() : 0;
+        int mresult = (int) (mId ^ (mId >>> 32));
         mresult = 31 * mresult + (mName != null ? mName.hashCode() : 0);
         mresult = 31 * mresult + (mDate != null ? mDate.hashCode() : 0);
         mresult = 31 * mresult + (mLocation != null ? mLocation.hashCode() : 0);

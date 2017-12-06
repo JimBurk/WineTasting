@@ -39,21 +39,8 @@ public class AddPhotoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_photo);
 
         Intent photoIntent = getIntent();
-        //String mIdString = photoIntent.getStringExtra("FirstWineID");
 
-        Bundle extras = getIntent().getExtras();
-        ArrayList<Wine> wineArrayList  = extras.getParcelableArrayList("wineArrayList");
-        Wine wine1a = wineArrayList.get(0);
-        Wine wine1b = wineArrayList.get(1);
-        Wine wine2a = wineArrayList.get(2);
-        Wine wine2b = wineArrayList.get(3);
-        Wine wine3a = wineArrayList.get(4);
-        Wine wine3b = wineArrayList.get(5);
-        Wine wine4a = wineArrayList.get(6);
-        Wine wine4b = wineArrayList.get(7);
-        Wine wine5a = wineArrayList.get(8);
-        Wine wine5b = wineArrayList.get(9);
-
+        ArrayList<Wine> wineArrayList  = getIntent().getParcelableArrayListExtra("wineArrayList");
 
         numTextView = (TextView) findViewById(R.id.numWinesTV);
         wineImageView = (ImageView) findViewById(R.id.wineBottleIV);
@@ -98,14 +85,14 @@ public class AddPhotoActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        //DBHelper db = new DBHelper(this);
-        //Wine wine = wineList.get(imageNum);
+        DBHelper db = new DBHelper(this);
+        Wine wine = wineList.get(imageNum);
 
-        //String wineInfo = wine.getmVarietal();
-        //wineInfo += "\n" + wine.getmVintage();
-        //wineInfo += "\n" + wine.getmWinery();
+        String wineInfo = wine.getmVarietal();
+        wineInfo += "\n" + wine.getmVintage();
+        wineInfo += "\n" + wine.getmWinery();
 
-        // wineInfoTV.setText(wineInfo);
+        wineInfoTV.setText(wineInfo);
 
         mId = mId + imageNum;
         super.onActivityResult(requestCode, resultCode, data);
@@ -115,8 +102,8 @@ public class AddPhotoActivity extends AppCompatActivity {
 
             wineImageView.setImageURI(imageUri);
 
-            //wine.setmImageUri(imageUri);
-            //db.updateWine(wine);
+            wine.setmImageUri(imageUri);
+            db.updateWine(wine);
         }
         imageNum++;
         if (imageNum > 9) {

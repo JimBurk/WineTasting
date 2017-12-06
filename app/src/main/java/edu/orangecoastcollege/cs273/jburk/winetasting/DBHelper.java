@@ -75,11 +75,11 @@ public class  DBHelper extends SQLiteOpenHelper {
     private static final String ALTERNATE_FIELD_NAME = "name";
 
     // Wine-Rating
-    private static final String OFFERING_WINE_RATING_TABLE = "Offering_wine_rating_names";
+    private static final String OFFERING_WINE_RATING_TABLE = "Offering_wine_rating";
     private static final String OFFERING_FIELD_WINE_NAME = "offering_wine";
-    private static final String OFFERING_FIELD_TASTING_NAME ="offering_tasting";
-    private static final String OFFERING_FIELD_TASTING_ID = "tasting_id";
-    private static final String OFFERING_WINE_GROUP_ID = "wine_group_id";
+    private static final String OFFERING_FIELD_TASTING_NAME ="offering_rating";
+    private static final String OFFERING_FIELD_TASTING_ID = "offering_tasting_id";
+    private static final String OFFERING_WINE_GROUP_ID = "offering_wine__id";
 
     public DBHelper(Context context) {super (context, DATABASE_NAME, null, DATABASE_VERSION);}
 
@@ -127,13 +127,13 @@ public class  DBHelper extends SQLiteOpenHelper {
                 + ALTERNATE_FIELD_NAME + " TEXT" + ")";
         sqLiteDatabase.execSQL(newDB);
 
-/**
+
         newDB = "CREATE TABLE " + OFFERING_WINE_RATING_TABLE + "("
-                + OFFERING_WINE_GROUP_ID = " INTEGER" + ")";
-                + OFFERING_FIELD_WINE_NAME = " TEXT, "
-                + OFFERING_FIELD_TASTING_NAME = " TEXT, "
-                + OFFERING_FIELD_TASTING_ID = " TEXT, "
-        sqLiteDatabase.execSQL(newDB);*/
+                + OFFERING_FIELD_WINE_NAME + " TEXT, "
+                + OFFERING_FIELD_TASTING_NAME + " TEXT, "
+                + OFFERING_FIELD_TASTING_ID + " INTEGER, "
+                + OFFERING_FIELD_TASTING_ID + " INTEGER" + ")";
+        sqLiteDatabase.execSQL(newDB);
 
     }
 

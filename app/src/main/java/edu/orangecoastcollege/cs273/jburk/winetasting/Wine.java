@@ -78,8 +78,8 @@ public class Wine implements Parcelable{
         mVineyard = parcel.readString();
         mPrice = parcel.readDouble();
 
-        String strUri = mImageUri.toString();
-        strUri = parcel.readString();
+        String strUri = parcel.readString();
+        mImageUri = Uri.parse(strUri);
     }
 
     public long getmTasteGroup() {
