@@ -14,8 +14,8 @@ import android.os.Parcelable;
 
 public class Wine implements Parcelable{
 
-    private Long mId;
-    private Long mTasteGroup;
+    private long mId;
+    private long mTasteGroup;
     private String mVarietal;
     private int mVintage;
     private String mWinery;
@@ -38,7 +38,7 @@ public class Wine implements Parcelable{
      * @param mPrice The wine price.
      * @param mImageUri The Uri of the picture.
      */
-    public Wine(Long mTasteGroup, String mVarietal, int mVintage, String mWinery, String mVineyard, double mPrice, Uri mImageUri) {
+    public Wine(long mTasteGroup, String mVarietal, int mVintage, String mWinery, String mVineyard, double mPrice, Uri mImageUri) {
         this.mTasteGroup = mTasteGroup;
         this.mVarietal = mVarietal;
         this.mVintage = mVintage;
@@ -58,7 +58,7 @@ public class Wine implements Parcelable{
      * @param mVineyard The wine vineyard.
      * @param mPrice The wine price.
      */
-    public Wine(Long mId, Long mTasteGroup, String mVarietal, int mVintage, String mWinery, String mVineyard, double mPrice, Uri imageUri) {
+    public Wine(long mId, long mTasteGroup, String mVarietal, int mVintage, String mWinery, String mVineyard, double mPrice, Uri imageUri) {
         this.mId = mId;
         this.mTasteGroup = mTasteGroup;
         this.mVarietal = mVarietal;
@@ -69,11 +69,24 @@ public class Wine implements Parcelable{
         this.mImageUri = imageUri;
     }
 
-    public Long getmTasteGroup() {
+    public Wine(Parcel parcel){
+        mId = parcel.readLong();
+        mTasteGroup = parcel.readLong();
+        mVarietal = parcel.readString();
+        mVintage = parcel.readInt();
+        mWinery = parcel.readString();
+        mVineyard = parcel.readString();
+        mPrice = parcel.readDouble();
+
+        String strUri = mImageUri.toString();
+        strUri = parcel.readString();
+    }
+
+    public long getmTasteGroup() {
         return mTasteGroup;
     }
 
-    public void setmTasteGroup(Long mTasteGroup) {
+    public void setmTasteGroup(long mTasteGroup) {
         this.mTasteGroup = mTasteGroup;
     }
 
@@ -81,7 +94,7 @@ public class Wine implements Parcelable{
      * Gets the unique id of the <code>Wine</code>.
      * @return The unique id.
      */
-    public Long getmId() {
+    public long getmId() {
         return mId;
     }
 
@@ -89,7 +102,7 @@ public class Wine implements Parcelable{
      * Sets the unique id of the <code>Wine</code>
      * @param mId The unique id.
      */
-    public void setmId(Long mId) {
+    public void setmId(long mId) {
         this.mId = mId;
     }
 
@@ -177,47 +190,44 @@ public class Wine implements Parcelable{
      * Sets the price of the <code>Wine</code>.
      * @param mPrice The price.
      */
-
-
-
     public void setmPrice(double mPrice) {
         this.mPrice = mPrice;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object mo) {
+        if (this == mo) return true;
+        if (!(mo instanceof Wine)) return false;
 
-        Wine wine = (Wine) o;
+        Wine mmWine = (Wine) mo;
 
-        if (mVintage != wine.mVintage) return false;
-        if (Double.compare(wine.mPrice, mPrice) != 0) return false;
-        if (mId != null ? !mId.equals(wine.mId) : wine.mId != null) return false;
-        if (mTasteGroup != null ? !mTasteGroup.equals(wine.mTasteGroup) : wine.mTasteGroup != null)
+        if (getmId() != mmWine.getmId()) return false;
+        if (getmTasteGroup() != mmWine.getmTasteGroup()) return false;
+        if (getmVintage() != mmWine.getmVintage()) return false;
+        if (Double.compare(mmWine.getmPrice(), getmPrice()) != 0) return false;
+        if (getmVarietal() != null ? !getmVarietal().equals(mmWine.getmVarietal()) : mmWine.getmVarietal() != null)
             return false;
-        if (mVarietal != null ? !mVarietal.equals(wine.mVarietal) : wine.mVarietal != null)
+        if (getmWinery() != null ? !getmWinery().equals(mmWine.getmWinery()) : mmWine.getmWinery() != null)
             return false;
-        if (mWinery != null ? !mWinery.equals(wine.mWinery) : wine.mWinery != null) return false;
-        if (mVineyard != null ? !mVineyard.equals(wine.mVineyard) : wine.mVineyard != null)
+        if (getmVineyard() != null ? !getmVineyard().equals(mmWine.getmVineyard()) : mmWine.getmVineyard() != null)
             return false;
-        return mImageUri != null ? mImageUri.equals(wine.mImageUri) : wine.mImageUri == null;
+        return getmImageUri() != null ? getmImageUri().equals(mmWine.getmImageUri()) : mmWine.getmImageUri() == null;
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = mId != null ? mId.hashCode() : 0;
-        result = 31 * result + (mTasteGroup != null ? mTasteGroup.hashCode() : 0);
-        result = 31 * result + (mVarietal != null ? mVarietal.hashCode() : 0);
-        result = 31 * result + mVintage;
-        result = 31 * result + (mWinery != null ? mWinery.hashCode() : 0);
-        result = 31 * result + (mVineyard != null ? mVineyard.hashCode() : 0);
-        temp = Double.doubleToLongBits(mPrice);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (mImageUri != null ? mImageUri.hashCode() : 0);
-        return result;
+        int mresult;
+        long mtemp;
+        mresult = (int) (getmId() ^ (getmId() >>> 32));
+        mresult = 31 * mresult + (int) (getmTasteGroup() ^ (getmTasteGroup() >>> 32));
+        mresult = 31 * mresult + (getmVarietal() != null ? getmVarietal().hashCode() : 0);
+        mresult = 31 * mresult + getmVintage();
+        mresult = 31 * mresult + (getmWinery() != null ? getmWinery().hashCode() : 0);
+        mresult = 31 * mresult + (getmVineyard() != null ? getmVineyard().hashCode() : 0);
+        mtemp = Double.doubleToLongBits(getmPrice());
+        mresult = 31 * mresult + (int) (mtemp ^ (mtemp >>> 32));
+        mresult = 31 * mresult + (getmImageUri() != null ? getmImageUri().hashCode() : 0);
+        return mresult;
     }
 
     @Override
@@ -259,9 +269,10 @@ public class Wine implements Parcelable{
         parcel.writeString(mWinery);
         parcel.writeString(mVineyard);
         parcel.writeDouble(mPrice);
+        parcel.writeString(mImageUri.toString());
     }
 
-    public static final Creator<Wine> CREATOR = new Creator<Wine>(){
+    public static final Parcelable.Creator<Wine> CREATOR = new Parcelable.Creator<Wine>(){
         /**
          * This method is used with Intents to crate new Wine objects.
          *
@@ -269,9 +280,7 @@ public class Wine implements Parcelable{
          * @return The new Wine object
          */
         @Override
-        public Wine createFromParcel(Parcel parcel) {
-            return null;
-        }
+        public Wine createFromParcel(Parcel parcel) {return new Wine(parcel);}
 
         /**
          * This method is used with JSON to create an array of Wine Objects.

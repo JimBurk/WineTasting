@@ -30,6 +30,16 @@
         android:textSize="32sp"/>
 
     <TextView
+        android:id="@+id/wineInfoTV"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+        android:layout_marginLeft="30dp"
+        android:text="0"
+        android:textSize="32sp"/>
+
+    <TextView
         android:id="@+id/numWinesTV"
         android:layout_width="0dp"
         android:layout_weight="1"

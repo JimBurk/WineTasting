@@ -24,9 +24,11 @@ import static edu.orangecoastcollege.cs273.jburk.winetasting.AddPhotoActivity.ge
 public class WinesActivity extends AppCompatActivity {
 
     private long mId = 0;
+    private long groupId;
+
     private DBHelper db;
     private List<Wine> wineList = new ArrayList<>();
-    private List<Wine> allWineList = new ArrayList<>();
+    private ArrayList<Wine> allWineList = new ArrayList<Wine>();
 
     public static final String TAG = WinesActivity.class.getSimpleName();
 
@@ -48,6 +50,9 @@ public class WinesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wines);
+
+        Intent intentFromOpen = getIntent();
+        groupId = intentFromOpen.getLongExtra("group_id", 0);
 
         //deleteDatabase(DBHelper.DATABASE_NAME);
 
@@ -74,9 +79,19 @@ public class WinesActivity extends AppCompatActivity {
      */
 
     public void addPhoto(View view) {
+        saveWines(view);
+
         Intent picturesIntent = new Intent(this, AddPhotoActivity.class);
-        picturesIntent.putExtra("FirstWineID", 0);
+        ArrayList<Wine> wineArrayList = new ArrayList<Wine>();
+        wineArrayList.addAll(allWineList);
+        Bundle bundle = new Bundle();
+
+        bundle.putParcelableArrayList("wineArrayList", wineArrayList);
+
+        //picturesIntent.putExtra("FirstWineID", 0);
+        picturesIntent.putExtras(bundle);
         startActivity(picturesIntent);
+
         overridePendingTransition(R.anim.fade_in, 0);
     }
 
@@ -84,7 +99,6 @@ public class WinesActivity extends AppCompatActivity {
      * This is a dummy method to fill in ten wines during a demonstration. It will be deleted
      * for the released version.
      */
-
     public void winesEnter(View view) {
         EditText vintageET = findViewById(R.id.wines1AVintageET);
         EditText varietalET = findViewById(R.id.wines1AVarietalET);
@@ -211,7 +225,7 @@ public class WinesActivity extends AppCompatActivity {
      * When the user is finished with this activity, the results are put in the database and control
      * passed back to the opening screen.
      */
-    public Wine updateWine(EditText vintage, EditText varietal, EditText winery, EditText vineyard, EditText price, Uri imageView){
+    public Wine updateWine(Long tasteGroup, EditText vintage, EditText varietal, EditText winery, EditText vineyard, EditText price, Uri imageView){
         Wine newWine = new Wine();
 
         String vintageString = vintage.getText().toString();
@@ -225,6 +239,7 @@ public class WinesActivity extends AppCompatActivity {
             int vintageRating = Integer.parseInt(vintageString);
             double priceRating = Double.parseDouble(priceString);
 
+            newWine.setmTasteGroup(tasteGroup);
             newWine.setmVintage(vintageRating);
             newWine.setmVarietal(varietalString);
             newWine.setmVineyard(vineyardString);
@@ -262,7 +277,6 @@ public class WinesActivity extends AppCompatActivity {
         wineList.clear();
         wineList = db.getAllWines();
         Log.i(TAG, "After updating wines:");
-        for (Wine w: wineList);
         for (Wine w: wineList)
             Log.i(TAG, w.toString());
 
@@ -280,14 +294,15 @@ public class WinesActivity extends AppCompatActivity {
 
     public void saveWines(View view){
 
-        Uri imageView= getUriFromResource(this, R.drawable.wine_bottle);
+        Long tasteGroup = groupId;
+        Uri imageView = getUriFromResource(this, R.drawable.wine_bottle);
         EditText vintageET = findViewById(R.id.wines1AVintageET);
         EditText varietalET = findViewById(R.id.wines1AVarietalET);
         EditText wineryET = findViewById(R.id.wines1AWineryET);
         EditText vineyardET = findViewById(R.id.wines1AVineyardET);
         EditText priceET = findViewById(R.id.wines1APriceET);
 
-        wine1a = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine1a = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(0, wine1a);
 
         vintageET = findViewById(R.id.wines1BVintageET);
@@ -296,7 +311,7 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines1BVineyardET);
         priceET = findViewById(R.id.wines1BPriceET);
 
-        wine1b = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine1b = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(1, wine1b);
 
         vintageET = findViewById(R.id.wines2AVintageET);
@@ -305,7 +320,7 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines2AVineyardET);
         priceET = findViewById(R.id.wines2APriceET);
 
-        wine2a = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine2a = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(2, wine2a);
 
         vintageET = findViewById(R.id.wines2BVintageET);
@@ -314,7 +329,7 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines2BVineyardET);
         priceET = findViewById(R.id.wines2BPriceET);
 
-        wine2b = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine2b = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(3, wine2b);
 
         vintageET = findViewById(R.id.wines3AVintageET);
@@ -323,7 +338,7 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines3AVineyardET);
         priceET = findViewById(R.id.wines3APriceET);
 
-        wine3a = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine3a = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(4, wine3a);
 
         vintageET = findViewById(R.id.wines3BVintageET);
@@ -332,7 +347,7 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines3BVineyardET);
         priceET = findViewById(R.id.wines3BPriceET);
 
-        wine3b = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine3b = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(5, wine3b);
 
         vintageET = findViewById(R.id.wines4AVintageET);
@@ -341,7 +356,7 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines4AVineyardET);
         priceET = findViewById(R.id.wines4APriceET);
 
-        wine4a = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine4a = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(6, wine4a);
 
         vintageET = findViewById(R.id.wines4BVintageET);
@@ -350,7 +365,7 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines4BVineyardET);
         priceET = findViewById(R.id.wines4BPriceET);
 
-        wine4b = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine4b = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(7, wine4b);
 
         vintageET = findViewById(R.id.wines5AVintageET);
@@ -359,7 +374,7 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines5AVineyardET);
         priceET = findViewById(R.id.wines5APriceET);
 
-        wine5a = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine5a = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(8, wine5a);
 
         vintageET = findViewById(R.id.wines5BVintageET);
@@ -368,7 +383,7 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines5BVineyardET);
         priceET = findViewById(R.id.wines5BPriceET);
 
-        wine5b = updateWine(vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
+        wine5b = updateWine(tasteGroup, vintageET, varietalET, wineryET, vineyardET, priceET, imageView);
         allWineList.set(9, wine5b);
     }
 }

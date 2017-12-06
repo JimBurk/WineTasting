@@ -12,6 +12,7 @@ import android.os.Parcelable;
 
 public class Rating implements Parcelable {
     private long mId;
+    private long mTasteGroup;
     private float mColor;
     private float mAroma;
     private float mBody;
@@ -22,6 +23,7 @@ public class Rating implements Parcelable {
     /***
      * These are the constructors for the class. The first has all the data, while the second has none.
      * @param id
+     * @param tasteGroup
      * @param color
      * @param aroma
      * @param body
@@ -29,9 +31,9 @@ public class Rating implements Parcelable {
      * @param finish
      * @param notes
      */
-
-    public Rating(long id, float color, float aroma, float body, float taste, float finish, String notes) {
+    public Rating(long id, long tasteGroup, float color, float aroma, float body, float taste, float finish, String notes) {
         mId = id;
+        mTasteGroup = tasteGroup;
         mColor = color;
         mAroma = aroma;
         mBody = body;
@@ -40,13 +42,26 @@ public class Rating implements Parcelable {
         mNotes = notes;
     }
 
-    public Rating() {
-        this(-1, -1, -1, -1, -1, -1, "");
+    /**public Rating() {mTasteGroup = 0L;  mColor = 0.0F;  mAroma = 0.0F; mBody = 0.0F; mTaste = 0.0F; mFinish = 0.0F; mNotes ="";}*/
+
+    public Rating() {this(-1, -1, -1, -1, -1, -1, -1, "");}
+
+    private Rating(Parcel parcel){
+        mId = parcel.readLong();
+        mTasteGroup = parcel.readLong();
+        mColor = parcel.readFloat();
+        mAroma = parcel.readFloat();
+        mBody = parcel.readFloat();
+        mTaste = parcel.readFloat();
+        mFinish = parcel.readFloat();
+        mNotes = parcel.readString();
     }
 
     public long getId() {
         return mId;
     }
+
+    public long getTasteGroup() {return mTasteGroup;}
 
     public float getColor() {
         return mColor;
@@ -75,6 +90,8 @@ public class Rating implements Parcelable {
     public void setId(long id) {
         mId = id;
     }
+
+    public void setTasteGroup(long tasteGroup) {mTasteGroup = tasteGroup;}
 
     public void setColor(float color) {
         mColor = color;
@@ -109,6 +126,50 @@ public class Rating implements Parcelable {
         }
     }
 
+    @Override
+    public boolean equals(Object mo) {
+        if (this == mo) return true;
+        if (!(mo instanceof Rating)) return false;
+
+        Rating mmRating = (Rating) mo;
+
+        if (mId != mmRating.mId) return false;
+        if (mTasteGroup != mmRating.mTasteGroup) return false;
+        if (Float.compare(mmRating.mColor, mColor) != 0) return false;
+        if (Float.compare(mmRating.mAroma, mAroma) != 0) return false;
+        if (Float.compare(mmRating.mBody, mBody) != 0) return false;
+        if (Float.compare(mmRating.mTaste, mTaste) != 0) return false;
+        if (Float.compare(mmRating.mFinish, mFinish) != 0) return false;
+        return mNotes != null ? mNotes.equals(mmRating.mNotes) : mmRating.mNotes == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int mresult = (int) (mId ^ (mId >>> 32));
+        mresult = 31 * mresult + (int) (mTasteGroup ^ (mTasteGroup >>> 32));
+        mresult = 31 * mresult + (mColor != +0.0f ? Float.floatToIntBits(mColor) : 0);
+        mresult = 31 * mresult + (mAroma != +0.0f ? Float.floatToIntBits(mAroma) : 0);
+        mresult = 31 * mresult + (mBody != +0.0f ? Float.floatToIntBits(mBody) : 0);
+        mresult = 31 * mresult + (mTaste != +0.0f ? Float.floatToIntBits(mTaste) : 0);
+        mresult = 31 * mresult + (mFinish != +0.0f ? Float.floatToIntBits(mFinish) : 0);
+        mresult = 31 * mresult + (mNotes != null ? mNotes.hashCode() : 0);
+        return mresult;
+    }
+
+    @Override
+    public String toString() {
+        return "Rating{" +
+                "mId=" + mId +
+                ", mTasteGroup=" + mTasteGroup +
+                ", mColor=" + mColor +
+                ", mAroma=" + mAroma +
+                ", mBody=" + mBody +
+                ", mTaste=" + mTaste +
+                ", mFinish=" + mFinish +
+                ", mNotes='" + mNotes + '\'' +
+                '}';
+    }
+
     /**
      * Return 0 if the its a stand parcel, else if resending files
      * need to run file descriptors
@@ -128,6 +189,7 @@ public class Rating implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeLong(mId);
+        parcel.writeLong(mTasteGroup);
         parcel.writeFloat(mColor);
         parcel.writeFloat(mAroma);
         parcel.writeFloat(mBody);
@@ -136,7 +198,7 @@ public class Rating implements Parcelable {
         parcel.writeString(mNotes);
     }
 
-    public static final Creator<Rating> CREATOR = new Creator<Rating>(){
+    public static final Parcelable.Creator<Rating> CREATOR = new Parcelable.Creator<Rating>(){
         /**
          * This method is used with Intents to crate new Wine objects.
          *
@@ -145,7 +207,7 @@ public class Rating implements Parcelable {
          */
         @Override
         public Rating createFromParcel(Parcel parcel) {
-            return null;
+            return new Rating(parcel);
         }
 
         /**
@@ -158,44 +220,4 @@ public class Rating implements Parcelable {
         }
     } ;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Rating rating = (Rating) o;
-
-        if (mId != rating.mId) return false;
-        if (Float.compare(rating.mColor, mColor) != 0) return false;
-        if (Float.compare(rating.mAroma, mAroma) != 0) return false;
-        if (Float.compare(rating.mBody, mBody) != 0) return false;
-        if (Float.compare(rating.mTaste, mTaste) != 0) return false;
-        if (Float.compare(rating.mFinish, mFinish) != 0) return false;
-        return mNotes != null ? mNotes.equals(rating.mNotes) : rating.mNotes == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = (int) (mId ^ (mId >>> 32));
-        result = 31 * result + (mColor != +0.0f ? Float.floatToIntBits(mColor) : 0);
-        result = 31 * result + (mAroma != +0.0f ? Float.floatToIntBits(mAroma) : 0);
-        result = 31 * result + (mBody != +0.0f ? Float.floatToIntBits(mBody) : 0);
-        result = 31 * result + (mTaste != +0.0f ? Float.floatToIntBits(mTaste) : 0);
-        result = 31 * result + (mFinish != +0.0f ? Float.floatToIntBits(mFinish) : 0);
-        result = 31 * result + (mNotes != null ? mNotes.hashCode() : 0);
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Rating{" +
-                "mId=" + mId +
-                ", mColor=" + mColor +
-                ", mAroma=" + mAroma +
-                ", mBody=" + mBody +
-                ", mTaste=" + mTaste +
-                ", mFinish=" + mFinish +
-                ", mNotes='" + mNotes + '\'' +
-                '}';
-    }
 }

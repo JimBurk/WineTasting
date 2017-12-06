@@ -49,12 +49,14 @@ public class AddTasting extends AppCompatActivity {
         for (Tasting t: tastingList)
             Log.i(TAG, t.toString());
 
+        /**
         db.deleteAllTasting();
         tastingList.clear();
         tastingList = db.getAllTastings();
         Log.i(TAG, "After deleting the list.");
         for (Tasting t: tastingList)
             Log.i(TAG, t.toString());
+         */
     }
 
     /***
@@ -75,6 +77,10 @@ public class AddTasting extends AppCompatActivity {
 
             db.addTasting(newTasting);
 
+            db.getTasting(newTasting.getId());
+
+            long groupId = newTasting.getId();
+
             mTastingName.setText("");
             mTastingDate.setText("");
             mTastingLocation.setText("");
@@ -82,6 +88,7 @@ public class AddTasting extends AppCompatActivity {
         testLog();
 
         Intent newRatingIntent = new Intent(this, RatingActivity.class);
+        newRatingIntent.putExtra("group_id", groupId);
         startActivity(newRatingIntent);
         overridePendingTransition(R.anim.fade_in, 0);
         }

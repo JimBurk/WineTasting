@@ -31,6 +31,8 @@ public class RatingActivity extends AppCompatActivity {
     private List<Rating> ratingList = new ArrayList<>();
     private List<Rating> allRatingList = new ArrayList<>();
 
+    private Long groupId;
+
     public static final String TAG = RatingActivity.class.getSimpleName();
 
     boolean [] totaled = { false, false, false, false, false, false, false, false, false, false };
@@ -60,6 +62,7 @@ public class RatingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rating);
 
         Intent intentFromOpen = getIntent();
+        groupId = intentFromOpen.getLongExtra("group_id", 0);
 
         String tastingName = intentFromOpen.getStringExtra("TastingName");
         String tastingDatee = intentFromOpen.getStringExtra("TastingDate");
@@ -81,8 +84,6 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.add(rating4b = new Rating());
         allRatingList.add(rating5a = new Rating());
         allRatingList.add(rating5b = new Rating());
-
-        DBHelper db = new DBHelper(this);
     }
 
     public void testRatingsLog(){
@@ -91,11 +92,9 @@ public class RatingActivity extends AppCompatActivity {
         for (Rating t : allRatingList)
             db.addRating(t);
 
-        // Let's clear out the list and rebuild from the databases this time:
         ratingList.clear();
         ratingList = db.getAllRatings(); // Retrieve the task from the database
 
-        // Loop through each of the Ratings and print them to the Log.i
         Log.i(TAG, "Showing all ratings:");
         for (Rating r: ratingList)
             Log.i(TAG, r.toString());
@@ -142,15 +141,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating1ATasteTV);
         EditText finishET = findViewById(R.id.rating1AFinishTV);
 
-        //db = new DBHelper(this);
-
         rating1a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
-        //db.addRating(rating1a);
 
+        rating1a.setTasteGroup(groupId);
         rating1a.setNotes("Rating One");
         allRatingList.set(0, rating1a);
-
-        //db.updateRating(rating1a);
 
         total[0] = rating1a.getColor() + rating1a.getAroma() + rating1a.getBody() + rating1a.getTaste() + rating1a.getFinish();
 
@@ -170,15 +165,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating1BTasteTV);
         EditText finishET = findViewById(R.id.rating1BFinishTV);
 
-        //db = new DBHelper(this);
-
         rating1b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
-        //db.addRating(rating1b);
 
+        rating1b.setTasteGroup(groupId);
         rating1b.setNotes("Rating Two");
         allRatingList.set(1, rating1b);
-
-        //db.updateRating(rating1b);
 
         total[1] = rating1b.getColor() + rating1b.getAroma() + rating1b.getBody() + rating1b.getTaste() + rating1b.getFinish();
 
@@ -198,15 +189,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating2ATasteTV);
         EditText finishET = findViewById(R.id.rating2AFinishTV);
 
-        //db = new DBHelper(this);
-
         rating2a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
-        //db.addRating(rating2a);
 
+        rating2a.setTasteGroup(groupId);
         rating2a.setNotes("Rating Three");
         allRatingList.set(2, rating2a);
-
-        //db.updateRating(rating2a);
 
         total[2] = rating2a.getColor() + rating2a.getAroma() + rating2a.getBody() + rating2a.getTaste() + rating2a.getFinish();
 
@@ -226,15 +213,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating2BTasteTV);
         EditText finishET = findViewById(R.id.rating2BFinishTV);
 
-        //db = new DBHelper(this);
-
         rating2b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
-        // db.addRating(rating2b);
 
+        rating2b.setTasteGroup(groupId);
         rating2b.setNotes("Rating Four");
         allRatingList.set(3, rating2b);
-
-        //db.updateRating(rating2b);
 
         total[3] = rating2b.getColor() + rating2b.getAroma() + rating2b.getBody() + rating2b.getTaste() + rating2b.getFinish();
 
@@ -254,15 +237,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating3ATasteTV);
         EditText finishET = findViewById(R.id.rating3AFinishTV);
 
-        //db = new DBHelper(this);
-
         rating3a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
-        //db.addRating(rating3a);
 
+        rating3a.setTasteGroup(groupId);
         rating3a.setNotes("Rating Five");
         allRatingList.set(4, rating3a);
-
-        //db.updateRating(rating3a);
 
         total[4] = rating3a.getColor() + rating3a.getAroma() + rating3a.getBody() + rating3a.getTaste() + rating3a.getFinish();
 
@@ -282,14 +261,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating3BTasteTV);
         EditText finishET = findViewById(R.id.rating3BFinishTV);
 
-        //db = new DBHelper(this);
-
         rating3b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
+        rating3b.setTasteGroup(groupId);
         rating3b.setNotes("Rating Six");
         allRatingList.set(5, rating3b);
-
-        //db.updateRating(rating3b);
 
         total[5] = rating3b.getColor() + rating3b.getAroma() + rating3b.getBody() + rating3b.getTaste() + rating3b.getFinish();
 
@@ -309,15 +285,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating4ATasteTV);
         EditText finishET = findViewById(R.id.rating4AFinishTV);
 
-        // db = new DBHelper(this);
-
         rating4a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
-        //db.addRating(rating4a);
 
+        rating4a.setTasteGroup(groupId);
         rating4a.setNotes("Rating Seven");
         allRatingList.set(6, rating4a);
-
-        // db.updateRating(rating4a);
 
         total[6] = rating4a.getColor() + rating4a.getAroma() + rating4a.getBody() + rating4a.getTaste() + rating4a.getFinish();
 
@@ -337,15 +309,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating4BTasteTV);
         EditText finishET = findViewById(R.id.rating4BFinishTV);
 
-        //db = new DBHelper(this);
-
         rating4b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
-        //db.addRating(rating4b);
 
+        rating4b.setTasteGroup(groupId);
         rating4b.setNotes("Rating Eight");
         allRatingList.set(7, rating4b);
-
-        //db.updateRating(rating4b);
 
         total[7] = rating4b.getColor() + rating4b.getAroma() + rating4b.getBody() + rating4b.getTaste() + rating4b.getFinish();
 
@@ -365,15 +333,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating5ATasteTV);
         EditText finishET = findViewById(R.id.rating5AFinishTV);
 
-        //db = new DBHelper(this);
-
         rating5a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
-        //db.addRating(rating5a);
 
+        rating5a.setTasteGroup(groupId);
         rating5a.setNotes("Rating Nine");
         allRatingList.set(8, rating5a);
-
-        //db.updateRating(rating5a);
 
         total[8] = rating5a.getColor() + rating5a.getAroma() + rating5a.getBody() + rating5a.getTaste() + rating5a.getFinish();
 
@@ -393,15 +357,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating5BTasteTV);
         EditText finishET = findViewById(R.id.rating5BFinishTV);
 
-        //db = new DBHelper(this);
-
         rating5b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
-        //db.addRating(rating5b);
 
+        rating5b.setTasteGroup(groupId);
         rating5b.setNotes("Rating Ten");
         allRatingList.set(9, rating5b);
-
-        //db.updateRating(rating5b);
 
         total[9] = rating5b.getColor() + rating5b.getAroma() + rating5b.getBody() + rating5b.getTaste() + rating5b.getFinish();
 
@@ -758,6 +718,7 @@ public class RatingActivity extends AppCompatActivity {
         testRatingsLog();
 
         Intent winesIntent = new Intent(this, WinesActivity.class);
+        winesIntent.putExtra("group_id", groupId);
         startActivity(winesIntent);
         overridePendingTransition(R.anim.fade_in, 0);
     }
