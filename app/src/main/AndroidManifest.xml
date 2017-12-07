@@ -22,28 +22,42 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".AddTasting">
-            android:screenOrientation="landscape">
+        <activity android:name=".AddTasting"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Add Tasting">
         </activity>
-        <activity android:name=".RatingActivity">
-            android:screenOrientation="landscape">
+        <activity
+            android:name=".RatingActivity"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Add Ratings">
         </activity>
-        <activity android:name=".WinesActivity">
-            android:screenOrientation="landscape">
+        <activity
+            android:name=".WinesActivity"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Add Wine Details">
         </activity>
-        <activity android:name=".ReviewTastingsActivity">
-            android:screenOrientation="landscape">
+        <activity
+            android:name=".ReviewTastingsActivity"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Review Tastings">
         </activity>
-        <activity android:name=".ReviewWinesActivity">
-            android:screenOrientation="landscape">
+        <activity
+            android:name=".ReviewWinesActivity"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Review Wines">
         </activity>
-        <activity android:name=".AddPhotoActivity">
-            android:screenOrientation="landscape">
+        <activity
+            android:name=".AddPhotoActivity"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Add Label Photos">
         </activity>
-        <activity android:name=".WineLocationListActivity">
+        <activity android:name=".WineLocationListActivity"
+                  android:label="Wine Tasting Notes - Wine Locations">
         </activity>
-        <activity android:name=".WineLocationDetailActivity">
-            android:screenOrientation="landscape">
+        <activity
+            android:name=".WineLocationDetailActivity"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Specific Wine Location">
         </activity>
 
         <meta-data

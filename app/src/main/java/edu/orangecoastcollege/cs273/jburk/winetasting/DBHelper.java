@@ -132,9 +132,8 @@ public class  DBHelper extends SQLiteOpenHelper {
                 + OFFERING_FIELD_WINE_NAME + " TEXT, "
                 + OFFERING_FIELD_TASTING_NAME + " TEXT, "
                 + OFFERING_FIELD_TASTING_ID + " INTEGER, "
-                + OFFERING_FIELD_TASTING_ID + " INTEGER" + ")";
+                + OFFERING_WINE_GROUP_ID + " INTEGER" + ")";
         sqLiteDatabase.execSQL(newDB);
-
     }
 
     @Override

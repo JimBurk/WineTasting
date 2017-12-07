@@ -92,7 +92,7 @@ public class WinesActivity extends AppCompatActivity {
 
         startActivity(picturesIntent);
 
-        overridePendingTransition(R.anim.fade_in, 0);
+        overridePendingTransition(R.anim.slide_from_left, 0);
     }
 
     /***
@@ -106,11 +106,11 @@ public class WinesActivity extends AppCompatActivity {
         EditText vineyardET = findViewById(R.id.wines1AVineyardET);
         EditText priceET = findViewById(R.id.wines1APriceET);
 
-        vintageET.setText("2002");
-        varietalET.setText("Cabernet Sauvignon");
-        wineryET.setText("Pride Mountain");
-        vineyardET.setText("Napa");
-        priceET.setText("$64.00");
+        vintageET.setText("2014");
+        varietalET.setText("Zinfandel");
+        wineryET.setText("Bedrock");
+        vineyardET.setText("Limerick Lane");
+        priceET.setText("$38.00");
 
         vintageET = findViewById(R.id.wines1BVintageET);
         varietalET = findViewById(R.id.wines1BVarietalET);
@@ -118,11 +118,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines1BVineyardET);
         priceET = findViewById(R.id.wines1BPriceET);
 
-        vintageET.setText("2015");
+        vintageET.setText("2013");
         varietalET.setText("Zinfandel");
-        wineryET.setText("Mauritson");
-        vineyardET.setText("Pritchet Peak");
-        priceET.setText("$42.95");
+        wineryET.setText("Ravenswood");
+        vineyardET.setText("Bedrock VY");
+        priceET.setText("$36.00");
 
         vintageET = findViewById(R.id.wines2AVintageET);
         varietalET = findViewById(R.id.wines2AVarietalET);
@@ -130,11 +130,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines2AVineyardET);
         priceET = findViewById(R.id.wines2APriceET);
 
-        vintageET.setText("2015");
-        varietalET.setText("Zinfandel");
-        wineryET.setText("Seghesio Family Vineyards");
-        vineyardET.setText("Sonoma County");
-        priceET.setText("$24.95");
+        vintageET.setText("2003");
+        varietalET.setText("Cabernet Sauvignon");
+        wineryET.setText("Outpost");
+        vineyardET.setText("Howell Mountain");
+        priceET.setText("$64.95");
 
         vintageET = findViewById(R.id.wines2BVintageET);
         varietalET = findViewById(R.id.wines2BVarietalET);
@@ -142,11 +142,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines2BVineyardET);
         priceET = findViewById(R.id.wines2BPriceET);
 
-        vintageET.setText("2013");
-        varietalET.setText("Pinot Noir");
-        wineryET.setText("Wild Horse");
-        vineyardET.setText("Central Coast");
-        priceET.setText("$23.95");
+        vintageET.setText("2002");
+        varietalET.setText("Cabernet Sauvignon");
+        wineryET.setText("Pride Mountain");
+        vineyardET.setText("Napa");
+        priceET.setText("$61.95");
 
         vintageET = findViewById(R.id.wines3AVintageET);
         varietalET = findViewById(R.id.wines3AVarietalET);
@@ -154,11 +154,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines3AVineyardET);
         priceET = findViewById(R.id.wines3APriceET);
 
-        vintageET.setText("2010");
-        varietalET.setText("Petite Syrah");
-        wineryET.setText("Carlisle");
-        vineyardET.setText("Palisades VY");
-        priceET.setText("$37.95");
+        vintageET.setText("2004");
+        varietalET.setText("Cabernet Franc");
+        wineryET.setText("Paradigm");
+        vineyardET.setText("Napa");
+        priceET.setText("$53.00");
 
         vintageET = findViewById(R.id.wines3BVintageET);
         varietalET = findViewById(R.id.wines3BVarietalET);
@@ -166,11 +166,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines3BVineyardET);
         priceET = findViewById(R.id.wines3BPriceET);
 
-        vintageET.setText("2008");
-        varietalET.setText("Merlot");
-        wineryET.setText("Pahlmeyer");
-        vineyardET.setText("Napa Valley");
-        priceET.setText("$64.95");
+        vintageET.setText("2011");
+        varietalET.setText("Cabernet Franc");
+        wineryET.setText("Rockpile");
+        vineyardET.setText("Buck Pasture");
+        priceET.setText("$40.95");
 
         vintageET = findViewById(R.id.wines4AVintageET);
         varietalET = findViewById(R.id.wines4AVarietalET);
@@ -178,11 +178,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines4AVineyardET);
         priceET = findViewById(R.id.wines4APriceET);
 
-        vintageET.setText("2012");
-        varietalET.setText("Pinot Noir");
-        wineryET.setText("Arista");
-        vineyardET.setText("Harper's Rest");
-        priceET.setText("$34.00");
+        vintageET.setText("2013");
+        varietalET.setText("Zinfandel");
+        wineryET.setText("Ridge");
+        vineyardET.setText("Hooker Creek");
+        priceET.setText("$32.00");
 
         vintageET = findViewById(R.id.wines4BVintageET);
         varietalET = findViewById(R.id.wines4BVarietalET);
@@ -190,11 +190,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines4BVineyardET);
         priceET = findViewById(R.id.wines4BPriceET);
 
-        vintageET.setText("2016");
-        varietalET.setText("Red Blend");
-        wineryET.setText("Bedrock");
-        vineyardET.setText("Evangelho Heritage");
-        priceET.setText("$42.95");
+        vintageET.setText("2002");
+        varietalET.setText("Cabernet Sauvignon");
+        wineryET.setText("ZD");
+        vineyardET.setText("Napa Reserve");
+        priceET.setText("$115.00");
 
         vintageET = findViewById(R.id.wines5AVintageET);
         varietalET = findViewById(R.id.wines5AVarietalET);
@@ -202,11 +202,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines5AVineyardET);
         priceET = findViewById(R.id.wines5APriceET);
 
-        vintageET.setText("2013");
-        varietalET.setText("Syrah");
-        wineryET.setText("Rockpile");
-        vineyardET.setText("Madrone Springs");
-        priceET.setText("$39.00");
+        vintageET.setText("2005");
+        varietalET.setText("Cabernet Sauvignon");
+        wineryET.setText("Stag's Leap");
+        vineyardET.setText("Artemis");
+        priceET.setText("$35.00");
 
         vintageET = findViewById(R.id.wines5BVintageET);
         varietalET = findViewById(R.id.wines5BVarietalET);
@@ -214,11 +214,11 @@ public class WinesActivity extends AppCompatActivity {
         vineyardET = findViewById(R.id.wines5BVineyardET);
         priceET = findViewById(R.id.wines5BPriceET);
 
-        vintageET.setText("2013");
-        varietalET.setText("Zinfandel");
-        wineryET.setText("Ravenswood");
-        vineyardET.setText("Big River VY");
-        priceET.setText("$35.95");
+        vintageET.setText("1998");
+        varietalET.setText("Cabernet Sauvignnon");
+        wineryET.setText("Vine Cliff");
+        vineyardET.setText("Oakville");
+        priceET.setText("$74.95");
     }
 
     /***

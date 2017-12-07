@@ -30,8 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="32sp"
-            android:background="@drawable/button_border"
-            android:hint="@string/tasting_name"
+            android:gravity="left"
+            android:background="@drawable/textview_border"
             android:paddingLeft="200dp"
             android:inputType="text"/>
 
@@ -58,8 +58,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="32sp"
-            android:background="@drawable/button_border"
-            android:hint="@string/tasting_date"
+            android:gravity="left"
+            android:background="@drawable/textview_border"
             android:layout_weight="1"
             android:paddingLeft="200dp"
             android:inputType="date"/>
@@ -87,8 +87,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="32sp"
-            android:background="@drawable/button_border"
-            android:hint="@string/tasting_location"
+            android:gravity="left"
+            android:background="@drawable/textview_border"
             android:paddingLeft="200dp"
             android:inputType="text"/>
 

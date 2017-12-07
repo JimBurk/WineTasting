@@ -7,12 +7,14 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.net.Uri;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,10 +26,22 @@ public class AddPhotoActivity extends AppCompatActivity {
     private ArrayList<Wine> wineArrayList;
     private TextView numTextView;
     private TextView wineInfoTV;
+    private TextView addWineInfoTV;
     private ImageView wineImageView;
+    private Button addPhotoButton;
     private Uri imageUri;
     private int imageNum = 0;
     private long mId = 0l;
+    private List<String> permsList = new ArrayList<>();
+
+    private DBHelper db;
+    private Wine wine;
+
+    private int hasCameraPerm;
+    private int readStoragePerm;
+    private int writeStoragePerm;
+
+    private Handler handler;
 
     // constants for permissions
     private static final int GRANTED = PackageManager.PERMISSION_GRANTED;
@@ -42,40 +56,55 @@ public class AddPhotoActivity extends AppCompatActivity {
 
         wineArrayList  = getIntent().getParcelableArrayListExtra("wineArrayList");
 
-        numTextView = (TextView) findViewById(R.id.numWinesTV);
         wineImageView = (ImageView) findViewById(R.id.wineBottleIV);
         wineInfoTV = (TextView) findViewById(R.id.wineInfoTV);
+        addWineInfoTV = (TextView) findViewById(R.id.addWineInfoTV);
+
+        addPhotoButton = (Button) findViewById(R.id.addPhotoButton);
+
+        wineInfoTV.setVisibility(View.INVISIBLE);
 
         wineImageView.setImageURI(getUriFromResource(this, R.drawable.wine_bottle));
-    }
 
-    public void selectWineImage(View v) {
         List<String> permsList = new ArrayList<>();
 
-        // Check each permission individually
-        int hasCameraPerm = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+        hasCameraPerm = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
         if (hasCameraPerm == DENIED)
             permsList.add(Manifest.permission.CAMERA);
 
-        int readStoragePerm = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        readStoragePerm = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
         if (readStoragePerm == DENIED)
             permsList.add(Manifest.permission.READ_EXTERNAL_STORAGE);
 
-        int writeStoragePerm = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        writeStoragePerm = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (writeStoragePerm == DENIED)
             permsList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
         if (permsList.size() > 0) {
             // Convert perms list into array
-            String [] permsArray = new String[permsList.size()];
+            String[] permsArray = new String[permsList.size()];
             permsList.toArray(permsArray);
 
             // Ask user for them
             ActivityCompat.requestPermissions(this, permsArray, 1337);
         }
 
+        wine = wineArrayList.get(imageNum);
+
+        String addWineInfo = "  " + Integer.toString(wine.getmVintage());
+        addWineInfo += "\n  " + wine.getmWinery();
+        addWineInfo += "\n  " + wine.getmVarietal();
+        addWineInfo += "\n  " + wine.getmVineyard() + "  ";
+
+        addWineInfoTV.setText(addWineInfo);
+
+        db = new DBHelper(this);
+    }
+
+    public void selectWineImage(View v) {
         // Lets make sure we have all permissions, then start Image Gallery
         if (hasCameraPerm == GRANTED && readStoragePerm == GRANTED && writeStoragePerm == GRANTED) {
+
             // Open the Image Gallery
             Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
@@ -85,12 +114,14 @@ public class AddPhotoActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        DBHelper db = new DBHelper(this);
-        Wine wine = wineArrayList.get(imageNum);
+        wineInfoTV.setVisibility(View.VISIBLE);
 
-        String wineInfo = wine.getmVarietal();
-        wineInfo += "\n" + wine.getmVintage();
-        wineInfo += "\n" + wine.getmWinery();
+        wine = wineArrayList.get(imageNum);
+
+        String wineInfo = "  " + Integer.toString(wine.getmVintage());
+        wineInfo += "\n  " + wine.getmWinery();
+        wineInfo += "\n  " + wine.getmVarietal();
+        wineInfo += "\n  " + wine.getmVineyard() + "  ";
 
         wineInfoTV.setText(wineInfo);
 
@@ -105,11 +136,27 @@ public class AddPhotoActivity extends AppCompatActivity {
             db.updateWine(wine);
         }
         imageNum++;
+
         if (imageNum > 9) {
-            this.finish();
+            handler = new Handler();
+            addWineInfoTV.setVisibility(View.INVISIBLE);
+            addPhotoButton.setVisibility(View.INVISIBLE);
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    endIt();
+                }
+            }, 4000);
         }
         else {
-            numTextView.setText("numImages = " + imageNum);
+            wine = wineArrayList.get(imageNum);
+
+            String addWineInfo = "  " + Integer.toString(wine.getmVintage());
+            addWineInfo += "\n  " + wine.getmWinery();
+            addWineInfo += "\n  " + wine.getmVarietal();
+            addWineInfo += "\n  " + wine.getmVineyard() + "  ";
+
+            addWineInfoTV.setText(addWineInfo);
         }
     }
 
@@ -132,5 +179,9 @@ public class AddPhotoActivity extends AppCompatActivity {
 
         // Parse the String
         return Uri.parse(uri);
+    }
+
+    public void endIt() {
+        this.finish();
     }
 }

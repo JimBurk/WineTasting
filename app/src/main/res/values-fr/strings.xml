@@ -62,7 +62,8 @@
     <string name="add_picture">Ajouter des Images</string>
     <string name="wines_enter">Entrez les Vins</string>
 
-    <string name="add_photo">Ajouiter une Photo</string>
+    <string name="add_photos">\t\tAjouiter des Photos\t\t</string>
+    <string name="add_photo">\t\tAjouiter une Photo\t\t</string>
 
     <string name="wines_save">\tSauegarder ces Vins\t</string>
 
