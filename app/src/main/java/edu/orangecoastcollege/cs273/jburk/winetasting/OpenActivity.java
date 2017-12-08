@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ public class OpenActivity extends AppCompatActivity {
 
     public static final String TAG = OpenActivity.class.getSimpleName();
 
-    private List <OfferingWineRating> offeringList = new ArrayList<>();
+    private List <OfferingRatingTasting> offeringList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,7 @@ public class OpenActivity extends AppCompatActivity {
 
 
         //TODO : IF CRASHES: COMMENT OUT FROM BELOW TO (STOP)
-        /**
+
         DBHelper db = new DBHelper(this);
 
         List<Tasting> tastingsList = db.getAllTastings();
@@ -51,22 +50,19 @@ public class OpenActivity extends AppCompatActivity {
 
 
         Rating rating = db.getRating(1);
-        Wine wine = db.getWine(1);
+        Tasting tasting = db.getTasting(rating.getTasteGroup());
 
-        OfferingWineRating offering = new OfferingWineRating(wine, rating);
+        OfferingRatingTasting offering = new OfferingRatingTasting(tasting, rating);
 
+        db.addRatingTastingOffering(offering);
 
-        //offering.setmRating(rating);
-        //offering.setmWine(wine);
-        db.addRatingWineRating(offering);
-
-        offeringList = db.getAllOfferingWineRatings();
+        offeringList = db.getAllRatingTastingOfferings();
 
         Log.i(TAG, "Showing all offerings:");
-        for (OfferingWineRating o: offeringList)
+        for (OfferingRatingTasting o: offeringList)
             Log.i(TAG, o.toString());
 
-         */
+
         //TODO: (STOP)
     }
 

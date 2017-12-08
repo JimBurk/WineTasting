@@ -55,59 +55,37 @@ public class WineDetailsActivity extends AppCompatActivity {
 
         db.addRatingWineRating(offering);
 
+        Tasting tasting = new Tasting(rating.getTasteGroup());
 
-        //OfferingRatingTasting offering = new OfferingRatingTasting();
+        OfferingRatingTasting rateTasteOffering = new OfferingRatingTasting(tasting, rating);
 
 
-
-        /**
-         offering.setmTasting(offer.getmTasting());
-         offering.setmRating(offer.getmRating());
-         offering.getmTasting().setName(offer.getmTasting().getName());
-         offering.getmTasting().setDate(offer.getmTasting().getDate());
-         offering.getmTasting().setLocation(offer.getmTasting().getLocation());
-         offering.getmRating().setColor(offer.getmRating().getColor());
-         offering.getmRating().setAroma(offer.getmRating().getAroma());
-         offering.getmRating().setBody(offer.getmRating().getBody());
-         offering.getmRating().setTaste(offer.getmRating().getTaste());
-         offering.getmRating().setFinish(offer.getmRating().getFinish());
-         offering.getmRating().setNotes(offer.getmRating().getNotes());
-         */
-
-/**
-        for (OfferingWineRating offer : allWineRatingList)
-            if (offer.getmRating().getId() == selectedWine.getmId()) {}
-            */
-
-/**
         ratingTextView.setText(
-                "Color: " + df.format(valueOf(offering.getmRating().getColor())) + "\n" +
-                "Aroma: " + df.format(valueOf(offering.getmRating().getColor())) + "\n" +
-                "Body: " + df.format(valueOf(offering.getmRating().getColor())) + "\n" +
-                "Taste: " + df.format(valueOf(offering.getmRating().getColor())) + "\n" +
-                "Finish: " + df.format(valueOf(offering.getmRating().getColor())) + "\n" +
+                "Color: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
+                "Aroma: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
+                "Body: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
+                "Taste: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
+                "Finish: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
                 "----------------" + "\n" +
-                "Total: " + df.format(getRankTotal(offering)) + "\n" +
+                "Total: " + String.valueOf(getRankTotal(offering)) + "\n" +
                 "Notes: " + offering.getmNotes()
         );
 
-        /**
         tastingTextView.setText(
-                "Name: " + offering.getmTasting().getName() + "\n" +
-                "Date: " + offering.getmTasting().getDate() + "\n" +
-                "Location: " + offering.getmTasting().getLocation()
+                "Name: " + rateTasteOffering.getmTasting().getName() + "\n" +
+                "Date: " + rateTasteOffering.getmTasting().getDate() + "\n" +
+                "Location: " + rateTasteOffering.getmTasting().getLocation()
         );
-         */
 
-/**
+
         wineTextView.setText(
                 "Varietal: " + selectedWine.getmVarietal() + "\n" +
-                "Vintage: " + valueOf(selectedWine.getmVintage()) + "\n" +
+                "Vintage: " + String.valueOf(selectedWine.getmVintage()) + "\n" +
                 "Winery: " + selectedWine.getmWinery() + "\n" +
                 "Vineyard: " + selectedWine.getmVineyard() + "\n" +
-                "Price: " + df.format(valueOf(selectedWine.getmPrice()))
+                "Price: " + String.valueOf(selectedWine.getmPrice())
         );
-*/
+
 
 
         Log.i("Wine Details Activity", " -> " + selectedWine.getmId());
@@ -128,3 +106,22 @@ public class WineDetailsActivity extends AppCompatActivity {
     }
 
 }
+
+/**
+ for (OfferingWineRating offer : allWineRatingList)
+ if (offer.getmRating().getId() == selectedWine.getmId()) {}
+ */
+
+/**
+ offering.setmTasting(offer.getmTasting());
+ offering.setmRating(offer.getmRating());
+ offering.getmTasting().setName(offer.getmTasting().getName());
+ offering.getmTasting().setDate(offer.getmTasting().getDate());
+ offering.getmTasting().setLocation(offer.getmTasting().getLocation());
+ offering.getmRating().setColor(offer.getmRating().getColor());
+ offering.getmRating().setAroma(offer.getmRating().getAroma());
+ offering.getmRating().setBody(offer.getmRating().getBody());
+ offering.getmRating().setTaste(offer.getmRating().getTaste());
+ offering.getmRating().setFinish(offer.getmRating().getFinish());
+ offering.getmRating().setNotes(offer.getmRating().getNotes());
+ */
