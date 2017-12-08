@@ -24,7 +24,6 @@
     <string name="summary_button">Reprende</string>
 
     <!-- Rating Activity-->
-
     <string name="header_wine">Vin</string>
     <string name="header_appearance">Couleur</string>
     <string name="header_aroma">Arome</string>
@@ -53,7 +52,6 @@
     <string name="rating_continue">\t\tReprende\t\t</string>
 
     <!-- Wines Activity-->
-
     <string name="header_vintage">Millesime</string>
     <string name="header_varietal">Varietal</string>
     <string name="header_winery">Vinicloe</string>

@@ -36,7 +36,6 @@ class LocationDBHelper extends SQLiteOpenHelper {
     private static final String FIELD_LATITUDE = "latitude";
     private static final String FIELD_LONGITUDE = "longitude";
 
-
     public LocationDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         mContext = context;
@@ -56,7 +55,6 @@ class LocationDBHelper extends SQLiteOpenHelper {
                 + FIELD_LONGITUDE + " REAL"
                 + ")";
         database.execSQL(createQuery);
-
     }
 
     @Override
@@ -70,7 +68,7 @@ class LocationDBHelper extends SQLiteOpenHelper {
 
     //********** LOCATIONS TABLE OPERATIONS:  ADD, GETALL, DELETE
 
-    public void addLocation(Location location) {
+    public void addLocation(WineLocation location) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -89,8 +87,8 @@ class LocationDBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public List<Location> getAllwineLocations() {
-        ArrayList<Location> locationsList = new ArrayList<>();
+    public List<WineLocation> getAllwineLocations() {
+        ArrayList<WineLocation> locationsList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(
                 LOCATIONS_TABLE,
@@ -102,8 +100,8 @@ class LocationDBHelper extends SQLiteOpenHelper {
         //COLLECT EACH ROW IN THE TABLE
         if (cursor.moveToFirst()) {
             do {
-                Location location =
-                        new Location(cursor.getLong(0),
+                WineLocation location =
+                        new WineLocation(cursor.getLong(0),
                                 cursor.getString(1),
                                 cursor.getString(2),
                                 cursor.getString(3),
@@ -120,7 +118,7 @@ class LocationDBHelper extends SQLiteOpenHelper {
         return locationsList;
     }
 
-    public void deleteLocation(Location location) {
+    public void deleteLocation(WineLocation location) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         // DELETE THE TABLE ROW
@@ -135,7 +133,7 @@ class LocationDBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public Location getLocation(int id) {
+    public WineLocation getLocation(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(
                 LOCATIONS_TABLE,
@@ -147,8 +145,8 @@ class LocationDBHelper extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
-        Location location =
-                new Location(cursor.getLong(0),
+        WineLocation location =
+                new WineLocation(cursor.getLong(0),
                         cursor.getString(1),
                         cursor.getString(2),
                         cursor.getString(3),
@@ -190,7 +188,7 @@ class LocationDBHelper extends SQLiteOpenHelper {
                 String phone = fields[6].trim();
                 double latitude = Double.parseDouble(fields[7].trim());
                 double longitude = Double.parseDouble(fields[8].trim());
-                addLocation(new Location(id, name, address, city, state, zipCode, phone, latitude, longitude));
+                addLocation(new WineLocation(id, name, address, city, state, zipCode, phone, latitude, longitude));
             }
         } catch (IOException e) {
             e.printStackTrace();

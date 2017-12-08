@@ -3,7 +3,7 @@ package edu.orangecoastcollege.cs273.jburk.winetasting;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Location implements Parcelable {
+public class WineLocation implements Parcelable {
     private long mId;
     private String mName;
     private String mAddress;
@@ -14,7 +14,7 @@ public class Location implements Parcelable {
     private double mLatitude;
     private double mLongitude;
 
-    public Location(long id, String name, String address, String city, String state, String zipCode, String phone, double latitude, double longitude) {
+    public WineLocation(long id, String name, String address, String city, String state, String zipCode, String phone, double latitude, double longitude) {
         mId = id;
         mName = name;
         mAddress = address;
@@ -26,11 +26,11 @@ public class Location implements Parcelable {
         mLongitude = longitude;
     }
 
-    public Location(String name, String address, String city, String state, String zipCode, String phone, double latitude, double longitude) {
+    public WineLocation(String name, String address, String city, String state, String zipCode, String phone, double latitude, double longitude) {
         this(-1, name, address, city, state, zipCode, phone, latitude, longitude);
     }
 
-    private Location(Parcel parcel) {
+    private WineLocation(Parcel parcel) {
         // Order does matter
         mId = parcel.readLong();
         mName = parcel.readString();
@@ -120,9 +120,18 @@ public class Location implements Parcelable {
         return mAddress + "\n" + mCity + ", " + mState + "  " + mZipCode;
     }
 
+    public String getFormattedLatLng()
+    {
+        String latLng = String.valueOf(Math.abs(mLatitude));
+        latLng += ((mLatitude < 0.0) ? " S  " : " N  ");
+        latLng += String.valueOf(Math.abs(mLongitude));
+        latLng += ((mLongitude < 0.0) ? " W" : "E");
+        return latLng;
+    }
+
     @Override
     public String toString() {
-        return "Location{" +
+        return "WineLocation{" +
                 "Id=" + mId +
                 ", Name='" + mName + '\'' +
                 ", Address='" + mAddress + '\'' +
@@ -153,15 +162,15 @@ public class Location implements Parcelable {
         parcel.writeDouble(mLongitude);
     }
 
-    public static final Parcelable.Creator<Location> CREATOR = new Creator<Location>() {
+    public static final Parcelable.Creator<WineLocation> CREATOR = new Creator<WineLocation>() {
         /***
          * This method used with Intents to create new Game objects
          * @param parcel The package with all the information for the game
          */
 
         @Override
-        public Location createFromParcel(Parcel parcel) {
-            return new Location(parcel);
+        public WineLocation createFromParcel(Parcel parcel) {
+            return new WineLocation(parcel);
         }
 
         /***
@@ -170,8 +179,8 @@ public class Location implements Parcelable {
          * @return new array of Games
          */
         @Override
-        public Location[] newArray(int size) {
-            return new Location[size];
+        public WineLocation[] newArray(int size) {
+            return new WineLocation[size];
         }
     };
 }

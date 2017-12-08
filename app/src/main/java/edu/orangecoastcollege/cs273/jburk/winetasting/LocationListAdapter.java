@@ -15,10 +15,10 @@ import java.util.List;
 /**
  * Helper class to provide custom adapter for the <code>Location</code> list.
  */
-public class LocationListAdapter extends ArrayAdapter<Location> {
+public class LocationListAdapter extends ArrayAdapter<WineLocation> {
 
     private Context mContext;
-    private List<Location> mLocationsList = new ArrayList<>();
+    private List<WineLocation> mLocationsList = new ArrayList<>();
     private int mResourceId;
 
     /**
@@ -28,7 +28,7 @@ public class LocationListAdapter extends ArrayAdapter<Location> {
      * @param rId The resource id (typically the layout file name)
      * @param locations The list of locations to display
      */
-    public LocationListAdapter(Context c, int rId, List<Location> locations) {
+    public LocationListAdapter(Context c, int rId, List<WineLocation> locations) {
         super(c, rId, locations);
         mContext = c;
         mResourceId = rId;
@@ -45,7 +45,7 @@ public class LocationListAdapter extends ArrayAdapter<Location> {
     @Override
     public View getView(int pos, View convertView, ViewGroup parent)
     {
-        final Location selectedLocation = mLocationsList.get(pos);
+        final WineLocation selectedLocation = mLocationsList.get(pos);
 
 
         LayoutInflater inflater =

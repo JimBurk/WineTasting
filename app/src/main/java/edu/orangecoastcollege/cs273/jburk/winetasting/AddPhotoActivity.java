@@ -21,6 +21,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+/***
+ * This activity is used to attach a photo of each wine's label to the database. A text box to the
+ * right of the activity shows the information on the wine to be added, along with an "Add Photo"
+ * button. The user will be transferred to the picture gallery on his device, where he will select
+ * a photo to be used. Upon selection, the label is shown on the left side of the screen, along with
+ * the information on that wine. When the last wine is selected, the image is shown for 6 seconds,
+ * while the button and information for the next wine is suppressed.
+ */
+
 public class AddPhotoActivity extends AppCompatActivity {
 
     private ArrayList<Wine> wineArrayList;
@@ -31,7 +40,6 @@ public class AddPhotoActivity extends AppCompatActivity {
     private Button addPhotoButton;
     private Uri imageUri;
     private int imageNum = 0;
-    private long mId = 0l;
     private List<String> permsList = new ArrayList<>();
 
     private DBHelper db;
@@ -101,6 +109,11 @@ public class AddPhotoActivity extends AppCompatActivity {
         db = new DBHelper(this);
     }
 
+    /***
+     * If the permissions are granted, the image gallery is opened.
+     * @param v
+     */
+
     public void selectWineImage(View v) {
         // Lets make sure we have all permissions, then start Image Gallery
         if (hasCameraPerm == GRANTED && readStoragePerm == GRANTED && writeStoragePerm == GRANTED) {
@@ -146,7 +159,7 @@ public class AddPhotoActivity extends AppCompatActivity {
                 public void run() {
                     endIt();
                 }
-            }, 4000);
+            }, 6000);
         }
         else {
             wine = wineArrayList.get(imageNum);

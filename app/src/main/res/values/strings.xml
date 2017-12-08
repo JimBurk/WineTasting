@@ -52,7 +52,6 @@
     <string name="rating_continue">\t\tContinue\t\t</string>
 
     <!-- Wines Activity-->
-
     <string name="header_vintage">Vintage</string>
     <string name="header_varietal">Varietal</string>
     <string name="header_winery">Winery</string>

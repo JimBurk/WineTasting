@@ -24,7 +24,6 @@
     <string name="summary_button">SUMMARY</string>
 
     <!-- Rating Activity-->
-
     <string name="header_wine">Wine</string>
     <string name="header_appearance">Color</string>
     <string name="header_aroma">Aroma</string>
@@ -53,7 +52,6 @@
     <string name="rating_continue">\t\tContinue\t\t</string>
 
     <!-- Wines Activity-->
-
     <string name="header_vintage">Vintage</string>
     <string name="header_varietal">Varietal</string>
     <string name="header_winery">Winery</string>
