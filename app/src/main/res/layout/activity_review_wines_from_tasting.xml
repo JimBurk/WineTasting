@@ -7,10 +7,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/vines6"
     android:layout_margin="15dp"
-    tools:context="edu.orangecoastcollege.cs273.jburk.winetasting.ReviewTastingsActivity">
+    tools:context="edu.orangecoastcollege.cs273.jburk.winetasting.ReviewWinesFromTastingActivity">
 
     <ListView
-        android:id="@+id/tasteListView"
+        android:id="@+id/winesListView"
         android:layout_width="342dp"
         android:layout_height="0dp"
         android:layout_marginBottom="32dp"

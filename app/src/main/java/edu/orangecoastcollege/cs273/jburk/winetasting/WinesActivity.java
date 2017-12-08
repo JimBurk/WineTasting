@@ -53,12 +53,10 @@ public class WinesActivity extends AppCompatActivity {
 
         Intent intentFromOpen = getIntent();
         groupId = intentFromOpen.getLongExtra("group_id", 0);
-
         //deleteDatabase(DBHelper.DATABASE_NAME);
 
         saveWine = (Button) findViewById(R.id.winesContinue);
         //getSaveWine = (Button) findViewById(R.id.getSavedWines);
-
 
         allWineList.add(wine1a = new Wine());
         allWineList.add(wine1b = new Wine());
@@ -265,6 +263,7 @@ public class WinesActivity extends AppCompatActivity {
         for (Wine w: wineList)
             Log.i(TAG, w.toString());
 
+        /**
         db.deleteWine(wineList.get(3));
         wineList.clear();
         wineList = db.getAllWines();
@@ -286,6 +285,7 @@ public class WinesActivity extends AppCompatActivity {
         wineList = db.getAllWines();
         for (Wine w: wineList)
             Log.i(TAG, w.toString());
+        */
 
         Intent continueIntent = new Intent(this, OpenActivity.class);
         startActivity(continueIntent);

@@ -3,9 +3,12 @@ package edu.orangecoastcollege.cs273.jburk.winetasting;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /***
@@ -16,10 +19,53 @@ import java.util.List;
 
 public class OpenActivity extends AppCompatActivity {
 
+    public static final String TAG = OpenActivity.class.getSimpleName();
+
+    private List <OfferingWineRating> offeringList = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open);
+
+
+        //TODO : IF CRASHES: COMMENT OUT FROM BELOW TO (STOP)
+        DBHelper db = new DBHelper(this);
+
+        List<Tasting> tastingsList = db.getAllTastings();
+        List<Rating> ratingsList = db.getAllRatings();
+        List<Wine> winesList = db.getAllWines();
+
+        Log.i(TAG, "Showing all tastings:");
+        for (Tasting t: tastingsList)
+            Log.i(TAG, t.toString());
+
+        Log.i(TAG, "Showing all ratings:");
+        for (Rating r: ratingsList)
+            Log.i(TAG, r.toString());
+
+        Log.i(TAG, "Showing all wines:");
+        for (Wine w: winesList)
+            Log.i(TAG, w.toString());
+
+
+        Rating rating = db.getRating(1);
+        Wine wine = db.getWine(1);
+
+        OfferingWineRating offering = new OfferingWineRating(wine, rating);
+
+
+        //offering.setmRating(rating);
+        //offering.setmWine(wine);
+        db.addRatingWineRating(offering);
+
+        offeringList = db.getAllOfferingWineRatings();
+
+        Log.i(TAG, "Showing all offerings:");
+        for (OfferingWineRating o: offeringList)
+            Log.i(TAG, o.toString());
+
+        //TODO: (STOP)
     }
 
     public void newTasting(View view){
@@ -46,7 +92,14 @@ public class OpenActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, 0);
     }
 
+    // TODO: once database is debugged
+    // TODO: Remove --> deleteDatabase(DBHelper.DATABASE_NAME); o
+    // TODO: Remove --> Toast.makeText(this, "Deleteing Database", Toast.LENGTH_LONG).show();
+    // TODO: Uncomment -> //this.finishAffinity();
     public void quitApp(View view) {
-        this.finishAffinity();
+        deleteDatabase(DBHelper.DATABASE_NAME);
+        Toast.makeText(this, "Deleting Database", Toast.LENGTH_LONG).show();
+
+        //this.finishAffinity();
     }
 }

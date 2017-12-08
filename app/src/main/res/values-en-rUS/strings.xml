@@ -65,4 +65,12 @@
 
     <string name="wines_save">\t\tSave These Wines\t\t</string>
 
+    <!-- Adapter -->
+    <string name="adapter_date">Date</string>
+    <string name="adapter_location">Location</string>
+    <string name="adapter_name">Name</string>
+    <string name="adapter_vintage">Vintage</string>
+    <string name="adapter_winery">Winery</string>
+    <string name="adapter_varietal">Varietal</string>
+
 </resources>

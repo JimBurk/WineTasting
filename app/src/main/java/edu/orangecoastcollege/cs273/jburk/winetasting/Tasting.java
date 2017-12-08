@@ -37,18 +37,6 @@ public class Tasting implements Parcelable {
         mLocation = in.readString();
     }
 
-    public static final Creator<Tasting> CREATOR = new Creator<Tasting>() {
-        @Override
-        public Tasting createFromParcel(Parcel in) {
-            return new Tasting(in);
-        }
-
-        @Override
-        public Tasting[] newArray(int size) {
-            return new Tasting[size];
-        }
-    };
-
     public long getId() {
         return mId;
     }
@@ -82,9 +70,32 @@ public class Tasting implements Parcelable {
     }
 
 
+
+
+    public static final Parcelable.Creator<Tasting> CREATOR = new Parcelable.Creator<Tasting>() {
+        @Override
+        public Tasting createFromParcel(Parcel in) {
+            return new Tasting(in);
+        }
+
+        @Override
+        public Tasting[] newArray(int size) {
+            return new Tasting[size];
+        }
+    };
+
+
     @Override
     public int describeContents() {
         return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeLong(mId);
+        parcel.writeString(mName);
+        parcel.writeString(mDate);
+        parcel.writeString(mLocation);
     }
 
     @Override
@@ -117,15 +128,5 @@ public class Tasting implements Parcelable {
                 ", mDate='" + mDate + '\'' +
                 ", mLocation='" + mLocation + '\'' +
                 '}';
-    }
-
-
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeLong(mId);
-        parcel.writeString(mName);
-        parcel.writeString(mDate);
-        parcel.writeString(mLocation);
     }
 }

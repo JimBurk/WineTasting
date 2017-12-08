@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="viewWineDetails"
+    android:onClick="viewWineList"
     android:clickable="true"
-    android:id="@+id/wineListLinearLayout">
+    android:id="@+id/tastingListLinearLayout">
 
     <ImageView
         android:id="@+id/wineBottleImageView"
@@ -21,24 +21,27 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/vineyardListTextView"
+            android:id="@+id/nameListTextView"
+            android:textAppearance="@color/midNightBlack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:text="Vineyard" />
+            android:text="@string/adapter_name"
+            android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/varietalListTextView"
+            android:id="@+id/dateListTextView"
+            android:textAppearance="@color/midNightBlack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Varietal" />
+            android:text="@string/adapter_date"
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/vintageListTextView"
+            android:id="@+id/locationListTextView"
+            android:textAppearance="@color/midNightBlack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:text="Vintage" />
+            android:text="@string/adapter_location"
+            android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

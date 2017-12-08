@@ -67,7 +67,7 @@ public class RatingActivity extends AppCompatActivity {
         String tastingName = intentFromOpen.getStringExtra("TastingName");
         String tastingDatee = intentFromOpen.getStringExtra("TastingDate");
         String tastingLocation = intentFromOpen.getStringExtra("TastingLocation");
-        // deleteDatabase(DBHelper.DATABASE_NAME);
+        //deleteDatabase(DBHelper.DATABASE_NAME);
 
         rankButton = (Button) findViewById(R.id.rankDisplay);
         rankButton.setVisibility(View.INVISIBLE);
@@ -99,6 +99,7 @@ public class RatingActivity extends AppCompatActivity {
         for (Rating r: ratingList)
             Log.i(TAG, r.toString());
 
+        /**
         // Delete Rating
         db.deleteRating(ratingList.get(3));
         ratingList.clear();
@@ -123,6 +124,7 @@ public class RatingActivity extends AppCompatActivity {
         Log.i(TAG, "After deleting all ratings:");
         for (Rating r: ratingList)
             Log.i(TAG, r.toString());
+         */
     }
 
     /***
