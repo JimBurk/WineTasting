@@ -49,6 +49,16 @@
             android:label="Wine Tasting Notes - Review Wines">
         </activity>
         <activity
+            android:name=".WineDetailsActivity"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Wines Details">
+        </activity>
+        <activity
+            android:name=".ReviewWinesFromTastingActivity"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Review Wines">
+        </activity>
+        <activity
             android:name=".AddPhotoActivity"
             android:screenOrientation="landscape"
             android:label="Wine Tasting Notes - Add Label Photos">
