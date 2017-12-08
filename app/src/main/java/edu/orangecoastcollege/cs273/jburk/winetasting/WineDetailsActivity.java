@@ -79,7 +79,7 @@ public class WineDetailsActivity extends AppCompatActivity {
                 "Location: " + rateTasteOffering.getmTasting().getLocation();
 
 
-        wineImageView.setImageURI(getUriFromResource(this, R.drawable.vines5));
+        wineImageView.setImageURI(selectedWine.getmImageUri());
 
         ratingTextView.setText(ratingText);
         tastingTextView.setText(tastingText);
