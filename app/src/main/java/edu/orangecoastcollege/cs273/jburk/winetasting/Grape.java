@@ -2,6 +2,7 @@ package edu.orangecoastcollege.cs273.jburk.winetasting;
 
 /**
  * Created by pjsda on 12/2/2017.
+ *
  */
 
 public class Grape {

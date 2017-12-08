@@ -1,13 +1,18 @@
 package edu.orangecoastcollege.cs273.jburk.winetasting;
 
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+
 
 import static java.lang.String.valueOf;
 
@@ -18,13 +23,11 @@ public class WineDetailsActivity extends AppCompatActivity {
 
     private DBHelper db;
     private List<Wine> allWinesList = new ArrayList<>();
-    private List<Wine> filteredWinesList = new ArrayList<>();
-    //private List<OfferingRatingTasting> allRatingsTastingList = new ArrayList<>();
-    //private List<OfferingRatingTasting> filteredRatingsTastingList = new ArrayList<>();
 
     private TextView ratingTextView ;
     private TextView tastingTextView;
     private TextView wineTextView;
+    private ImageView wineImageView;
 
     List<OfferingWineRating> allWineRatingList;
 
@@ -41,55 +44,46 @@ public class WineDetailsActivity extends AppCompatActivity {
         ratingTextView = (TextView) findViewById(R.id.ratingsTextView);
         tastingTextView = (TextView) findViewById(R.id.tastingsTextView);
         wineTextView = (TextView) findViewById(R.id.wineDetailsTextView);
+        wineImageView = (ImageView) findViewById(R.id.wineBottleImageView);
+
 
         allWineRatingList = new ArrayList<>();
-        //List<OfferingWineRating> filteredWineRatingList = new ArrayList<>();
 
         allWinesList = db.getAllWines();
+
         allWineRatingList = db.getAllOfferingWineRatings();
-
-
         Rating rating = db.getRating(selectedWine.getmId());
 
         OfferingWineRating offering = new OfferingWineRating(selectedWine, rating);
-
         db.addRatingWineRating(offering);
 
         Tasting tasting = new Tasting(rating.getTasteGroup());
 
         OfferingRatingTasting rateTasteOffering = new OfferingRatingTasting(tasting, rating);
 
-
-        ratingTextView.setText(
-                "Color: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
-                "Aroma: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
-                "Body: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
-                "Taste: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
-                "Finish: " + String.valueOf(offering.getmRating().getColor()) + "\n" +
+        String ratingText = "Color: " + df.format(offering.getmRating().getColor()) + "\n" +
+                "Aroma: " + df.format(offering.getmRating().getColor()) + "\n" +
+                "Body: " + df.format(offering.getmRating().getColor()) + "\n" +
+                "Taste: " + df.format(offering.getmRating().getColor()) + "\n" +
+                "Finish: " + df.format(offering.getmRating().getColor()) + "\n" +
                 "----------------" + "\n" +
-                "Total: " + String.valueOf(getRankTotal(offering)) + "\n" +
-                "Notes: " + offering.getmNotes()
-        );
+                "Total: " + df.format(getRankTotal(offering)) + "\n\n" +
+                "Notes: " + offering.getmNotes();
 
-        tastingTextView.setText(
-                "Name: " + rateTasteOffering.getmTasting().getName() + "\n" +
+        String tastingText = "Name: " + rateTasteOffering.getmTasting().getName() + "\n" +
                 "Date: " + rateTasteOffering.getmTasting().getDate() + "\n" +
-                "Location: " + rateTasteOffering.getmTasting().getLocation()
-        );
+                "Location: " + rateTasteOffering.getmTasting().getLocation();
+
+        String wineText = "Name: " + rateTasteOffering.getmTasting().getName() + "\n" +
+                "Date: " + rateTasteOffering.getmTasting().getDate() + "\n" +
+                "Location: " + rateTasteOffering.getmTasting().getLocation();
 
 
-        wineTextView.setText(
-                "Varietal: " + selectedWine.getmVarietal() + "\n" +
-                "Vintage: " + String.valueOf(selectedWine.getmVintage()) + "\n" +
-                "Winery: " + selectedWine.getmWinery() + "\n" +
-                "Vineyard: " + selectedWine.getmVineyard() + "\n" +
-                "Price: " + String.valueOf(selectedWine.getmPrice())
-        );
+        wineImageView.setImageURI(getUriFromResource(this, R.drawable.vines5));
 
-
-
-        Log.i("Wine Details Activity", " -> " + selectedWine.getmId());
-
+        ratingTextView.setText(ratingText);
+        tastingTextView.setText(tastingText);
+        wineTextView.setText(wineText);
     }
 
     public float getRankTotal(OfferingWineRating offering){
@@ -105,23 +99,22 @@ public class WineDetailsActivity extends AppCompatActivity {
         return total;
     }
 
+    /***
+     * This method obtains the URI of the image so it can be saved.
+     *
+     * @param context
+     * @param resId
+     * @return
+     */
+    public static Uri getUriFromResource(Context context, int resId) {
+        Resources res = context.getResources();
+        String uri = ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
+                + res.getResourcePackageName(resId) + "/"
+                +res.getResourceTypeName(resId) + "/"
+                +res.getResourceEntryName(resId);
+
+        // Parse the String
+        return Uri.parse(uri);
+    }
+
 }
-
-/**
- for (OfferingWineRating offer : allWineRatingList)
- if (offer.getmRating().getId() == selectedWine.getmId()) {}
- */
-
-/**
- offering.setmTasting(offer.getmTasting());
- offering.setmRating(offer.getmRating());
- offering.getmTasting().setName(offer.getmTasting().getName());
- offering.getmTasting().setDate(offer.getmTasting().getDate());
- offering.getmTasting().setLocation(offer.getmTasting().getLocation());
- offering.getmRating().setColor(offer.getmRating().getColor());
- offering.getmRating().setAroma(offer.getmRating().getAroma());
- offering.getmRating().setBody(offer.getmRating().getBody());
- offering.getmRating().setTaste(offer.getmRating().getTaste());
- offering.getmRating().setFinish(offer.getmRating().getFinish());
- offering.getmRating().setNotes(offer.getmRating().getNotes());
- */
