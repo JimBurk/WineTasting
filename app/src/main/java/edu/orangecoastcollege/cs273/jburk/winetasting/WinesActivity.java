@@ -78,16 +78,28 @@ public class WinesActivity extends AppCompatActivity {
      */
 
     public void addPhoto(View view) {
-        saveWines(view);
-
         Intent picturesIntent = new Intent(this, AddPhotoActivity.class);
         ArrayList<Wine> wineArrayList = new ArrayList<Wine>();
         wineArrayList.addAll(allWineList);
 
-        picturesIntent.putExtra("FirstWineID", 0);
+        db = new DBHelper(this);
+
+        wineList.clear();
+        wineList = db.getAllWines();
+        Log.i(TAG, "Showing all wines:");
+        for (Wine w: wineList)
+            Log.i(TAG, w.toString());
+
+        wineList.clear();
+        wineList = db.getAllWines();
+        Log.i(TAG, "WineArrayList all wines:");
+        for (Wine w: wineArrayList)
+            Log.i(TAG, w.toString());
+
+
+        //picturesIntent.putExtra("FirstWineID", 0);
 
         picturesIntent.putParcelableArrayListExtra("wineArrayList", wineArrayList);
-
         startActivity(picturesIntent);
 
         overridePendingTransition(R.anim.slide_from_left, 0);
@@ -217,6 +229,17 @@ public class WinesActivity extends AppCompatActivity {
         wineryET.setText("Vine Cliff");
         vineyardET.setText("Oakville");
         priceET.setText("$74.95");
+
+        saveWines(view);
+        DBHelper db = new DBHelper(this);
+
+        for (Wine w: allWineList)
+            db.addWine(w);
+        wineList.clear();
+        wineList = db.getAllWines();
+        Log.i(TAG, "Showing all wines:");
+        for (Wine w: wineList)
+            Log.i(TAG, w.toString());
     }
 
     /***
@@ -250,10 +273,12 @@ public class WinesActivity extends AppCompatActivity {
     }
 
     public void winesContinue(View view) {
-        saveWines(view);
+        /**
         DBHelper db = new DBHelper(this);
 
-        for (Wine w: allWineList)
+         saveWines(view);
+
+         for (Wine w: allWineList)
             db.addWine(w);
 
         wineList.clear();
@@ -262,6 +287,7 @@ public class WinesActivity extends AppCompatActivity {
         Log.i(TAG, "Showing all wines:");
         for (Wine w: wineList)
             Log.i(TAG, w.toString());
+         */
 
         /**
         db.deleteWine(wineList.get(3));

@@ -6,15 +6,13 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-
-
-import static java.lang.String.valueOf;
 
 
 public class WineDetailsActivity extends AppCompatActivity {
@@ -31,11 +29,15 @@ public class WineDetailsActivity extends AppCompatActivity {
 
     List<OfferingWineRating> allWineRatingList;
 
+    public static final String TAG = WineDetailsActivity.class.getSimpleName();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wine_details);
+
+        Log.i(TAG, "Wine Details Opening.");
 
         Wine selectedWine = getIntent().getExtras().getParcelable("SelectedWine");
 
@@ -57,9 +59,15 @@ public class WineDetailsActivity extends AppCompatActivity {
         OfferingWineRating offering = new OfferingWineRating(selectedWine, rating);
         db.addRatingWineRating(offering);
 
-        Tasting tasting = new Tasting(rating.getTasteGroup());
+        Tasting tasting = db.getTasting(selectedWine.getmId());
 
         OfferingRatingTasting rateTasteOffering = new OfferingRatingTasting(tasting, rating);
+        db.addRatingTastingOffering(rateTasteOffering);
+
+        Log.i(TAG, "ORT Name: " + rateTasteOffering.getmTasting().getName());
+        Log.i(TAG, "ORT Date: " + rateTasteOffering.getmTasting().getDate());
+        Log.i(TAG, "ORT Location: " + rateTasteOffering.getmTasting().getLocation());
+
 
         String ratingText = "Color: " + df.format(offering.getmRating().getColor()) + "\n" +
                 "Aroma: " + df.format(offering.getmRating().getColor()) + "\n" +
@@ -74,9 +82,10 @@ public class WineDetailsActivity extends AppCompatActivity {
                 "Date: " + rateTasteOffering.getmTasting().getDate() + "\n" +
                 "Location: " + rateTasteOffering.getmTasting().getLocation();
 
-        String wineText = "Name: " + rateTasteOffering.getmTasting().getName() + "\n" +
-                "Date: " + rateTasteOffering.getmTasting().getDate() + "\n" +
-                "Location: " + rateTasteOffering.getmTasting().getLocation();
+        String wineText = "Vintage: " + selectedWine.getmVintage() + "\n" +
+                "Winery: " + selectedWine.getmWinery() + "\n" +
+                "Designation: " + selectedWine.getmVineyard() + "\n" +
+                "Varietal: " + selectedWine.getmVarietal();
 
 
         wineImageView.setImageURI(selectedWine.getmImageUri());
@@ -84,6 +93,41 @@ public class WineDetailsActivity extends AppCompatActivity {
         ratingTextView.setText(ratingText);
         tastingTextView.setText(tastingText);
         wineTextView.setText(wineText);
+
+        DBHelper db = new DBHelper(this);
+
+        List<OfferingRatingTasting> rateTaste;
+        rateTaste = db.getAllRatingTastingOfferings();
+
+        Log.i(TAG, "Showing all Offering Rating Tasting:");
+        Log.i(TAG, "Showing all Offering Rating Tasting:");
+        Log.i(TAG, "Showing all Offering Rating Tasting:");
+        for (OfferingRatingTasting ort: rateTaste)
+            Log.i(TAG, ort.toString());
+/**
+
+         db.deleteWine(wineList.get(3));
+         wineList.clear();
+         wineList = db.getAllWines();
+         Log.i(TAG, "After deleting wine 4:");
+         for (Wine w: wineList)
+         Log.i(TAG, w.toString());
+
+         wine1a.setmWinery("Test Upgrade");
+         db.updateWine(wine1a);
+         wineList.clear();
+         wineList = db.getAllWines();
+         Log.i(TAG, "After updating wines:");
+         for (Wine w: wineList)
+         Log.i(TAG, w.toString());
+
+         Log.i(TAG, "Deleting all wines:");
+         db.deleteAllWine();
+         wineList.clear();
+         wineList = db.getAllWines();
+         for (Wine w: wineList)
+         Log.i(TAG, w.toString());
+ */
     }
 
     public float getRankTotal(OfferingWineRating offering){
@@ -98,23 +142,4 @@ public class WineDetailsActivity extends AppCompatActivity {
 
         return total;
     }
-
-    /***
-     * This method obtains the URI of the image so it can be saved.
-     *
-     * @param context
-     * @param resId
-     * @return
-     */
-    public static Uri getUriFromResource(Context context, int resId) {
-        Resources res = context.getResources();
-        String uri = ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
-                + res.getResourcePackageName(resId) + "/"
-                +res.getResourceTypeName(resId) + "/"
-                +res.getResourceEntryName(resId);
-
-        // Parse the String
-        return Uri.parse(uri);
-    }
-
 }

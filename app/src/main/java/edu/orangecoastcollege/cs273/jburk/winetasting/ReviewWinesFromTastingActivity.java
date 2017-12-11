@@ -19,6 +19,9 @@ public class ReviewWinesFromTastingActivity extends AppCompatActivity {
     private WinesListAdapter winesListAdapter;
     private ListView winesListView;
 
+    public static final String TAG = ReviewWinesFromTastingActivity.class.getSimpleName();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,10 @@ public class ReviewWinesFromTastingActivity extends AppCompatActivity {
         for (Wine wine : allWinesList)
             if ((wine.getmTasteGroup()) == (selectedTasting.getId()))
                 filteredWinesList.add(wine);
+
+        Log.i(TAG, "Showing all wines:");
+        for (Wine w: filteredWinesList)
+            Log.i(TAG, w.toString());
 
 
         winesListAdapter = new WinesListAdapter(this, R.layout.wines_list_item, filteredWinesList);

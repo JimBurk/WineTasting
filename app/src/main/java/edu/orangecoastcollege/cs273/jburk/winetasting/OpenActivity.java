@@ -29,6 +29,7 @@ public class OpenActivity extends AppCompatActivity {
 
 
         //TODO : IF CRASHES: COMMENT OUT FROM BELOW TO (STOP)
+        /**
 
         DBHelper db = new DBHelper(this);
 
@@ -62,6 +63,7 @@ public class OpenActivity extends AppCompatActivity {
         for (OfferingRatingTasting o: offeringList)
             Log.i(TAG, o.toString());
 
+        */
 
         //TODO: (STOP)
     }

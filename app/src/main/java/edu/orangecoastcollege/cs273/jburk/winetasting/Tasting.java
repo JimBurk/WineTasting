@@ -26,6 +26,8 @@ public class Tasting implements Parcelable {
         mLocation = location;
     }
 
+    public Tasting(){this(-1,"", "", "");}
+
     public Tasting(long id) {
         mId = id;
     }

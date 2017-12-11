@@ -73,4 +73,7 @@
     <string name="adapter_winery">Winery</string>
     <string name="adapter_varietal">Varietal</string>
 
+    <string name="file_provider_authority" translatable="false">com.quiro.winetastingnotes.fileprovider</string>
+
+
 </resources>

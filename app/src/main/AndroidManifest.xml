@@ -24,7 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".AddTasting"
+        <activity
+            android:name=".AddTasting"
             android:screenOrientation="landscape"
             android:label="Wine Tasting Notes - Add Tasting">
         </activity>
