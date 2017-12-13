@@ -2,6 +2,7 @@ package edu.orangecoastcollege.cs273.jburk.winetasting;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 
 /**
  * Created by jimburk on 11/30/17.
@@ -28,11 +29,11 @@ public class Tasting implements Parcelable {
 
     public Tasting(){this(-1,"", "", "");}
 
-    public Tasting(long id) {
+    /*public Tasting(long id) {
         mId = id;
-    }
+    }*/
 
-    protected Tasting(Parcel in) {
+    public Tasting(Parcel in) {
         mId = in.readLong();
         mName = in.readString();
         mDate = in.readString();
@@ -70,8 +71,6 @@ public class Tasting implements Parcelable {
     public void setLocation(String location) {
         mLocation = location;
     }
-
-
 
 
     public static final Parcelable.Creator<Tasting> CREATOR = new Parcelable.Creator<Tasting>() {

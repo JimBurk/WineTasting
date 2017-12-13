@@ -19,6 +19,9 @@ public class ReviewWinesFromTastingActivity extends AppCompatActivity {
     private WinesListAdapter winesListAdapter;
     private ListView winesListView;
 
+    private Tasting selectedTasting;
+    private Wine selectedWine;
+
     public static final String TAG = ReviewWinesFromTastingActivity.class.getSimpleName();
 
 
@@ -32,7 +35,9 @@ public class ReviewWinesFromTastingActivity extends AppCompatActivity {
         allWinesList = db.getAllWines();
 
 
-        Tasting selectedTasting = getIntent().getExtras().getParcelable("SelectedTasting");
+        selectedWine = new Wine();
+        selectedTasting = new Tasting();
+        selectedTasting = getIntent().getExtras().getParcelable("SelectedTasting");
 
 
         for (Wine wine : allWinesList)
@@ -52,10 +57,11 @@ public class ReviewWinesFromTastingActivity extends AppCompatActivity {
     public void viewWineDetails(View view) {
         if (view instanceof LinearLayout) {
             LinearLayout selectedLayout = (LinearLayout) view;
-            Wine selectedWine = (Wine) selectedLayout.getTag();
+            selectedWine = (Wine) selectedLayout.getTag();
             Log.i("Wine Tasting Details", selectedWine.toString());
             Intent detailsIntent = new Intent(this, WineDetailsActivity.class);
 
+            detailsIntent.putExtra("tastingId", selectedWine.getmId());
             detailsIntent.putExtra("SelectedWine", selectedWine);
             startActivity(detailsIntent);
         }

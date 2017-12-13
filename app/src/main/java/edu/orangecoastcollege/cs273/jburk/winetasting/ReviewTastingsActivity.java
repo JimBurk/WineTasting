@@ -17,6 +17,11 @@ public class ReviewTastingsActivity extends AppCompatActivity {
     private TastingListAdapter tasteListAdapter;
     private ListView tasteListView;
 
+    private Tasting selectedTasting;
+
+    public static final String TAG = ReviewTastingsActivity.class.getSimpleName();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +39,18 @@ public class ReviewTastingsActivity extends AppCompatActivity {
 
     public void viewWineList(View view) {
         if (view instanceof LinearLayout) {
+
             LinearLayout selectedLayout = (LinearLayout) view;
-            Tasting selectedTasting= (Tasting) selectedLayout.getTag();
+            selectedTasting = (Tasting) selectedLayout.getTag();
+
+
             Log.i("Tasting Events", selectedTasting.toString());
             Intent detailsIntent = new Intent(this, ReviewWinesFromTastingActivity.class);
+
+
+            Log.i(TAG, "Showing Selected Tasting:");
+                Log.i(TAG, selectedTasting.toString());
+
 
             detailsIntent.putExtra("SelectedTasting", selectedTasting);
             startActivity(detailsIntent);

@@ -2,6 +2,7 @@ package edu.orangecoastcollege.cs273.jburk.winetasting;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 
 /**
  * This is the model for the rating class. A Rating has an id, and variables for rating Color, Aroma,
@@ -46,7 +47,7 @@ public class Rating implements Parcelable {
 
     public Rating() {this(-1, -1, -1, -1, -1, -1, -1, "");}
 
-    private Rating(Parcel parcel){
+    public Rating(Parcel parcel){
         mId = parcel.readLong();
         mTasteGroup = parcel.readLong();
         mColor = parcel.readFloat();

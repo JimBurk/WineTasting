@@ -3,6 +3,7 @@ package edu.orangecoastcollege.cs273.jburk.winetasting;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 
 
 /**

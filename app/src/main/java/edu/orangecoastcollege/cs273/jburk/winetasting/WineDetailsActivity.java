@@ -27,6 +27,10 @@ public class WineDetailsActivity extends AppCompatActivity {
     private TextView wineTextView;
     private ImageView wineImageView;
 
+    private Tasting tasting;
+    private Rating rating;
+    private Wine selectedWine;
+
     List<OfferingWineRating> allWineRatingList;
 
     public static final String TAG = WineDetailsActivity.class.getSimpleName();
@@ -39,7 +43,8 @@ public class WineDetailsActivity extends AppCompatActivity {
 
         Log.i(TAG, "Wine Details Opening.");
 
-        Wine selectedWine = getIntent().getExtras().getParcelable("SelectedWine");
+        selectedWine = new Wine();
+        selectedWine = getIntent().getExtras().getParcelable("SelectedWine");
 
         db = new DBHelper(this);
 
@@ -54,12 +59,16 @@ public class WineDetailsActivity extends AppCompatActivity {
         allWinesList = db.getAllWines();
 
         allWineRatingList = db.getAllOfferingWineRatings();
-        Rating rating = db.getRating(selectedWine.getmId());
+
+
+        rating = new Rating();
+        rating = db.getRating(selectedWine.getmId());
 
         OfferingWineRating offering = new OfferingWineRating(selectedWine, rating);
         db.addRatingWineRating(offering);
 
-        Tasting tasting = db.getTasting(selectedWine.getmId());
+        tasting = new Tasting();
+        tasting = db.getTasting(rating.getTasteGroup());
 
         OfferingRatingTasting rateTasteOffering = new OfferingRatingTasting(tasting, rating);
         db.addRatingTastingOffering(rateTasteOffering);

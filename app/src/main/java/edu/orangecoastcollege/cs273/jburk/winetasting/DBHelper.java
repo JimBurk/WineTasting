@@ -586,7 +586,7 @@ public class  DBHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(id)},
                 null, null, null, null);
 
-        if (cursor != null)
+        if (cursor != null && cursor.moveToFirst())
             cursor.moveToFirst();
 
         Tasting tasting = new Tasting(
