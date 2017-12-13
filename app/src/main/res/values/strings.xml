@@ -73,6 +73,12 @@
     <string name="adapter_winery">Winery</string>
     <string name="adapter_varietal">Varietal</string>
 
+    <!-- Review Tasting -->
+    <string name="review_tasting_label">Tasting Information</string>
+    <string name="review_tasting_name">Name: </string>
+    <string name="review_date_name">Date: </string>
+    <string name="review_location_name">Location: </string>
+
     <string name="file_provider_authority" translatable="false">com.quiro.winetastingnotes.fileprovider</string>
 
 

@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +27,8 @@ import java.util.List;
  */
 
 public class RatingActivity extends AppCompatActivity {
+
+    private static final DecimalFormat df = new DecimalFormat(".#");
 
     private DBHelper db;
     private List<Rating> ratingList = new ArrayList<>();

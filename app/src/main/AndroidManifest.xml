@@ -64,8 +64,10 @@
             android:screenOrientation="landscape"
             android:label="Wine Tasting Notes - Add Label Photos">
         </activity>
-        <activity android:name=".WineLocationListActivity"
-                  android:label="Wine Tasting Notes - Wine Locations">
+        <activity
+            android:name=".WineLocationListActivity"
+            android:screenOrientation="landscape"
+            android:label="Wine Tasting Notes - Wine Locations">
         </activity>
         <activity
             android:name=".WineLocationDetailActivity"

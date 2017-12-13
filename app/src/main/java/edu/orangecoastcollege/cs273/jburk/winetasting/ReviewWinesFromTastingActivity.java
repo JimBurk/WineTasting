@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +53,17 @@ public class ReviewWinesFromTastingActivity extends AppCompatActivity {
         winesListAdapter = new WinesListAdapter(this, R.layout.wines_list_item, filteredWinesList);
         winesListView = (ListView) findViewById(R.id.winesListView);
         winesListView.setAdapter(winesListAdapter);
+
+        String tasteString =
+                 selectedTasting.getName() + "\n" +
+                 selectedTasting.getDate() + "\n" +
+                 selectedTasting.getLocation();
+
+        TextView tastingLabelTextView = (TextView) findViewById(R.id.tastingLabelTextView);
+        TextView tastingDetailTextView = (TextView) findViewById(R.id.tastingDetailTextView);
+        tastingDetailTextView.setText(tasteString);
+
+
     }
 
     public void viewWineDetails(View view) {
