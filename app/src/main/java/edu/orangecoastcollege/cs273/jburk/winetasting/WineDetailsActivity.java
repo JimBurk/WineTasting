@@ -1,9 +1,5 @@
 package edu.orangecoastcollege.cs273.jburk.winetasting;
 
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.res.Resources;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -78,23 +74,26 @@ public class WineDetailsActivity extends AppCompatActivity {
         Log.i(TAG, "ORT Location: " + rateTasteOffering.getmTasting().getLocation());
 
 
-        String ratingText = "Color: " + df.format(offering.getmRating().getColor()) + "\n" +
-                "Aroma: " + df.format(offering.getmRating().getColor()) + "\n" +
-                "Body: " + df.format(offering.getmRating().getColor()) + "\n" +
-                "Taste: " + df.format(offering.getmRating().getColor()) + "\n" +
-                "Finish: " + df.format(offering.getmRating().getColor()) + "\n" +
-                "----------------" + "\n" +
-                "Total: " + df.format(getRankTotal(offering)) + "\n\n" +
-                "Notes: " + offering.getmNotes();
+        String ratingText =
+                "Color:     " + df.format(offering.getmRating().getColor()) + "\n" +
+                "Aroma:   "   + df.format(offering.getmRating().getColor()) + "\n" +
+                "Body:      " + df.format(offering.getmRating().getColor()) + "\n" +
+                "Taste:     " + df.format(offering.getmRating().getColor()) + "\n" +
+                "Finish:    " + df.format(offering.getmRating().getColor()) + "\n" +
+                "-----------------------------" + "\n" +
+                "Total:     " + df.format(getRankTotal(offering)) + "\n\n" +
+                "Notes:     " + offering.getmNotes();
 
-        String tastingText = "Name: " + rateTasteOffering.getmTasting().getName() + "\n" +
-                "Date: " + rateTasteOffering.getmTasting().getDate() + "\n" +
-                "Location: " + rateTasteOffering.getmTasting().getLocation();
+        String tastingText =
+                rateTasteOffering.getmTasting().getName() + "\n" +
+                rateTasteOffering.getmTasting().getDate() + "\n" +
+                rateTasteOffering.getmTasting().getLocation();
 
-        String wineText = "Vintage: " + selectedWine.getmVintage() + "\n" +
-                "Winery: " + selectedWine.getmWinery() + "\n" +
-                "Designation: " + selectedWine.getmVineyard() + "\n" +
-                "Varietal: " + selectedWine.getmVarietal();
+        String wineText =
+                selectedWine.getmVintage() + "\n" +
+                selectedWine.getmWinery() + "\n" +
+                selectedWine.getmVineyard() + "\n" +
+                selectedWine.getmVarietal();
 
 
         wineImageView.setImageURI(selectedWine.getmImageUri());

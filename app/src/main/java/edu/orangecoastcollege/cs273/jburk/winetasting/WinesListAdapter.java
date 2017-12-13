@@ -48,6 +48,7 @@ public class WinesListAdapter extends ArrayAdapter<Wine> {
         TextView varietalTextView = (TextView) view.findViewById(R.id.varietalListTextView);
         TextView vintageTextView = (TextView) view.findViewById(R.id.vintageListTextView);
         TextView wineryTextView = (TextView) view.findViewById(R.id.wineryListTextView);
+        TextView locationTextView = (TextView) view.findViewById(R.id.designationTextView);
 
         wineLineLay.setTag(selectedWine);
 
@@ -56,6 +57,7 @@ public class WinesListAdapter extends ArrayAdapter<Wine> {
         varietalTextView.setText(selectedWine.getmVarietal());
         vintageTextView.setText(Integer.toString(selectedWine.getmVintage()));
         wineryTextView.setText(selectedWine.getmWinery());
+        locationTextView.setText(selectedWine.getmVineyard());
 
         return view;
     }
