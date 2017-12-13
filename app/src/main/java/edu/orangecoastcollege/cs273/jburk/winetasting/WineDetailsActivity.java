@@ -73,13 +73,12 @@ public class WineDetailsActivity extends AppCompatActivity {
         Log.i(TAG, "ORT Date: " + rateTasteOffering.getmTasting().getDate());
         Log.i(TAG, "ORT Location: " + rateTasteOffering.getmTasting().getLocation());
 
-
         String ratingText =
                 "Color:     " + df.format(offering.getmRating().getColor()) + "\n" +
-                "Aroma:   "   + df.format(offering.getmRating().getColor()) + "\n" +
-                "Body:      " + df.format(offering.getmRating().getColor()) + "\n" +
-                "Taste:     " + df.format(offering.getmRating().getColor()) + "\n" +
-                "Finish:    " + df.format(offering.getmRating().getColor()) + "\n" +
+                "Aroma:   "   + df.format(offering.getmRating().getAroma()) + "\n" +
+                "Body:      " + df.format(offering.getmRating().getBody()) + "\n" +
+                "Taste:     " + df.format(offering.getmRating().getTaste()) + "\n" +
+                "Finish:    " + df.format(offering.getmRating().getFinish()) + "\n" +
                 "-----------------------------" + "\n" +
                 "Total:     " + df.format(getRankTotal(offering)) + "\n\n" +
                 "Notes:     " + offering.getmNotes();

@@ -318,10 +318,11 @@ public class WinesActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, 0);
     }
 
-    public void saveWines(View view){
+    public void saveWines(View view) {
 
         Long tasteGroup = groupId;
         Uri imageView = getUriFromResource(this, R.drawable.wine_bottle);
+
         EditText vintageET = findViewById(R.id.wines1AVintageET);
         EditText varietalET = findViewById(R.id.wines1AVarietalET);
         EditText wineryET = findViewById(R.id.wines1AWineryET);

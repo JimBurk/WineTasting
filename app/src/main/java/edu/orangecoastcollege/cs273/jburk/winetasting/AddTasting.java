@@ -39,24 +39,15 @@ public class AddTasting extends AppCompatActivity {
         mTastingLocation = (EditText) findViewById(R.id.tasting_location);
     }
 
-    public void testLog(){
+    public void testLog() {
         db = new DBHelper(this);
 
         List<Tasting> tastingList = new ArrayList<>();
         tastingList = db.getAllTastings();
 
         Log.i(TAG, "Showing all tastings");
-        for (Tasting t: tastingList)
+        for (Tasting t : tastingList)
             Log.i(TAG, t.toString());
-
-        /**
-        db.deleteAllTasting();
-        tastingList.clear();
-        tastingList = db.getAllTastings();
-        Log.i(TAG, "After deleting the list.");
-        for (Tasting t: tastingList)
-            Log.i(TAG, t.toString());
-         */
     }
 
     /***

@@ -26,46 +26,6 @@ public class OpenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open);
-
-
-        //TODO : IF CRASHES: COMMENT OUT FROM BELOW TO (STOP)
-        /**
-
-        DBHelper db = new DBHelper(this);
-
-        List<Tasting> tastingsList = db.getAllTastings();
-        List<Rating> ratingsList = db.getAllRatings();
-        List<Wine> winesList = db.getAllWines();
-
-        Log.i(TAG, "Showing all tastings:");
-        for (Tasting t: tastingsList)
-            Log.i(TAG, t.toString());
-
-        Log.i(TAG, "Showing all ratings:");
-        for (Rating r: ratingsList)
-            Log.i(TAG, r.toString());
-
-        Log.i(TAG, "Showing all wines:");
-        for (Wine w: winesList)
-            Log.i(TAG, w.toString());
-
-
-        Rating rating = db.getRating(1);
-        Tasting tasting = db.getTasting(rating.getTasteGroup());
-
-        OfferingRatingTasting offering = new OfferingRatingTasting(tasting, rating);
-
-        db.addRatingTastingOffering(offering);
-
-        offeringList = db.getAllRatingTastingOfferings();
-
-        Log.i(TAG, "Showing all offerings:");
-        for (OfferingRatingTasting o: offeringList)
-            Log.i(TAG, o.toString());
-
-        */
-
-        //TODO: (STOP)
     }
 
     public void newTasting(View view){
@@ -92,10 +52,6 @@ public class OpenActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, 0);
     }
 
-    // TODO: once database is debugged
-    // TODO: Remove --> deleteDatabase(DBHelper.DATABASE_NAME); o
-    // TODO: Remove --> Toast.makeText(this, "Deleteing Database", Toast.LENGTH_LONG).show();
-    // TODO: Uncomment -> //this.finishAffinity();
     public void quitApp(View view) {
         deleteDatabase(DBHelper.DATABASE_NAME);
         Toast.makeText(this, "Deleting Database", Toast.LENGTH_LONG).show();

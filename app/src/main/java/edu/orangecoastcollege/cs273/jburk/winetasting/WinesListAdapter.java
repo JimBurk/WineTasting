@@ -52,7 +52,6 @@ public class WinesListAdapter extends ArrayAdapter<Wine> {
 
         wineLineLay.setTag(selectedWine);
 
-
         wineImageView.setImageURI(selectedWine.getmImageUri());
         varietalTextView.setText(selectedWine.getmVarietal());
         vintageTextView.setText(Integer.toString(selectedWine.getmVintage()));

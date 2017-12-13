@@ -44,7 +44,6 @@ public class RatingActivity extends AppCompatActivity {
 
     String totalString;
 
-
     private Rating rating1a;
     private Rating rating1b;
     private Rating rating2a;
@@ -143,10 +142,12 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating1ATasteTV);
         EditText finishET = findViewById(R.id.rating1AFinishTV);
 
+        EditText notesET = findViewById(R.id.rating1ANotesTV);
+
         rating1a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating1a.setTasteGroup(groupId);
-        rating1a.setNotes("Rating One");
+        rating1a.setNotes(notesET.getText().toString());
         allRatingList.set(0, rating1a);
 
         total[0] = rating1a.getColor() + rating1a.getAroma() + rating1a.getBody() + rating1a.getTaste() + rating1a.getFinish();
@@ -167,10 +168,12 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating1BTasteTV);
         EditText finishET = findViewById(R.id.rating1BFinishTV);
 
+        EditText notesET = findViewById(R.id.rating1BNotesTV);
+
         rating1b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating1b.setTasteGroup(groupId);
-        rating1b.setNotes("Rating Two");
+        rating1b.setNotes(notesET.getText().toString());
         allRatingList.set(1, rating1b);
 
         total[1] = rating1b.getColor() + rating1b.getAroma() + rating1b.getBody() + rating1b.getTaste() + rating1b.getFinish();
@@ -191,10 +194,12 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating2ATasteTV);
         EditText finishET = findViewById(R.id.rating2AFinishTV);
 
+        EditText notesET = findViewById(R.id.rating2ANotesTV);
+
         rating2a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating2a.setTasteGroup(groupId);
-        rating2a.setNotes("Rating Three");
+        rating2a.setNotes(notesET.getText().toString());
         allRatingList.set(2, rating2a);
 
         total[2] = rating2a.getColor() + rating2a.getAroma() + rating2a.getBody() + rating2a.getTaste() + rating2a.getFinish();
@@ -215,10 +220,12 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating2BTasteTV);
         EditText finishET = findViewById(R.id.rating2BFinishTV);
 
+        EditText notesET = findViewById(R.id.rating2BNotesTV);
+
         rating2b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating2b.setTasteGroup(groupId);
-        rating2b.setNotes("Rating Four");
+        rating2b.setNotes(notesET.getText().toString());
         allRatingList.set(3, rating2b);
 
         total[3] = rating2b.getColor() + rating2b.getAroma() + rating2b.getBody() + rating2b.getTaste() + rating2b.getFinish();
@@ -239,10 +246,12 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating3ATasteTV);
         EditText finishET = findViewById(R.id.rating3AFinishTV);
 
+        EditText notesET = findViewById(R.id.rating3ANotesTV);
+
         rating3a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating3a.setTasteGroup(groupId);
-        rating3a.setNotes("Rating Five");
+        rating3a.setNotes(notesET.getText().toString());
         allRatingList.set(4, rating3a);
 
         total[4] = rating3a.getColor() + rating3a.getAroma() + rating3a.getBody() + rating3a.getTaste() + rating3a.getFinish();
@@ -263,10 +272,12 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating3BTasteTV);
         EditText finishET = findViewById(R.id.rating3BFinishTV);
 
+        EditText notesET = findViewById(R.id.rating3BNotesTV);
+
         rating3b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating3b.setTasteGroup(groupId);
-        rating3b.setNotes("Rating Six");
+        rating3b.setNotes(notesET.getText().toString());
         allRatingList.set(5, rating3b);
 
         total[5] = rating3b.getColor() + rating3b.getAroma() + rating3b.getBody() + rating3b.getTaste() + rating3b.getFinish();
@@ -287,10 +298,12 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating4ATasteTV);
         EditText finishET = findViewById(R.id.rating4AFinishTV);
 
+        EditText notesET = findViewById(R.id.rating4ANotesTV);
+
         rating4a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating4a.setTasteGroup(groupId);
-        rating4a.setNotes("Rating Seven");
+        rating4a.setNotes(notesET.getText().toString());
         allRatingList.set(6, rating4a);
 
         total[6] = rating4a.getColor() + rating4a.getAroma() + rating4a.getBody() + rating4a.getTaste() + rating4a.getFinish();
@@ -311,10 +324,12 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating4BTasteTV);
         EditText finishET = findViewById(R.id.rating4BFinishTV);
 
+        EditText notesET = findViewById(R.id.rating4BNotesTV);
+
         rating4b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating4b.setTasteGroup(groupId);
-        rating4b.setNotes("Rating Eight");
+        rating4b.setNotes(notesET.getText().toString());
         allRatingList.set(7, rating4b);
 
         total[7] = rating4b.getColor() + rating4b.getAroma() + rating4b.getBody() + rating4b.getTaste() + rating4b.getFinish();
@@ -335,10 +350,12 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating5ATasteTV);
         EditText finishET = findViewById(R.id.rating5AFinishTV);
 
+        EditText notesET = findViewById(R.id.rating5ANotesTV);
+
         rating5a = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating5a.setTasteGroup(groupId);
-        rating5a.setNotes("Rating Nine");
+        rating5a.setNotes(notesET.getText().toString());
         allRatingList.set(8, rating5a);
 
         total[8] = rating5a.getColor() + rating5a.getAroma() + rating5a.getBody() + rating5a.getTaste() + rating5a.getFinish();
@@ -358,11 +375,13 @@ public class RatingActivity extends AppCompatActivity {
         EditText bodyET = findViewById(R.id.rating5BBodyTV);
         EditText tasteET = findViewById(R.id.rating5BTasteTV);
         EditText finishET = findViewById(R.id.rating5BFinishTV);
+        EditText notesET = findViewById(R.id.rating5BNotesTV);
+
 
         rating5b = getTotal(colorET, aromaET, bodyET, tasteET, finishET);
 
         rating5b.setTasteGroup(groupId);
-        rating5b.setNotes("Rating Ten");
+        rating5b.setNotes(notesET.getText().toString());
         allRatingList.set(9, rating5b);
 
         total[9] = rating5b.getColor() + rating5b.getAroma() + rating5b.getBody() + rating5b.getTaste() + rating5b.getFinish();
