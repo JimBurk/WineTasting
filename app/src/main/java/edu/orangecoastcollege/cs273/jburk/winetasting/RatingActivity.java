@@ -150,7 +150,9 @@ public class RatingActivity extends AppCompatActivity {
         rating1a.setNotes(notesET.getText().toString());
         allRatingList.set(0, rating1a);
 
-        total[0] = rating1a.getColor() + rating1a.getAroma() + rating1a.getBody() + rating1a.getTaste() + rating1a.getFinish();
+        total[0] = rating1a.getColor() + rating1a.getAroma() + rating1a.getBody() + rating1a.getTaste() + rating1a.getFinish()+ 0.01f;
+        total[0] = (int) (total[0] * 10.0f);
+        total[0] = total[0] / 10.0f;
 
         if (total[0] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating1ATotalTV);
@@ -177,6 +179,8 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.set(1, rating1b);
 
         total[1] = rating1b.getColor() + rating1b.getAroma() + rating1b.getBody() + rating1b.getTaste() + rating1b.getFinish();
+        total[1] = (int) (total[1] * 10.0f);
+        total[1] = total[1] / 10.0f;
 
         if (total[1] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating1BTotalTV);
@@ -203,6 +207,8 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.set(2, rating2a);
 
         total[2] = rating2a.getColor() + rating2a.getAroma() + rating2a.getBody() + rating2a.getTaste() + rating2a.getFinish();
+        total[2] = (int) (total[2] * 10.0f);
+        total[2] = total[2] / 10.0f;
 
         if (total[2] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating2ATotalTV);
@@ -229,6 +235,8 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.set(3, rating2b);
 
         total[3] = rating2b.getColor() + rating2b.getAroma() + rating2b.getBody() + rating2b.getTaste() + rating2b.getFinish();
+        total[3] = (int) (total[3] * 10.0f);
+        total[3] = total[3] / 10.0f;
 
         if (total[3] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating2BTotalTV);
@@ -255,6 +263,8 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.set(4, rating3a);
 
         total[4] = rating3a.getColor() + rating3a.getAroma() + rating3a.getBody() + rating3a.getTaste() + rating3a.getFinish();
+        total[4] = (int) (total[4] * 10.0f);
+        total[4] = total[4] / 10.0f;
 
         if (total[4] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating3ATotalTV);
@@ -281,6 +291,8 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.set(5, rating3b);
 
         total[5] = rating3b.getColor() + rating3b.getAroma() + rating3b.getBody() + rating3b.getTaste() + rating3b.getFinish();
+        total[5] = (int) (total[5] * 10.0f);
+        total[5] = total[5] / 10.0f;
 
         if (total[5] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating3BTotalTV);
@@ -307,6 +319,8 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.set(6, rating4a);
 
         total[6] = rating4a.getColor() + rating4a.getAroma() + rating4a.getBody() + rating4a.getTaste() + rating4a.getFinish();
+        total[6] = (int) (total[6] * 10.0f);
+        total[6] = total[6] / 10.0f;
 
         if (total[6] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating4ATotalTV);
@@ -333,6 +347,8 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.set(7, rating4b);
 
         total[7] = rating4b.getColor() + rating4b.getAroma() + rating4b.getBody() + rating4b.getTaste() + rating4b.getFinish();
+        total[7] = (int) (total[7] * 10.0f);
+        total[7] = total[7] / 10.0f;
 
         if (total[7] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating4BTotalTV);
@@ -359,6 +375,8 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.set(8, rating5a);
 
         total[8] = rating5a.getColor() + rating5a.getAroma() + rating5a.getBody() + rating5a.getTaste() + rating5a.getFinish();
+        total[8] = (int) (total[8] * 10.0f);
+        total[8] = total[8] / 10.0f;
 
         if (total[8] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating5ATotalTV);
@@ -385,6 +403,8 @@ public class RatingActivity extends AppCompatActivity {
         allRatingList.set(9, rating5b);
 
         total[9] = rating5b.getColor() + rating5b.getAroma() + rating5b.getBody() + rating5b.getTaste() + rating5b.getFinish();
+        total[9] = (int) (total[9] * 10.0f);
+        total[9] = total[9] / 10.0f;
 
         if (total[9] > 0.0) {
             totalButton = (Button) findViewById(R.id.rating5BTotalTV);
@@ -467,11 +487,11 @@ public class RatingActivity extends AppCompatActivity {
         EditText finishET = findViewById(R.id.rating1AFinishTV);
         Button totalET = findViewById(R.id.rating1ATotalTV);
 
-        colorET.setText("3");
-        aromaET.setText("3");
-        bodyET.setText("3");
-        tasteET.setText("3");
-        finishET.setText("2");
+        colorET.setText("3.3");
+        aromaET.setText("3.1");
+        bodyET.setText("3.4");
+        tasteET.setText("3.8");
+        finishET.setText("4.5");
         totalET.setText("");
 
         colorET = findViewById(R.id.rating1BColorTV);
