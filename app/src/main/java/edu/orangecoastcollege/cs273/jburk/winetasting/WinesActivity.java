@@ -72,12 +72,27 @@ public class WinesActivity extends AppCompatActivity {
         DBHelper db = new DBHelper(this);
     }
 
+    public void summonDB(View view){
+        saveWines(view);
+        DBHelper db = new DBHelper(this);
+
+        for (Wine w: allWineList)
+            db.addWine(w);
+        wineList.clear();
+        wineList = db.getAllWines();
+        Log.i(TAG, "Showing all wines:");
+        for (Wine w: wineList)
+            Log.i(TAG, w.toString());
+    }
+
     /***
      * This method will go to a new activity to allow the user to take some label shots, then assign
      * one to each wine.
      */
 
     public void addPhoto(View view) {
+        summonDB(view);
+
         Intent picturesIntent = new Intent(this, AddPhotoActivity.class);
         ArrayList<Wine> wineArrayList = new ArrayList<Wine>();
         wineArrayList.addAll(allWineList);
@@ -229,17 +244,6 @@ public class WinesActivity extends AppCompatActivity {
         wineryET.setText("Vine Cliff");
         vineyardET.setText("Oakville");
         priceET.setText("$74.95");
-
-        saveWines(view);
-        DBHelper db = new DBHelper(this);
-
-        for (Wine w: allWineList)
-            db.addWine(w);
-        wineList.clear();
-        wineList = db.getAllWines();
-        Log.i(TAG, "Showing all wines:");
-        for (Wine w: wineList)
-            Log.i(TAG, w.toString());
     }
 
     /***
