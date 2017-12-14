@@ -53,9 +53,9 @@ public class OpenActivity extends AppCompatActivity {
     }
 
     public void quitApp(View view) {
-        deleteDatabase(DBHelper.DATABASE_NAME);
-        Toast.makeText(this, "Deleting Database", Toast.LENGTH_LONG).show();
+        // deleteDatabase(DBHelper.DATABASE_NAME);
+        // Toast.makeText(this, "Deleting Database", Toast.LENGTH_LONG).show();
 
-        //this.finishAffinity();
+        this.finishAffinity();
     }
 }

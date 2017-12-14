@@ -489,6 +489,7 @@ public class RatingActivity extends AppCompatActivity {
         EditText tasteET = findViewById(R.id.rating1ATasteTV);
         EditText finishET = findViewById(R.id.rating1AFinishTV);
         Button totalET = findViewById(R.id.rating1ATotalTV);
+        EditText notesET = findViewById(R.id.rating1ANotesTV);
 
         colorET.setText("3.3");
         aromaET.setText("3.1");
@@ -496,6 +497,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3.8");
         finishET.setText("4.5");
         totalET.setText("");
+        notesET.setText("Great Nose, Stone fruit notes.");
 
         colorET = findViewById(R.id.rating1BColorTV);
         aromaET = findViewById(R.id.rating1BAromaTV);
@@ -503,6 +505,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET = findViewById(R.id.rating1BTasteTV);
         finishET = findViewById(R.id.rating1BFinishTV);
         totalET = findViewById(R.id.rating1BTotalTV);
+        notesET = findViewById(R.id.rating1BNotesTV);
 
         colorET.setText("3");
         aromaET.setText("3");
@@ -510,6 +513,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("2");
         totalET.setText("");
+        notesET.setText("Nice body, weak finish.");
 
         colorET = findViewById(R.id.rating2AColorTV);
         aromaET = findViewById(R.id.rating2AAromaTV);
@@ -517,6 +521,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET = findViewById(R.id.rating2ATasteTV);
         finishET = findViewById(R.id.rating2AFinishTV);
         totalET = findViewById(R.id.rating2ATotalTV);
+        notesET = findViewById(R.id.rating2ANotesTV);
 
         colorET.setText("3");
         aromaET.setText("3");
@@ -524,6 +529,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("2");
         totalET.setText("");
+        notesET.setText("Lighter than 2B.");
 
         colorET = findViewById(R.id.rating2BColorTV);
         aromaET = findViewById(R.id.rating2BAromaTV);
@@ -531,6 +537,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET = findViewById(R.id.rating2BTasteTV);
         finishET = findViewById(R.id.rating2BFinishTV);
         totalET = findViewById(R.id.rating2BTotalTV);
+        notesET = findViewById(R.id.rating2BNotesTV);
 
         colorET.setText("3");
         aromaET.setText("3");
@@ -538,6 +545,8 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("2");
         totalET.setText("");
+        notesET.setText("Full Bodied, solid finish");
+
 
         colorET = findViewById(R.id.rating3AColorTV);
         aromaET = findViewById(R.id.rating3AAromaTV);
@@ -545,6 +554,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET = findViewById(R.id.rating3ATasteTV);
         finishET = findViewById(R.id.rating3AFinishTV);
         totalET = findViewById(R.id.rating3ATotalTV);
+        notesET = findViewById(R.id.rating3ANotesTV);
 
         colorET.setText("3");
         aromaET.setText("3");
@@ -552,6 +562,8 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("2");
         totalET.setText("");
+        notesET.setText("Cherry notes");
+
 
         colorET = findViewById(R.id.rating3BColorTV);
         aromaET = findViewById(R.id.rating3BAromaTV);
@@ -559,6 +571,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET = findViewById(R.id.rating3BTasteTV);
         finishET = findViewById(R.id.rating3BFinishTV);
         totalET = findViewById(R.id.rating3BTotalTV);
+        notesET = findViewById(R.id.rating3BNotesTV);
 
         colorET.setText("3");
         aromaET.setText("3");
@@ -566,6 +579,8 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("2");
         totalET.setText("");
+        notesET.setText("Nose sharp, acid finish");
+
 
         colorET = findViewById(R.id.rating4AColorTV);
         aromaET = findViewById(R.id.rating4AAromaTV);
@@ -573,6 +588,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET = findViewById(R.id.rating4ATasteTV);
         finishET = findViewById(R.id.rating4AFinishTV);
         totalET = findViewById(R.id.rating4ATotalTV);
+        notesET = findViewById(R.id.rating4ANotesTV);
 
         colorET.setText("3");
         aromaET.setText("3");
@@ -580,6 +596,8 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("2");
         totalET.setText("");
+        notesET.setText("Good color, long finish.");
+
 
         colorET = findViewById(R.id.rating4BColorTV);
         aromaET = findViewById(R.id.rating4BAromaTV);
@@ -587,6 +605,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET = findViewById(R.id.rating4BTasteTV);
         finishET = findViewById(R.id.rating4BFinishTV);
         totalET = findViewById(R.id.rating4BTotalTV);
+        notesET = findViewById(R.id.rating4BNotesTV);
 
         colorET.setText("3");
         aromaET.setText("3");
@@ -594,6 +613,8 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("3");
         totalET.setText("");
+        notesET.setText("This is a buy!");
+
 
         colorET = findViewById(R.id.rating5AColorTV);
         aromaET = findViewById(R.id.rating5AAromaTV);
@@ -601,6 +622,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET = findViewById(R.id.rating5ATasteTV);
         finishET = findViewById(R.id.rating5AFinishTV);
         totalET = findViewById(R.id.rating5ATotalTV);
+        notesET = findViewById(R.id.rating5ANotesTV);
 
         colorET.setText("3");
         aromaET.setText("3");
@@ -608,6 +630,8 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("4");
         totalET.setText("");
+        notesET.setText("Strong finish, fruity.");
+
 
         colorET = findViewById(R.id.rating5BColorTV);
         aromaET = findViewById(R.id.rating5BAromaTV);
@@ -615,6 +639,7 @@ public class RatingActivity extends AppCompatActivity {
         tasteET = findViewById(R.id.rating5BTasteTV);
         finishET = findViewById(R.id.rating5BFinishTV);
         totalET = findViewById(R.id.rating5BTotalTV);
+        notesET = findViewById(R.id.rating5BNotesTV);
 
         colorET.setText("3");
         aromaET.setText("3");
@@ -622,6 +647,8 @@ public class RatingActivity extends AppCompatActivity {
         tasteET.setText("3");
         finishET.setText("5");
         totalET.setText("");
+        notesET.setText("Funk blew off, barnyard notes.");
+
     }
 
     /***
